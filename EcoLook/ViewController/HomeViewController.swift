@@ -9,9 +9,24 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var labelTitle: UILabel!
+    
+    @IBOutlet weak var buttonNewPost: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = ThemeColors.verdeClaro
+        
+        labelTitle.textColor = ThemeColors.verdeOscuro
+        
+        buttonNewPost.tintColor = ThemeColors.verdeOscuro
+        
+//        self.tabBarItem = UITabBarItem(title: "AEa", image: nil, tag: 1)
+        
+        
         // Do any additional setup after loading the view.
     }
     

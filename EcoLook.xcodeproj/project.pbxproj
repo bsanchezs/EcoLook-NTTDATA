@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F05812D28657465008D95C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05812C28657465008D95C4 /* Colors.swift */; };
+		1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15428C2865066E00FC48F4 /* HomeViewController.swift */; };
+		1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */; };
 		1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D3D8285BEA87008F84CA /* AppDelegate.swift */; };
 		1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D3DA285BEA87008F84CA /* SceneDelegate.swift */; };
 		1F46D3DD285BEA87008F84CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D3DC285BEA87008F84CA /* ViewController.swift */; };
 		1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3DE285BEA87008F84CA /* Main.storyboard */; };
 		1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E1285BEA87008F84CA /* Assets.xcassets */; };
 		1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E3285BEA87008F84CA /* LaunchScreen.storyboard */; };
+		1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FA70A692865394700BDB740 /* Playball-Regular.ttf */; };
+		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F05812C28657465008D95C4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1F15428C2865066E00FC48F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarOptions.swift; sourceTree = "<group>"; };
 		1F46D3D5285BEA87008F84CA /* EcoLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F46D3D8285BEA87008F84CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F46D3DA285BEA87008F84CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,8 @@
 		1F46D3E1285BEA87008F84CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F46D3E4285BEA87008F84CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F46D3E6285BEA87008F84CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA70A692865394700BDB740 /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
+		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,9 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F05812E286584FB008D95C4 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		1F1542892864FA3400FC48F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1F05812C28657465008D95C4 /* Colors.swift */,
+				1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -57,8 +77,17 @@
 			isa = PBXGroup;
 			children = (
 				1F46D3DC285BEA87008F84CA /* ViewController.swift */,
+				1F15428C2865066E00FC48F4 /* HomeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1F15428E28651B6400FC48F4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1FA70A692865394700BDB740 /* Playball-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		1F46D3CC285BEA87008F84CA = {
@@ -80,6 +109,8 @@
 		1F46D3D7285BEA87008F84CA /* EcoLook */ = {
 			isa = PBXGroup;
 			children = (
+				1F05812E286584FB008D95C4 /* TabBarController */,
+				1F15428E28651B6400FC48F4 /* fonts */,
 				1F15428B2864FD6300FC48F4 /* ViewController */,
 				1F15428A2864FA6700FC48F4 /* Common */,
 				1F1542892864FA3400FC48F4 /* Model */,
@@ -149,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */,
 				1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */,
 				1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */,
 				1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */,
@@ -163,8 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F46D3DD285BEA87008F84CA /* ViewController.swift in Sources */,
+				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
+				1F05812D28657465008D95C4 /* Colors.swift in Sources */,
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
+				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
+				1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +261,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AN9WD34YLL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -286,6 +323,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AN9WD34YLL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
