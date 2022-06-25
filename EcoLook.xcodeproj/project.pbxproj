@@ -18,6 +18,7 @@
 		1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E3285BEA87008F84CA /* LaunchScreen.storyboard */; };
 		1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FA70A692865394700BDB740 /* Playball-Regular.ttf */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
+		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1F46D3E6285BEA87008F84CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA70A692865394700BDB740 /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		1F15428E28651B6400FC48F4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */,
 				1FA70A692865394700BDB740 /* Playball-Regular.ttf */,
 			);
 			path = fonts;
@@ -184,6 +187,7 @@
 				1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */,
 				1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */,
 				1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */,
+				1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Playball-Regular.ttf</string>
+		<string>RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

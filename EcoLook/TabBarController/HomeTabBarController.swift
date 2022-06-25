@@ -19,7 +19,7 @@ class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarHome.backgroundColor = ThemeColors.verdeOscuro
+        tabBarHome.backgroundColor = ThemeColors.verdePrimary
 //        tabBarHome.tintColor = UIColor.white
         
         

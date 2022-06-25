@@ -14,15 +14,32 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var buttonNewPost: UIButton!
     
     
+    @IBOutlet weak var inputSearch: UITextField!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = ThemeColors.verdeClaro
+        self.view.backgroundColor = ThemeColors.verdeBackground
         
-        labelTitle.textColor = ThemeColors.verdeOscuro
+        labelTitle.textColor = ThemeColors.verdePrimary
         
-        buttonNewPost.tintColor = ThemeColors.verdeOscuro
+        buttonNewPost.tintColor = ThemeColors.verdePrimary
+        
+        inputSearch.backgroundColor = ThemeColors.verdeInput
+        
+        inputSearch.borderStyle = .none
+        
+        
+//        print("Quiero analizar lo de aqui \(inputSearch.frame)")
+        
+//        inputSearch.frame = inputSearch.frame.size.height
+        
+//        inputSearch.
+        
         
 //        self.tabBarItem = UITabBarItem(title: "AEa", image: nil, tag: 1)
         
