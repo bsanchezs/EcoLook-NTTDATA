@@ -16,7 +16,6 @@ struct Tag{
     
 }
 
-
 let arrEtiquetasTotales = [
     Tag(id: 1, name: "#basura", status: 1),
     Tag(id: 2, name: "#plastico", status: 1),
@@ -25,3 +24,7 @@ let arrEtiquetasTotales = [
     Tag(id: 5, name: "#desechos_toxicos", status: 1),
     Tag(id: 6, name: "#urgente", status: 1)
 ]
+
+
+var setTagsNameSelected = Set<String>()
+

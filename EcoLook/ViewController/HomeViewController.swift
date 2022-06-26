@@ -10,14 +10,14 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var labelTitle: UILabel!
-    
     @IBOutlet weak var buttonNewPost: UIButton!
-    
-    
     @IBOutlet weak var inputSearch: UITextField!
-    
-    
     @IBOutlet weak var sliderTags: UICollectionView!
+//    ----------------------------------------
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,8 @@ class HomeViewController: UIViewController {
         
         sliderTags.dataSource = self
         sliderTags.register(UINib(nibName: "TagsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCellTag")
+        
+        
         
         
         // Do any additional setup after loading the view.
@@ -80,15 +82,36 @@ extension UIViewController: ButtonViewCollectionCellDelegate{
     
     func btnHasPressed(btnPressed: UIButton) {
         
+        
+        
         let tagButtonPressed = btnPressed.tag
         
-        let nameButtonPressed = btnPressed.currentTitle
+        guard let nameButtonPressed = btnPressed.currentTitle else {
+            return
+        }
         
-        print("El tag es: \(tagButtonPressed) y el nombre es: \(nameButtonPressed)")
         
-        btnPressed.tintColor = .white
+//        print("El tag es: \(tagButtonPressed) y el nombre es: \(nameButtonPressed)")
         
-        btnPressed.backgroundColor = ThemeColors.verdePrimary
+        if setTagsNameSelected.contains(nameButtonPressed){
+            
+            setTagsNameSelected.remove(nameButtonPressed)
+            
+            btnPressed.tintColor = ThemeColors.verdeLabel
+            
+            btnPressed.backgroundColor = ThemeColors.verdeBackground
+            
+        } else {
+            
+            setTagsNameSelected.insert(nameButtonPressed)
+            
+            btnPressed.tintColor = .white
+            
+            btnPressed.backgroundColor = ThemeColors.verdePrimary
+            
+        }
+        
+        
         
         
     }
