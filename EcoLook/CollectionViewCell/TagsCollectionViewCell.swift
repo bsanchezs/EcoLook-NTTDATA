@@ -24,12 +24,17 @@ class TagsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        self.backgroundColor = ThemeColors.verdeBackground
-//        self.backgroundColor = .white
-        
+
+        // Color de cada celda
         viewCell.backgroundColor = ThemeColors.verdeBackground
         
+        //Color de las etiquetas
         btnTagHS.tintColor = ThemeColors.verdeLabel
+        
+        // Tener efecto de redondeado
+        btnTagHS.layer.cornerRadius = 10
+        btnTagHS.clipsToBounds = true
+        
         
 //        btnTagHS.backgroundColor = ThemeColors.verdeLabel
         
