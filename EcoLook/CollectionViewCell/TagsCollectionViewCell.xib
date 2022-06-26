@@ -9,16 +9,50 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TagsCollectionViewCell" customModule="EcoLook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="138" height="87"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCellTag" id="gTV-IL-0wX" customClass="TagsCollectionViewCell" customModule="EcoLook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="185" height="67"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="138" height="87"/>
+                <rect key="frame" x="0.0" y="0.0" width="185" height="67"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ooo-YB-LBz">
+                        <rect key="frame" x="0.0" y="0.0" width="185" height="67"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcI-zf-SzF">
+                                <rect key="frame" x="26" y="17" width="133" height="33"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="tgB-Rq-1qF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BcI-zf-SzF" secondAttribute="trailing" constant="26" id="3my-tc-eub"/>
+                            <constraint firstItem="BcI-zf-SzF" firstAttribute="top" secondItem="Ooo-YB-LBz" secondAttribute="top" constant="17" id="E94-qQ-CRD"/>
+                            <constraint firstAttribute="bottom" secondItem="BcI-zf-SzF" secondAttribute="bottom" constant="17" id="Npd-JK-BJK"/>
+                            <constraint firstItem="BcI-zf-SzF" firstAttribute="leading" secondItem="Ooo-YB-LBz" secondAttribute="leading" constant="26" id="i0f-XG-PSU"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="138" height="87"/>
-            <point key="canvasLocation" x="195.6521739130435" y="112.16517857142857"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ooo-YB-LBz" secondAttribute="trailing" id="3av-4H-Sch"/>
+                <constraint firstItem="Ooo-YB-LBz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="T2z-WO-WkM"/>
+                <constraint firstAttribute="bottom" secondItem="Ooo-YB-LBz" secondAttribute="bottom" id="omU-1U-F0I"/>
+                <constraint firstItem="Ooo-YB-LBz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="unW-YJ-dUa"/>
+            </constraints>
+            <size key="customSize" width="185" height="67"/>
+            <connections>
+                <outlet property="btnTagHS" destination="BcI-zf-SzF" id="7YS-rq-6Ta"/>
+                <outlet property="viewCell" destination="Ooo-YB-LBz" id="oXS-76-LUc"/>
+            </connections>
+            <point key="canvasLocation" x="229.71014492753625" y="105.46875"/>
         </collectionViewCell>
     </objects>
 </document>

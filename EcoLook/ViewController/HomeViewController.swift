@@ -32,8 +32,10 @@ class HomeViewController: UIViewController {
         
         inputSearch.borderStyle = .none
         
-        sliderTags.dataSource = self
+        sliderTags.backgroundColor = ThemeColors.verdeBackground
         
+        sliderTags.dataSource = self
+        sliderTags.register(UINib(nibName: "TagsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCellTag")
         
         
         // Do any additional setup after loading the view.
@@ -54,11 +56,41 @@ extension UIViewController: UICollectionViewDataSource{
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("Que era el index path? \(indexPath)")
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTag", for: indexPath) as? TagsCollectionViewCell
+        
+        cell?.btnTagHS.setTitle(arrEtiquetasTotales[indexPath.row].name, for: .normal)
+        cell?.btnTagHS.tag = arrEtiquetasTotales[indexPath.row].id
+        
+        cell?.delegate = self
+        
+        return cell!
+        
     }
     
     
     
     
+    
+}
+
+
+extension UIViewController: ButtonViewCollectionCellDelegate{
+    
+    
+    func btnHasPressed(btnPressed: UIButton) {
+        
+        let tagButtonPressed = btnPressed.tag
+        
+        let nameButtonPressed = btnPressed.currentTitle
+        
+        print("El tag es: \(tagButtonPressed) y el nombre es: \(nameButtonPressed)")
+        
+        btnPressed.tintColor = .white
+        
+        btnPressed.backgroundColor = ThemeColors.verdePrimary
+        
+        
+    }
     
 }
