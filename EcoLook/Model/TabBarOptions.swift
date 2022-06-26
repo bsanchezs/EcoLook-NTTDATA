@@ -16,4 +16,4 @@ enum TabBarOptions {
 }
 
 
-var arrayTabBarOptions: [TabBarOptions] = [.Home, .Favoritos, .Personal]
+var arrTabBarOptions: [TabBarOptions] = [.Home, .Favoritos, .Personal]

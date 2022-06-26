@@ -23,7 +23,7 @@ class HomeTabBarController: UITabBarController {
 //        tabBarHome.tintColor = UIColor.white
         
         
-        for item in arrayTabBarOptions {
+        for item in arrTabBarOptions {
             
             switch item {
                 

@@ -17,8 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var inputSearch: UITextField!
     
     
-    
-    
+    @IBOutlet weak var sliderTags: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,29 +32,33 @@ class HomeViewController: UIViewController {
         
         inputSearch.borderStyle = .none
         
+        sliderTags.dataSource = self
         
-//        print("Quiero analizar lo de aqui \(inputSearch.frame)")
-        
-//        inputSearch.frame = inputSearch.frame.size.height
-        
-//        inputSearch.
-        
-        
-//        self.tabBarItem = UITabBarItem(title: "AEa", image: nil, tag: 1)
         
         
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension UIViewController: UICollectionViewDataSource{
+    
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
-    */
-
+    
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrEtiquetasTotales.count
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("Que era el index path? \(indexPath)")
+    }
+    
+    
+    
+    
+    
 }
