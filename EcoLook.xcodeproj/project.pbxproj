@@ -16,6 +16,8 @@
 		1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E1285BEA87008F84CA /* Assets.xcassets */; };
 		1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E3285BEA87008F84CA /* LaunchScreen.storyboard */; };
 		1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FA70A692865394700BDB740 /* Playball-Regular.ttf */; };
+		1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */; };
+		1FAC454E2868A6BB0070ECAC /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
@@ -33,6 +35,8 @@
 		1F46D3E4285BEA87008F84CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F46D3E6285BEA87008F84CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA70A692865394700BDB740 /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
+		1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 		1F8614F128680EAD00036DE7 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */,
+				1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */,
+				1FAC454E2868A6BB0070ECAC /* TagsCollectionViewCell.xib in Resources */,
 				1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */,
 				1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */,
 				1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */,
@@ -211,6 +218,7 @@
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,
 				1FE05B262867B3B400C3160D /* Tags.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
+				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
 				1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */,
 			);
