@@ -10,12 +10,18 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var idSelectedPost: Int?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let post = getPostSelected(idPost: idSelectedPost)
         
-        print("Llego?? : \(idSelectedPost)")
+        
+        
+        
+        print("recibio el post? : \(post)")
         // Do any additional setup after loading the view.
     }
     
@@ -30,4 +36,16 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
+
+func getPostSelected(idPost: Int?) -> Post{
+    
+    guard let idPostSafe = idPost else{
+        return Post()
+    }
+    
+    let post = arrMockPosts.filter( {$0.idPublicacion == idPostSafe} )
+    
+    return post[0]
+    
 }

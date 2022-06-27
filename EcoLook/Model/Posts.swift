@@ -20,6 +20,20 @@ struct Post {
     let idUsuario: Int
     let estado: Int
     
+    init (){
+        
+        self.idPublicacion = 0
+        self.titulo = "Sin Titulo"
+        self.descripcion = "Sin Desc"
+        self.nivelRiesgo = 0
+        self.latitud = nil
+        self.longitud = nil
+        self.imagen = nil
+        self.fecha = "Error"
+        self.idUsuario = 0
+        self.estado = 0
+        
+    }
     
     init (idPublicacion: Int, titulo: String, descripcion: String, nivelRiesgo: Int, fecha: String, idUsuario: Int){
         
