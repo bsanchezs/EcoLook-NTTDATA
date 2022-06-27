@@ -13,7 +13,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var buttonNewPost: UIButton!
     @IBOutlet weak var inputSearch: UITextField!
     @IBOutlet weak var sliderTags: UICollectionView!
-//    ----------------------------------------
+    @IBOutlet weak var tableViewPostsCards: UITableView!
+    
+    //    ----------------------------------------
     
     
     
@@ -29,13 +31,14 @@ class HomeViewController: UIViewController {
         buttonNewPost.tintColor = ThemeColors.verdePrimary
         
         inputSearch.backgroundColor = ThemeColors.verdeInput
-        
         inputSearch.borderStyle = .none
         
         sliderTags.backgroundColor = ThemeColors.verdeBackground
-        
         sliderTags.dataSource = self
         sliderTags.register(UINib(nibName: "TagsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCellTag")
+        
+        tableViewPostsCards.separatorStyle = .none
+        tableViewPostsCards.backgroundColor = ThemeColors.verdeBackground
         
         
         

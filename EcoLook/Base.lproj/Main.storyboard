@@ -108,15 +108,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-Nd-ZAR">
+                                <rect key="frame" x="20" y="220" width="374" height="593"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQE-Uk-zCp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zxn-CN-Kyb" firstAttribute="top" secondItem="fQE-Uk-zCp" secondAttribute="top" constant="5" id="1T4-O9-EON"/>
                             <constraint firstItem="fl8-WN-JSs" firstAttribute="centerX" secondItem="KRI-Tg-QM1" secondAttribute="centerX" id="BQE-y1-eLG"/>
+                            <constraint firstItem="aA8-Nd-ZAR" firstAttribute="bottom" secondItem="fQE-Uk-zCp" secondAttribute="bottom" id="QzE-ZI-gpW"/>
+                            <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="aA8-Nd-ZAR" secondAttribute="trailing" constant="20" id="Ro8-iT-Uqn"/>
                             <constraint firstItem="aAR-xc-m94" firstAttribute="leading" secondItem="fQE-Uk-zCp" secondAttribute="leading" constant="20" id="c9v-g4-DLg"/>
                             <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="Zxn-CN-Kyb" secondAttribute="trailing" constant="20" id="dVM-Le-gaU"/>
                             <constraint firstItem="ddT-XH-pTS" firstAttribute="top" secondItem="fl8-WN-JSs" secondAttribute="bottom" constant="13" id="dsY-7S-jK6"/>
+                            <constraint firstItem="aA8-Nd-ZAR" firstAttribute="top" secondItem="aAR-xc-m94" secondAttribute="bottom" constant="8" symbolic="YES" id="eTJ-av-dyy"/>
+                            <constraint firstItem="aA8-Nd-ZAR" firstAttribute="leading" secondItem="fQE-Uk-zCp" secondAttribute="leading" constant="20" id="fc6-fa-Pnb"/>
                             <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="aAR-xc-m94" secondAttribute="trailing" constant="20" id="fcj-h6-OUy"/>
                             <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="ddT-XH-pTS" secondAttribute="trailing" constant="20" id="fgN-rP-WJC"/>
                             <constraint firstItem="aAR-xc-m94" firstAttribute="top" secondItem="ddT-XH-pTS" secondAttribute="bottom" constant="8" symbolic="YES" id="nDg-OD-hez"/>
@@ -130,6 +138,7 @@
                         <outlet property="inputSearch" destination="ddT-XH-pTS" id="Dgj-sZ-3DK"/>
                         <outlet property="labelTitle" destination="fl8-WN-JSs" id="UqB-a0-8bl"/>
                         <outlet property="sliderTags" destination="aAR-xc-m94" id="g1m-1K-YGF"/>
+                        <outlet property="tableViewPostsCards" destination="aA8-Nd-ZAR" id="D63-e4-3l5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXQ-H1-BPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
