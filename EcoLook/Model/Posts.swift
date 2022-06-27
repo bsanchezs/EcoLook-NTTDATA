@@ -48,7 +48,7 @@ struct Post {
 }
 
 
-let arrayMockPosts = [
+let arrMockPosts = [
 
     Post(idPublicacion: 1, titulo: "Publicacion 1", descripcion: "Primera descripcion", nivelRiesgo: 3, fecha: "10/02/2021", idUsuario: 1),
     Post(idPublicacion: 2, titulo: "Publicacion 2", descripcion: "Segunda descripcion", nivelRiesgo: 1, fecha: "11/02/2021", idUsuario: 1),
