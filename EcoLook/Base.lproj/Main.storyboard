@@ -140,7 +140,7 @@
                         <outlet property="labelTitle" destination="fl8-WN-JSs" id="UqB-a0-8bl"/>
                         <outlet property="sliderTags" destination="aAR-xc-m94" id="g1m-1K-YGF"/>
                         <outlet property="tableViewPostsCards" destination="aA8-Nd-ZAR" id="D63-e4-3l5"/>
-                        <segue destination="hvi-A6-xZM" kind="presentation" id="hjC-n4-BNL"/>
+                        <segue destination="hvi-A6-xZM" kind="presentation" identifier="homeToDetailSegue" id="hjC-n4-BNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXQ-H1-BPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="528" y="-126"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="fW7-1m-5e0">
             <objects>
-                <viewController id="hvi-A6-xZM" sceneMemberID="viewController">
+                <viewController id="hvi-A6-xZM" customClass="DetailViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bzd-77-IeJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

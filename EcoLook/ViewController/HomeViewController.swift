@@ -49,6 +49,28 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        print("Should perform: \(identifier)")
+//        return false
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //let segueId = segue.identifier
+        let buttonPressed = sender as? UIButton
+        
+        let idPostToSend = buttonPressed?.tag
+        
+        
+        let viewControllerDestination = segue.destination as! DetailViewController
+        viewControllerDestination.idSelectedPost = idPostToSend
+        
+        //print("El segue del prepare es: \(segueId!)")
+        
+        
+        
+    }
+    
 
 
 }
@@ -151,9 +173,17 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: ButtonGoViewCellDelegate{
     
     
-    
-    
     func goToDetail(btnGo: UIButton) {
+        
+//        let storyboard = UIStoryboard(name:"Main", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        viewController.idSelectedPost = btnGo.tag
+        
+        
+        performSegue(withIdentifier: "homeToDetailSegue", sender: btnGo)
+        
+        
+        
         print("Esto lo manda para alla")
     }
     
