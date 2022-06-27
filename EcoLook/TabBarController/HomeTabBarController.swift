@@ -12,16 +12,11 @@ class HomeTabBarController: UITabBarController {
     @IBOutlet weak var tabBarHome: UITabBar!
     private var count = 0
     var tabBarItemHome: UITabBarItem?
-//    let tabBarAppareance = UITabBarAppearance()
-//
-//    tabBarAppareance.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tabBarHome.backgroundColor = ThemeColors.verdePrimary
-//        tabBarHome.tintColor = UIColor.white
-        
         
         for item in arrTabBarOptions {
             

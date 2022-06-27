@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
         sliderTags.register(UINib(nibName: "TagsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCellTag")
         
         tableViewPostsCards.separatorStyle = .none
+        tableViewPostsCards.showsVerticalScrollIndicator = false
         tableViewPostsCards.backgroundColor = ThemeColors.verdeBackground
         tableViewPostsCards.dataSource = self
         tableViewPostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
