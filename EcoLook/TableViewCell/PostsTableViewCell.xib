@@ -50,7 +50,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpy-C3-mhB">
                                 <rect key="frame" x="294.5" y="183" width="45.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" image="chevron.right.2" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="chevron.right.2" catalog="system">
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="btnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="F7e-yF-o5r"/>
                                 </connections>

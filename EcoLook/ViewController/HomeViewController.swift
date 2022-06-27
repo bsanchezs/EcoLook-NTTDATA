@@ -137,7 +137,7 @@ extension HomeViewController: UITableViewDataSource{
         cell?.labelTitleCard.text = arrMockPosts[indexPath.row].titulo
         cell?.labelShortDescCard.text = arrMockPosts[indexPath.row].getShortDescription(descripcion: arrMockPosts[indexPath.row].descripcion)
         cell?.btnGoDetailCard.tag = arrMockPosts[indexPath.row].idPublicacion
-        
+        cell?.selectionStyle = .none
         cell?.delegate = self
         
         return cell!

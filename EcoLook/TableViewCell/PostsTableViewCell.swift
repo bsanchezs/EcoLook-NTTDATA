@@ -33,8 +33,9 @@ class PostsTableViewCell: UITableViewCell {
         
         imageViewCard.image = UIImage(named: "Contaminacion")
         imageViewCard.layer.cornerRadius = 15
+        imageViewCard.contentMode = .scaleAspectFill
         
-        btnGoDetailCard.backgroundColor = .white
+//        btnGoDetailCard.backgroundColor = .system
         btnGoDetailCard.tintColor = ThemeColors.verdePrimary
         
         
