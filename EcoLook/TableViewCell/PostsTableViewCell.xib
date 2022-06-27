@@ -42,7 +42,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrW-bg-3n2">
                                 <rect key="frame" x="8" y="215" width="332" height="1"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="iNH-Hp-3Mg"/>
                                 </constraints>
@@ -51,6 +51,9 @@
                                 <rect key="frame" x="294.5" y="183" width="45.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="chevron.right.2" catalog="system"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="F7e-yF-o5r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfg-RS-oD0">
                                 <rect key="frame" x="8" y="220" width="332" height="25"/>
@@ -91,6 +94,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnGoDetailCard" destination="Gpy-C3-mhB" id="Eeo-lS-3oO"/>
+                <outlet property="imageViewCard" destination="8rv-Sj-PAS" id="bSZ-Ao-TCS"/>
+                <outlet property="labelShortDescCard" destination="Pfg-RS-oD0" id="7zn-67-Le9"/>
+                <outlet property="labelTitleCard" destination="byk-Sg-HUP" id="F9Y-Ui-vbU"/>
                 <outlet property="viewCard" destination="cr7-D2-4Wn" id="UtQ-kD-JQA"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="154.6875"/>
@@ -98,8 +105,8 @@
     </objects>
     <resources>
         <image name="chevron.right.2" catalog="system" width="128" height="105"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
