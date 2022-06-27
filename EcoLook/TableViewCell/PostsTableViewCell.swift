@@ -8,9 +8,9 @@
 import UIKit
 
 
-protocol BtnGoViewCellDelegate: AnyObject{
+protocol ButtonGoViewCellDelegate: AnyObject{
     
-    func goToDetail()
+    func goToDetail(btnGo: UIButton)
     
 }
 
@@ -21,7 +21,7 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var btnGoDetailCard: UIButton!
     @IBOutlet weak var labelShortDescCard: UILabel!
     
-    weak var delegate: BtnGoViewCellDelegate?
+    weak var delegate: ButtonGoViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,7 +53,7 @@ class PostsTableViewCell: UITableViewCell {
     
     @IBAction func btnAction(_ sender: UIButton) {
         
-        delegate?.goToDetail()
+        delegate?.goToDetail(btnGo: btnGoDetailCard)
         
     }
 }

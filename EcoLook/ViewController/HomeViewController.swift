@@ -39,6 +39,8 @@ class HomeViewController: UIViewController {
         
         tableViewPostsCards.separatorStyle = .none
         tableViewPostsCards.backgroundColor = ThemeColors.verdeBackground
+        tableViewPostsCards.dataSource = self
+        tableViewPostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
         
         
         
@@ -50,7 +52,7 @@ class HomeViewController: UIViewController {
 
 }
 
-extension UIViewController: UICollectionViewDataSource{
+extension HomeViewController: UICollectionViewDataSource{
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -80,14 +82,10 @@ extension UIViewController: UICollectionViewDataSource{
 }
 
 
-extension UIViewController: ButtonViewCollectionCellDelegate{
+extension HomeViewController: ButtonViewCollectionCellDelegate{
     
     
     func btnHasPressed(btnPressed: UIButton) {
-        
-        
-        
-        let tagButtonPressed = btnPressed.tag
         
         guard let nameButtonPressed = btnPressed.currentTitle else {
             return
@@ -118,5 +116,46 @@ extension UIViewController: ButtonViewCollectionCellDelegate{
         
         
     }
+    
+}
+
+extension HomeViewController: UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayMockPosts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customPostsCardsCell", for: indexPath) as? PostsTableViewCell
+        
+        cell?.labelTitleCard.text = arrayMockPosts[indexPath.row].titulo
+        cell?.labelShortDescCard.text = arrayMockPosts[indexPath.row].getShortDescription(descripcion: arrayMockPosts[indexPath.row].descripcion)
+        cell?.btnGoDetailCard.tag = arrayMockPosts[indexPath.row].idPublicacion
+        
+        cell?.delegate = self
+        
+        return cell!
+        
+    }
+    
+    
+}
+
+extension HomeViewController: ButtonGoViewCellDelegate{
+    
+    
+    
+    
+    func goToDetail(btnGo: UIButton) {
+        print("Esto lo manda para alla")
+    }
+    
+    
     
 }
