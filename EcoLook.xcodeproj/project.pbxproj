@@ -19,6 +19,8 @@
 		1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */; };
 		1FAC454E2868A6BB0070ECAC /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */; };
 		1FAC4550286934F10070ECAC /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC454F286934F10070ECAC /* Posts.swift */; };
+		1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC455228693E1A0070ECAC /* PostsTableViewCell.swift */; };
+		1FAC455528693E1A0070ECAC /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
@@ -39,6 +41,8 @@
 		1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
 		1FAC454F286934F10070ECAC /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		1FAC455228693E1A0070ECAC /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		1F46D3D7285BEA87008F84CA /* EcoLook */ = {
 			isa = PBXGroup;
 			children = (
+				1FAC455128693DD40070ECAC /* TableViewCell */,
 				1F8614F128680EAD00036DE7 /* CollectionViewCell */,
 				1F05812E286584FB008D95C4 /* TabBarController */,
 				1F15428E28651B6400FC48F4 /* fonts */,
@@ -140,6 +145,15 @@
 				1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1FAC455128693DD40070ECAC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1FAC455228693E1A0070ECAC /* PostsTableViewCell.swift */,
+				1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +220,7 @@
 				1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */,
 				1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */,
 				1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */,
+				1FAC455528693E1A0070ECAC /* PostsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +238,7 @@
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
+				1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */,
 				1FAC4550286934F10070ECAC /* Posts.swift in Sources */,
 				1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */,
 			);
