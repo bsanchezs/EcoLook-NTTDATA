@@ -55,16 +55,6 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 func getPostSelected(idPost: Int?) -> Post{
@@ -76,5 +66,19 @@ func getPostSelected(idPost: Int?) -> Post{
     let post = arrMockPosts.filter( {$0.idPublicacion == idPostSafe} )
     
     return post[0]
+    
+}
+
+extension DetailViewController: UICollectionViewDataSource{
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
     
 }
