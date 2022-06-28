@@ -57,8 +57,9 @@ class DetailViewController: UIViewController {
         labelDatePostDetail.text = post?.fecha
         labelDescriptionPostDetail.text = post?.descripcion
         
+        let icon = getNameIconByRiskLevel(riskLevel: post?.nivelRiesgo)
         
-        
+        imageViewRiskLevel.image = UIImage(systemName: icon)
         
         
         
@@ -83,6 +84,14 @@ func getPostSelected(idPost: Int?) -> Post{
     
 }
 
+func getNameIconByRiskLevel(riskLevel: Int?) -> String {
+    
+    guard let risklvl = riskLevel else{
+        return "0.square.fill"
+    }
+    
+    return String(risklvl)+".square.fill"
+}
 
 extension DetailViewController: UICollectionViewDataSource{
     
