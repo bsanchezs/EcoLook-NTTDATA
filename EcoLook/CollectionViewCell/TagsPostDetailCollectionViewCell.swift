@@ -17,6 +17,9 @@ class TagsPostDetailCollectionViewCell: UICollectionViewCell {
         
         self.backgroundColor = ThemeColors.verdePrimary
         
+        self.layer.cornerRadius = 10
+        
+        
     }
 
 }

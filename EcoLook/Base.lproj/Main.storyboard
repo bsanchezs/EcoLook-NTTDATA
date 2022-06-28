@@ -391,6 +391,7 @@
                     <navigationItem key="navigationItem" id="g1B-t9-1zN"/>
                     <connections>
                         <outlet property="buttonFavoritePostDetail" destination="HsU-ob-89P" id="fp0-Mw-a18"/>
+                        <outlet property="collectionViewTagsPostDetail" destination="065-eT-pZ7" id="fGn-tf-j2t"/>
                         <outlet property="imageViewDetail" destination="ufU-VB-odZ" id="F1x-Y4-i8L"/>
                         <outlet property="imageViewRiskLevel" destination="Vf2-6r-LiM" id="7vO-0V-Lb6"/>
                         <outlet property="labelDatePostDetail" destination="7N4-R3-sp7" id="X4R-JG-Z8x"/>

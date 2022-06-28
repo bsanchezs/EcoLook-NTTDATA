@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var webViewPostDetail: WKWebView!
     @IBOutlet weak var labelDirectionPostDetail: UILabel!
     @IBOutlet weak var imageViewRiskLevel: UIImageView!
+    @IBOutlet weak var collectionViewTagsPostDetail: UICollectionView!
     
     
     var idSelectedPost: Int?
@@ -46,6 +47,9 @@ class DetailViewController: UIViewController {
         viewDetail.clipsToBounds = true
         viewDetail.layer.cornerRadius = 25
         viewDetail.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        collectionViewTagsPostDetail.dataSource = self
+        
         
         
         
@@ -73,7 +77,7 @@ func getPostSelected(idPost: Int?) -> Post{
 extension DetailViewController: UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -84,6 +88,15 @@ extension DetailViewController: UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTagDetail", for: indexPath) as? TagsPostDetailCollectionViewCell
         
+        
+        cell?.labelTagPostDetail.text = post?.arrayEtiquetas?[indexPath.row].name
+        
+        
+        guard let cellDesempaquetado = cell else{
+            return UICollectionViewCell()
+        }
+        
+        return cellDesempaquetado
         
         
     }
