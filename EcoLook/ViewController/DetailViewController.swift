@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
         
         post = getPostSelected(idPost: idSelectedPost)
         
-        print("recibio el post? : \(post)")
+//        print("recibio el post? : \(post)")
         
         imageViewDetail.image = UIImage(named: "Contaminacion")
         imageViewDetail.contentMode = .scaleAspectFill
@@ -48,7 +48,16 @@ class DetailViewController: UIViewController {
         viewDetail.layer.cornerRadius = 25
         viewDetail.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
+        // --------------
         collectionViewTagsPostDetail.dataSource = self
+        // --------------
+        
+        
+        labelTitlePostDetail.text = post?.titulo
+        labelDatePostDetail.text = post?.fecha
+        labelDescriptionPostDetail.text = post?.descripcion
+        
+        
         
         
         
@@ -73,6 +82,7 @@ func getPostSelected(idPost: Int?) -> Post{
     return post[0]
     
 }
+
 
 extension DetailViewController: UICollectionViewDataSource{
     
