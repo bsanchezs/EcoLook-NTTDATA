@@ -14,6 +14,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageViewDetail: UIImageView!
     @IBOutlet weak var scrollDetailView: UIScrollView!
     @IBOutlet weak var viewDetail: UIView!
+    @IBOutlet weak var labelTitlePostDetail: UILabel!
+    @IBOutlet weak var labelDatePostDetail: UILabel!
+    @IBOutlet weak var buttonFavoritePostDetail: UIButton!
     
     
     var idSelectedPost: Int?
