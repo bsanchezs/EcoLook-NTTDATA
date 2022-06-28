@@ -197,7 +197,50 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-D5-3h0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="567"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v51-Cz-rAk">
+                                                <rect key="frame" x="23" y="8" width="368" height="28"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N4-R3-sp7">
+                                                <rect key="frame" x="23" y="42" width="324" height="18"/>
+                                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="15"/>
+                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vto-Bs-mPS">
+                                                <rect key="frame" x="23" y="71" width="368" height="1"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="hvc-Uh-xr0"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsU-ob-89P">
+                                                <rect key="frame" x="367" y="39" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="HAy-ff-QCB"/>
+                                                    <constraint firstAttribute="height" constant="24" id="ryj-CW-fyn"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="vto-Bs-mPS" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="AxZ-ox-Taf"/>
+                                            <constraint firstAttribute="trailing" secondItem="vto-Bs-mPS" secondAttribute="trailing" constant="23" id="BvA-7Z-1cB"/>
+                                            <constraint firstItem="HsU-ob-89P" firstAttribute="top" secondItem="v51-Cz-rAk" secondAttribute="bottom" constant="3" id="Hh3-Kg-OEf"/>
+                                            <constraint firstItem="v51-Cz-rAk" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="Iaa-Q6-bpJ"/>
+                                            <constraint firstItem="HsU-ob-89P" firstAttribute="leading" secondItem="7N4-R3-sp7" secondAttribute="trailing" constant="20" id="Mjo-BC-uEi"/>
+                                            <constraint firstItem="7N4-R3-sp7" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="VY3-UC-bGl"/>
+                                            <constraint firstAttribute="trailing" secondItem="HsU-ob-89P" secondAttribute="trailing" constant="23" id="VYQ-st-eD4"/>
+                                            <constraint firstAttribute="trailing" secondItem="v51-Cz-rAk" secondAttribute="trailing" constant="23" id="YQb-ot-hDZ"/>
+                                            <constraint firstItem="v51-Cz-rAk" firstAttribute="top" secondItem="qXW-D5-3h0" secondAttribute="top" constant="8" id="lzm-3B-5Ql"/>
+                                            <constraint firstItem="7N4-R3-sp7" firstAttribute="top" secondItem="v51-Cz-rAk" secondAttribute="bottom" constant="6" id="u1l-hc-EA5"/>
+                                            <constraint firstItem="vto-Bs-mPS" firstAttribute="top" secondItem="HsU-ob-89P" secondAttribute="bottom" constant="8" symbolic="YES" id="wWJ-Y0-O49"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -236,8 +279,15 @@
     </scenes>
     <resources>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
