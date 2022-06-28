@@ -228,20 +228,77 @@
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-QV-Kjm">
+                                                <rect key="frame" x="23" y="80" width="91" height="17"/>
+                                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWd-MA-jrS">
+                                                <rect key="frame" x="23" y="105" width="368" height="12"/>
+                                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="10"/>
+                                                <color key="textColor" systemColor="systemGray3Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localizacion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72M-iS-dW1">
+                                                <rect key="frame" x="23" y="129" width="368" height="17"/>
+                                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kue-gT-K3f">
+                                                <rect key="frame" x="23" y="156" width="368" height="90"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="DXZ-p2-Du2"/>
+                                                </constraints>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-vI-fDn">
+                                                <rect key="frame" x="23" y="254" width="368" height="12"/>
+                                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="10"/>
+                                                <color key="textColor" systemColor="systemGray3Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nivel de riesgo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fad-9U-vWr">
+                                                <rect key="frame" x="23" y="274" width="106" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="EWd-MA-jrS" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="3GK-yo-PhD"/>
                                             <constraint firstItem="vto-Bs-mPS" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="AxZ-ox-Taf"/>
                                             <constraint firstAttribute="trailing" secondItem="vto-Bs-mPS" secondAttribute="trailing" constant="23" id="BvA-7Z-1cB"/>
+                                            <constraint firstItem="e1G-vI-fDn" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="CnX-dZ-Vsc"/>
+                                            <constraint firstAttribute="trailing" secondItem="72M-iS-dW1" secondAttribute="trailing" constant="23" id="EIS-je-KhD"/>
+                                            <constraint firstAttribute="trailing" secondItem="kue-gT-K3f" secondAttribute="trailing" constant="23" id="EYk-dx-38L"/>
                                             <constraint firstItem="HsU-ob-89P" firstAttribute="top" secondItem="v51-Cz-rAk" secondAttribute="bottom" constant="3" id="Hh3-Kg-OEf"/>
+                                            <constraint firstItem="OLK-QV-Kjm" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="HlI-Zt-BRe"/>
                                             <constraint firstItem="v51-Cz-rAk" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="Iaa-Q6-bpJ"/>
                                             <constraint firstItem="HsU-ob-89P" firstAttribute="leading" secondItem="7N4-R3-sp7" secondAttribute="trailing" constant="20" id="Mjo-BC-uEi"/>
                                             <constraint firstItem="7N4-R3-sp7" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="VY3-UC-bGl"/>
                                             <constraint firstAttribute="trailing" secondItem="HsU-ob-89P" secondAttribute="trailing" constant="23" id="VYQ-st-eD4"/>
+                                            <constraint firstItem="kue-gT-K3f" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="YNV-Bn-OvV"/>
                                             <constraint firstAttribute="trailing" secondItem="v51-Cz-rAk" secondAttribute="trailing" constant="23" id="YQb-ot-hDZ"/>
+                                            <constraint firstItem="72M-iS-dW1" firstAttribute="top" secondItem="EWd-MA-jrS" secondAttribute="bottom" constant="12" id="ZEf-7L-lJ9"/>
+                                            <constraint firstAttribute="trailing" secondItem="OLK-QV-Kjm" secondAttribute="trailing" constant="300" id="aN1-6w-E4F"/>
+                                            <constraint firstItem="kue-gT-K3f" firstAttribute="top" secondItem="72M-iS-dW1" secondAttribute="bottom" constant="10" id="awx-C2-gV0"/>
+                                            <constraint firstItem="OLK-QV-Kjm" firstAttribute="top" secondItem="vto-Bs-mPS" secondAttribute="bottom" constant="8" symbolic="YES" id="dtD-q8-4b9"/>
+                                            <constraint firstAttribute="trailing" secondItem="EWd-MA-jrS" secondAttribute="trailing" constant="23" id="evz-VO-pJm"/>
                                             <constraint firstItem="v51-Cz-rAk" firstAttribute="top" secondItem="qXW-D5-3h0" secondAttribute="top" constant="8" id="lzm-3B-5Ql"/>
+                                            <constraint firstItem="72M-iS-dW1" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="nZJ-mI-d3s"/>
+                                            <constraint firstItem="EWd-MA-jrS" firstAttribute="top" secondItem="OLK-QV-Kjm" secondAttribute="bottom" constant="8" symbolic="YES" id="pha-6M-6km"/>
+                                            <constraint firstAttribute="trailing" secondItem="e1G-vI-fDn" secondAttribute="trailing" constant="23" id="pv6-oV-Ljd"/>
                                             <constraint firstItem="7N4-R3-sp7" firstAttribute="top" secondItem="v51-Cz-rAk" secondAttribute="bottom" constant="6" id="u1l-hc-EA5"/>
                                             <constraint firstItem="vto-Bs-mPS" firstAttribute="top" secondItem="HsU-ob-89P" secondAttribute="bottom" constant="8" symbolic="YES" id="wWJ-Y0-O49"/>
+                                            <constraint firstItem="e1G-vI-fDn" firstAttribute="top" secondItem="kue-gT-K3f" secondAttribute="bottom" constant="8" id="yEm-W2-cT6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -272,9 +329,12 @@
                         <outlet property="buttonFavoritePostDetail" destination="HsU-ob-89P" id="fp0-Mw-a18"/>
                         <outlet property="imageViewDetail" destination="ufU-VB-odZ" id="F1x-Y4-i8L"/>
                         <outlet property="labelDatePostDetail" destination="7N4-R3-sp7" id="X4R-JG-Z8x"/>
+                        <outlet property="labelDescriptionPostDetail" destination="EWd-MA-jrS" id="Hiy-nt-yW7"/>
+                        <outlet property="labelDirectionPostDetail" destination="e1G-vI-fDn" id="bks-2l-jNu"/>
                         <outlet property="labelTitlePostDetail" destination="v51-Cz-rAk" id="Xg5-fg-xBI"/>
                         <outlet property="scrollDetailView" destination="8Qt-BW-aGW" id="kPQ-Kc-YGq"/>
                         <outlet property="viewDetail" destination="qXW-D5-3h0" id="0Ot-Qw-xJ5"/>
+                        <outlet property="webViewPostDetail" destination="kue-gT-K3f" id="6KF-lk-azE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-Lw-MnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,6 +353,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

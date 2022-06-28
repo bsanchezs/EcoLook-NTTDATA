@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
     
@@ -17,6 +18,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var labelTitlePostDetail: UILabel!
     @IBOutlet weak var labelDatePostDetail: UILabel!
     @IBOutlet weak var buttonFavoritePostDetail: UIButton!
+    @IBOutlet weak var labelDescriptionPostDetail: UILabel!
+    @IBOutlet weak var webViewPostDetail: WKWebView!
+    @IBOutlet weak var labelDirectionPostDetail: UILabel!
     
     
     var idSelectedPost: Int?
