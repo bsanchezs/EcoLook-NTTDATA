@@ -93,7 +93,6 @@ func getUrlGoogleMapsByLatLng(lat: Double?, lng: Double?) -> String {
         return "https://www.google.com/maps/@"+String(latSafe)+","+String(lngSafe)+",18.6z"
         
     }else{
-        
         return "https://www.google.com/maps/@-8.1114925,-79.0287559,18.6z"
     }
     
