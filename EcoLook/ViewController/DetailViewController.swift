@@ -21,6 +21,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var labelDescriptionPostDetail: UILabel!
     @IBOutlet weak var webViewPostDetail: WKWebView!
     @IBOutlet weak var labelDirectionPostDetail: UILabel!
+    @IBOutlet weak var imageViewRiskLevel: UIImageView!
     
     
     var idSelectedPost: Int?
