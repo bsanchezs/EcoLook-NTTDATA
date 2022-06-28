@@ -25,11 +25,12 @@ class DetailViewController: UIViewController {
     
     
     var idSelectedPost: Int?
+    var post: Post?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let post = getPostSelected(idPost: idSelectedPost)
+        post = getPostSelected(idPost: idSelectedPost)
         
         print("recibio el post? : \(post)")
         
@@ -71,14 +72,20 @@ func getPostSelected(idPost: Int?) -> Post{
 
 extension DetailViewController: UICollectionViewDataSource{
     
-    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return post?.arrayEtiquetas?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTagDetail", for: indexPath) as? TagsPostDetailCollectionViewCell
+        
+        
+        
     }
     
 }
