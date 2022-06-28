@@ -49,18 +49,19 @@ class DetailViewController: UIViewController {
         viewDetail.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
         // --------------
-        collectionViewTagsPostDetail.dataSource = self
-        // --------------
-        
         
         labelTitlePostDetail.text = post?.titulo
         labelDatePostDetail.text = post?.fecha
         labelDescriptionPostDetail.text = post?.descripcion
+        labelDirectionPostDetail.text = post?.direccion
+        
+        let googleMapsEmbed = getUrlGoogleMapsByLatLng(lat: post?.latitud, lng: post?.longitud)
+        webViewPostDetail.load(URLRequest(url: URL(string: googleMapsEmbed)!))
         
         let icon = getNameIconByRiskLevel(riskLevel: post?.nivelRiesgo)
-        
         imageViewRiskLevel.image = UIImage(systemName: icon)
         
+        collectionViewTagsPostDetail.dataSource = self
         
         
         
@@ -83,6 +84,24 @@ func getPostSelected(idPost: Int?) -> Post{
     return post[0]
     
 }
+
+func getUrlGoogleMapsByLatLng(lat: Double?, lng: Double?) -> String {
+    
+    
+    if let latSafe = lat, let lngSafe = lng {
+        
+        return "https://www.google.com/maps/@"+String(latSafe)+","+String(lngSafe)+",18.6z"
+        
+    }else{
+        
+        return "https://www.google.com/maps/@-8.1114925,-79.0287559,18.6z"
+    }
+    
+    
+    
+    
+}
+
 
 func getNameIconByRiskLevel(riskLevel: Int?) -> String {
     
