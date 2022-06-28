@@ -9,20 +9,41 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    
+    
+    @IBOutlet weak var imageViewDetail: UIImageView!
+    @IBOutlet weak var scrollDetailView: UIScrollView!
+    @IBOutlet weak var viewDetail: UIView!
+    
+    
     var idSelectedPost: Int?
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let post = getPostSelected(idPost: idSelectedPost)
         
-        
-        
-        
         print("recibio el post? : \(post)")
-        // Do any additional setup after loading the view.
+        
+        imageViewDetail.image = UIImage(named: "Contaminacion")
+        imageViewDetail.contentMode = .scaleAspectFill
+        
+        
+        // Redondear el scrollView y el view
+        scrollDetailView.clipsToBounds = true
+        scrollDetailView.layer.cornerRadius = 25
+        scrollDetailView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        viewDetail.clipsToBounds = true
+        viewDetail.layer.cornerRadius = 25
+        viewDetail.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        
+        
+        
+        
+        
+        
     }
     
 
