@@ -477,6 +477,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-5F-Df6">
+                                <rect key="frame" x="27" y="337" width="360" height="122"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="Bgc-rP-Z5l"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wI8-O1-feE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -490,6 +500,9 @@
                             <constraint firstItem="Dgw-2s-uK3" firstAttribute="leading" secondItem="Moc-A9-L9I" secondAttribute="leading" constant="117" id="LPZ-fe-rkw"/>
                             <constraint firstItem="q0m-s8-SFs" firstAttribute="top" secondItem="wI8-O1-feE" secondAttribute="top" id="LdW-lI-4Hn"/>
                             <constraint firstItem="Moc-A9-L9I" firstAttribute="top" secondItem="q0m-s8-SFs" secondAttribute="bottom" constant="8" symbolic="YES" id="M7e-D2-tJJ"/>
+                            <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="ieV-5F-Df6" secondAttribute="trailing" constant="27" id="NVa-9h-Lah"/>
+                            <constraint firstItem="ieV-5F-Df6" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="27" id="RQm-vK-VI4"/>
+                            <constraint firstItem="ieV-5F-Df6" firstAttribute="top" secondItem="faf-f3-dXt" secondAttribute="bottom" constant="15" id="TG4-RK-oB7"/>
                             <constraint firstItem="Moc-A9-L9I" firstAttribute="trailing" secondItem="Dgw-2s-uK3" secondAttribute="trailing" constant="116" id="W6K-WG-n2g"/>
                             <constraint firstItem="Kda-SQ-gra" firstAttribute="top" secondItem="Moc-A9-L9I" secondAttribute="bottom" constant="18" id="cOE-8A-9fT"/>
                             <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="HBI-I5-3gZ" secondAttribute="trailing" constant="27" id="dq9-YB-Jmk"/>
@@ -510,6 +523,7 @@
                         <outlet property="inputDirectionNewPost" destination="faf-f3-dXt" id="kdZ-Yc-FDp"/>
                         <outlet property="inputTitleNewPost" destination="Kda-SQ-gra" id="4zA-zU-hv6"/>
                         <outlet property="labelTitleHeader" destination="q0m-s8-SFs" id="7bV-HA-UUd"/>
+                        <outlet property="textViewDescriptionNewPost" destination="ieV-5F-Df6" id="vmE-vQ-Hyx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uC6-eq-H3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -524,6 +538,9 @@
         <image name="location" catalog="system" width="128" height="118"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
