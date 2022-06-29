@@ -17,6 +17,7 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var inputDirectionNewPost: UITextField!
     @IBOutlet weak var buttonDirectionNewPost: UIButton!
     @IBOutlet weak var textViewDescriptionNewPost: UITextView!
+    @IBOutlet weak var sliderRiskLevelNewPost: UISlider!
     
     
     override func viewDidLoad() {
@@ -30,12 +31,12 @@ class NewPostViewController: UIViewController {
         imageViewPhotoNewPost.layer.cornerRadius = 15
         
         buttonDirectionNewPost.tintColor = ThemeColors.verdePrimary
-//        inputDirectionNewPost.layer.cornerRadius = 15
         textViewDescriptionNewPost.backgroundColor = .white
         textViewDescriptionNewPost.layer.borderWidth = 1
         textViewDescriptionNewPost.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 0.08)
         textViewDescriptionNewPost.layer.cornerRadius = 15
-//        inputDescriptionNewPost.backgroundColor = .white
+        sliderRiskLevelNewPost.thumbTintColor = ThemeColors.verdePrimary
+        sliderRiskLevelNewPost.tintColor = ThemeColors.verdePrimary
         
 
         
