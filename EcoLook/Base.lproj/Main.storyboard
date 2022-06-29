@@ -436,6 +436,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="actionButtonGoBackHeader:" destination="uM2-cT-7ec" eventType="touchUpInside" id="CPa-FX-4EZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wI8-O1-feE"/>

@@ -17,10 +17,14 @@ class NewPostViewController: UIViewController {
         
         self.view.backgroundColor = ThemeColors.verdeBackground
         labelTitleHeader.tintColor = ThemeColors.verdePrimary
-        
+        buttonGoBackHeader.tintColor = ThemeColors.verdePrimary
         
 
         
+    }
+    @IBAction func actionButtonGoBackHeader(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
     }
     
 
