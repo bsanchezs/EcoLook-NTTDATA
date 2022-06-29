@@ -11,6 +11,8 @@ class NewPostViewController: UIViewController {
 
     @IBOutlet weak var labelTitleHeader: UILabel!
     @IBOutlet weak var buttonGoBackHeader: UIButton!
+    @IBOutlet weak var imageViewPhotoNewPost: UIImageView!
+    @IBOutlet weak var buttonAddPhotoNewPost: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,8 @@ class NewPostViewController: UIViewController {
         self.view.backgroundColor = ThemeColors.verdeBackground
         labelTitleHeader.textColor = ThemeColors.verdePrimary
         buttonGoBackHeader.tintColor = ThemeColors.verdePrimary
+        
+        imageViewPhotoNewPost.layer.cornerRadius = 15
         
 
         

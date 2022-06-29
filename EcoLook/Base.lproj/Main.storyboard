@@ -440,19 +440,45 @@
                                     <action selector="actionButtonGoBackHeader:" destination="uM2-cT-7ec" eventType="touchUpInside" id="CPa-FX-4EZ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Moc-A9-L9I">
+                                <rect key="frame" x="27" y="92" width="360" height="129"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="qMd-i4-gBd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-2s-uK3">
+                                <rect key="frame" x="144" y="147" width="127" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="4gj-50-dQG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Agregar Imagen">
+                                    <imageReference key="image" image="camera.shutter.button" catalog="system" symbolScale="default"/>
+                                    <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wI8-O1-feE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="Moc-A9-L9I" secondAttribute="trailing" constant="27" id="8A0-1S-fXI"/>
                             <constraint firstItem="wFs-Xu-DjC" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="20" id="94x-w4-flz"/>
                             <constraint firstItem="wFs-Xu-DjC" firstAttribute="top" secondItem="wI8-O1-feE" secondAttribute="top" constant="9" id="KV2-uh-M33"/>
+                            <constraint firstItem="Dgw-2s-uK3" firstAttribute="leading" secondItem="Moc-A9-L9I" secondAttribute="leading" constant="117" id="LPZ-fe-rkw"/>
                             <constraint firstItem="q0m-s8-SFs" firstAttribute="top" secondItem="wI8-O1-feE" secondAttribute="top" id="LdW-lI-4Hn"/>
+                            <constraint firstItem="Moc-A9-L9I" firstAttribute="top" secondItem="q0m-s8-SFs" secondAttribute="bottom" constant="8" symbolic="YES" id="M7e-D2-tJJ"/>
+                            <constraint firstItem="Moc-A9-L9I" firstAttribute="trailing" secondItem="Dgw-2s-uK3" secondAttribute="trailing" constant="116" id="W6K-WG-n2g"/>
+                            <constraint firstItem="Moc-A9-L9I" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="27" id="rUq-sb-LId"/>
                             <constraint firstItem="q0m-s8-SFs" firstAttribute="centerX" secondItem="I9l-7M-IZH" secondAttribute="centerX" id="sfg-5u-IeB"/>
+                            <constraint firstItem="Dgw-2s-uK3" firstAttribute="bottom" secondItem="Moc-A9-L9I" secondAttribute="bottom" constant="-26" id="tSG-Lc-Yi6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u4W-j9-Vvn"/>
                     <connections>
+                        <outlet property="buttonAddPhotoNewPost" destination="Dgw-2s-uK3" id="s2Z-Fg-UCE"/>
                         <outlet property="buttonGoBackHeader" destination="wFs-Xu-DjC" id="ULc-Je-p6c"/>
+                        <outlet property="imageViewPhotoNewPost" destination="Moc-A9-L9I" id="yMs-fp-v4k"/>
                         <outlet property="labelTitleHeader" destination="q0m-s8-SFs" id="7bV-HA-UUd"/>
                     </connections>
                 </viewController>
@@ -464,10 +490,14 @@
     <resources>
         <image name="0.square.fill" catalog="system" width="128" height="114"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="camera.shutter.button" catalog="system" width="128" height="109"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
