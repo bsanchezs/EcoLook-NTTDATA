@@ -49,6 +49,17 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    @IBAction func buttonGoNewPost(_ sender: Any) {
+        
+        performSegue(withIdentifier: "homeToNewPostSegue", sender: nil)
+        
+        
+    }
+    
+    
+    
 //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 //        print("Should perform: \(identifier)")
 //        return false

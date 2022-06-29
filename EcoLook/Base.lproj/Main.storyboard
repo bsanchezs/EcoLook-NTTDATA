@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kn-HD-txR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="970"/>
+            <point key="canvasLocation" x="735" y="982"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="zsi-2P-6AW">
@@ -70,6 +70,9 @@
                                     <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGoNewPost:" destination="lxn-er-nkW" eventType="touchUpInside" id="9Xt-k2-6Gt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl8-WN-JSs">
                                 <rect key="frame" x="172.66666666666666" y="44" width="68.666666666666657" height="40"/>
@@ -141,11 +144,12 @@
                         <outlet property="sliderTags" destination="aAR-xc-m94" id="g1m-1K-YGF"/>
                         <outlet property="tableViewPostsCards" destination="aA8-Nd-ZAR" id="D63-e4-3l5"/>
                         <segue destination="hvi-A6-xZM" kind="presentation" identifier="homeToDetailSegue" id="hjC-n4-BNL"/>
+                        <segue destination="uM2-cT-7ec" kind="show" identifier="homeToNewPostSegue" id="Osf-Rk-Pco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXQ-H1-BPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="527.536231884058" y="-834.375"/>
+            <point key="canvasLocation" x="736" y="-708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aRM-yN-T19">
@@ -176,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMh-i2-9xa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="-14"/>
+            <point key="canvasLocation" x="736" y="130"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="fW7-1m-5e0">
@@ -443,6 +447,7 @@
                             <constraint firstItem="q0m-s8-SFs" firstAttribute="centerX" secondItem="I9l-7M-IZH" secondAttribute="centerX" id="sfg-5u-IeB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u4W-j9-Vvn"/>
                     <connections>
                         <outlet property="buttonGoBackHeader" destination="wFs-Xu-DjC" id="ULc-Je-p6c"/>
                         <outlet property="labelTitleHeader" destination="q0m-s8-SFs" id="7bV-HA-UUd"/>
