@@ -14,6 +14,8 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var imageViewPhotoNewPost: UIImageView!
     @IBOutlet weak var buttonAddPhotoNewPost: UIButton!
     @IBOutlet weak var inputTitleNewPost: UITextField!
+    @IBOutlet weak var inputDirectionNewPost: UITextField!
+    @IBOutlet weak var buttonDirectionNewPost: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
