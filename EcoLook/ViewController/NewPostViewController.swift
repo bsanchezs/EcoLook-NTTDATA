@@ -16,7 +16,7 @@ class NewPostViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = ThemeColors.verdeBackground
-        labelTitleHeader.tintColor = ThemeColors.verdePrimary
+        labelTitleHeader.textColor = ThemeColors.verdePrimary
         buttonGoBackHeader.tintColor = ThemeColors.verdePrimary
         
 
