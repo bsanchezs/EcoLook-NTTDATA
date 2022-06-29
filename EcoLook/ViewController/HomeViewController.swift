@@ -67,15 +67,19 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //let segueId = segue.identifier
-        let buttonPressed = sender as? UIButton
+        guard let segueId = segue.identifier else {
+            return
+        }
         
-        let idPostToSend = buttonPressed?.tag
-        
-        
-        let viewControllerDestination = segue.destination as! DetailViewController
-        viewControllerDestination.idSelectedPost = idPostToSend
-        
+        if segueId == "homeToDetailSegue" || segueId == "favoritesToDetailSegue" || segueId == "personalToDetailSegue" {
+            let buttonPressed = sender as? UIButton
+            
+            let idPostToSend = buttonPressed?.tag
+            
+            
+            let viewControllerDestination = segue.destination as! DetailViewController
+            viewControllerDestination.idSelectedPost = idPostToSend
+        }
         //print("El segue del prepare es: \(segueId!)")
         
         
