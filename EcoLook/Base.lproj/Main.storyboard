@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kn-HD-txR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="579"/>
+            <point key="canvasLocation" x="528" y="970"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="zsi-2P-6AW">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMh-i2-9xa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="-126"/>
+            <point key="canvasLocation" x="671" y="-14"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="fW7-1m-5e0">
@@ -405,11 +405,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-Lw-MnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-251.11607142857142"/>
+            <point key="canvasLocation" x="3200" y="-468"/>
+        </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="ZZ7-ms-Cc1">
+            <objects>
+                <viewController id="uM2-cT-7ec" customClass="NewPostViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I9l-7M-IZH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nueva Publicacion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-s8-SFs">
+                                <rect key="frame" x="100.00000000000001" y="44" width="214.33333333333337" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214.33000000000001" id="tQj-F7-urb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Playball-Regular" family="Playball" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFs-Xu-DjC">
+                                <rect key="frame" x="20" y="53" width="30" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1fK-sU-58A"/>
+                                    <constraint firstAttribute="height" constant="23" id="tg2-hb-OEk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wI8-O1-feE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wFs-Xu-DjC" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="20" id="94x-w4-flz"/>
+                            <constraint firstItem="wFs-Xu-DjC" firstAttribute="top" secondItem="wI8-O1-feE" secondAttribute="top" constant="9" id="KV2-uh-M33"/>
+                            <constraint firstItem="q0m-s8-SFs" firstAttribute="top" secondItem="wI8-O1-feE" secondAttribute="top" id="LdW-lI-4Hn"/>
+                            <constraint firstItem="q0m-s8-SFs" firstAttribute="centerX" secondItem="I9l-7M-IZH" secondAttribute="centerX" id="sfg-5u-IeB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonGoBackHeader" destination="wFs-Xu-DjC" id="ULc-Je-p6c"/>
+                        <outlet property="labelTitleHeader" destination="q0m-s8-SFs" id="7bV-HA-UUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uC6-eq-H3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3200.0000000000005" y="436.60714285714283"/>
         </scene>
     </scenes>
     <resources>
         <image name="0.square.fill" catalog="system" width="128" height="114"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="opaqueSeparatorColor">

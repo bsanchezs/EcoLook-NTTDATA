@@ -17,6 +17,7 @@
 		1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E3285BEA87008F84CA /* LaunchScreen.storyboard */; };
 		1F63BC1D286A0F580070AE08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63BC1C286A0F580070AE08 /* DetailViewController.swift */; };
 		1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */; };
+		1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */; };
 		1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FA70A692865394700BDB740 /* Playball-Regular.ttf */; };
 		1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */; };
 		1FAC454E2868A6BB0070ECAC /* TagsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */; };
@@ -41,6 +42,7 @@
 		1F46D3E6285BEA87008F84CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F63BC1C286A0F580070AE08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsPostDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		1FA70A692865394700BDB740 /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
 		1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				1F15428C2865066E00FC48F4 /* HomeViewController.swift */,
 				1F63BC1C286A0F580070AE08 /* DetailViewController.swift */,
+				1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F63BC1D286A0F580070AE08 /* DetailViewController.swift in Sources */,
+				1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */,
 				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
 				1F05812D28657465008D95C4 /* Colors.swift in Sources */,
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,
