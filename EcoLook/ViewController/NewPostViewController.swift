@@ -108,6 +108,23 @@ class NewPostViewController: UIViewController {
         
         let formStatus = verifyInputsNewPost()
         
+        switch formStatus {
+            case .incomplete:
+                let message = "Por favor, rellene todos los campos"
+                showErrorAlert(message: message)
+                
+            case .wrongData:
+                let message = "Por favor, introduzca formatos validos"
+                showErrorAlert(message: message)
+                
+            case .null:
+                let message = "Por favor seleccione una imagen"
+                showErrorAlert(message: message)
+                
+            case .success:
+                print("TODO OK")
+        }
+        
         
         
     }
@@ -133,6 +150,15 @@ extension NewPostViewController {
             
         }
         
+        
+    }
+    
+    func showErrorAlert( message: String ){
+        
+        let okay = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(okay)
+        present(alert, animated: true, completion: nil)
         
     }
     
