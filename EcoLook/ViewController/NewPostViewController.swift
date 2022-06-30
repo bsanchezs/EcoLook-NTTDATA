@@ -62,6 +62,15 @@ class NewPostViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
+    @IBAction func actionButtonAddImage(_ sender: UIButton) {
+        
+        imageViewPhotoNewPost.image = UIImage(named: "Contaminacion-2")
+        
+//        sender.isEnabled = false
+        
+        
+    }
+    
     
 
 }
