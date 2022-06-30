@@ -106,7 +106,7 @@ class NewPostViewController: UIViewController {
     
     @IBAction func actionButtonSaveNewPost(_ sender: Any) {
         
-        verifyInputsNewPost()
+        let formStatus = verifyInputsNewPost()
         
         
         
@@ -117,13 +117,22 @@ class NewPostViewController: UIViewController {
 
 extension NewPostViewController {
     
-    func verifyInputsNewPost() {
+    func verifyInputsNewPost() -> FormStatus {
         
-        guard let titulo = inputTitleNewPost.text, let direccion = inputDirectionNewPost.text, let descripcion = textViewDescriptionNewPost.text else{
-            return
+        guard let titulo = inputTitleNewPost.text, let direccion = inputDirectionNewPost.text, let descripcion = textViewDescriptionNewPost.text, let _ = imageViewPhotoNewPost.image else{
+            return .null
         }
         
-        print("Que sale por la imagen: \(imageViewPhotoNewPost.image)")
+        if titulo == "" || direccion == "" || descripcion == "" {
+            
+            return .incomplete
+            
+        }else{
+            
+            return .success
+            
+        }
+        
         
     }
     

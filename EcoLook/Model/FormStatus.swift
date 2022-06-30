@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum InputStatus {
+enum FormStatus {
     
     case incomplete
     case wrongData
