@@ -547,6 +547,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7u-TK-uqX">
+                                <rect key="frame" x="27" y="801" width="360" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="ECI-9L-25q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Guardar">
+                                    <fontDescription key="titleFontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="32"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wI8-O1-feE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -569,6 +579,8 @@
                             <constraint firstItem="ieV-5F-Df6" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="27" id="RQm-vK-VI4"/>
                             <constraint firstItem="ieV-5F-Df6" firstAttribute="top" secondItem="faf-f3-dXt" secondAttribute="bottom" constant="15" id="TG4-RK-oB7"/>
                             <constraint firstItem="Moc-A9-L9I" firstAttribute="trailing" secondItem="Dgw-2s-uK3" secondAttribute="trailing" constant="116" id="W6K-WG-n2g"/>
+                            <constraint firstItem="s7u-TK-uqX" firstAttribute="bottom" secondItem="wI8-O1-feE" secondAttribute="bottom" id="XQE-Ao-HaH"/>
+                            <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="s7u-TK-uqX" secondAttribute="trailing" constant="27" id="aCB-aV-bSn"/>
                             <constraint firstItem="Kda-SQ-gra" firstAttribute="top" secondItem="Moc-A9-L9I" secondAttribute="bottom" constant="18" id="cOE-8A-9fT"/>
                             <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="HBI-I5-3gZ" secondAttribute="trailing" constant="27" id="dq9-YB-Jmk"/>
                             <constraint firstItem="faf-f3-dXt" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="27" id="ilQ-fu-7gN"/>
@@ -582,6 +594,7 @@
                             <constraint firstItem="q0m-s8-SFs" firstAttribute="centerX" secondItem="I9l-7M-IZH" secondAttribute="centerX" id="sfg-5u-IeB"/>
                             <constraint firstItem="Dgw-2s-uK3" firstAttribute="bottom" secondItem="Moc-A9-L9I" secondAttribute="bottom" constant="-26" id="tSG-Lc-Yi6"/>
                             <constraint firstItem="17t-xo-4sE" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="27" id="w0l-iL-Vz0"/>
+                            <constraint firstItem="s7u-TK-uqX" firstAttribute="leading" secondItem="wI8-O1-feE" secondAttribute="leading" constant="27" id="wty-AH-adw"/>
                             <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="TmU-Y0-ZIZ" secondAttribute="trailing" constant="247" id="x7o-BB-9bc"/>
                             <constraint firstItem="wI8-O1-feE" firstAttribute="trailing" secondItem="bbZ-JM-nj0" secondAttribute="trailing" constant="27" id="xcx-KH-hzk"/>
                         </constraints>
@@ -591,6 +604,7 @@
                         <outlet property="buttonAddPhotoNewPost" destination="Dgw-2s-uK3" id="s2Z-Fg-UCE"/>
                         <outlet property="buttonDirectionNewPost" destination="HBI-I5-3gZ" id="65g-vV-rlO"/>
                         <outlet property="buttonGoBackHeader" destination="wFs-Xu-DjC" id="ULc-Je-p6c"/>
+                        <outlet property="buttonSaveNewPost" destination="s7u-TK-uqX" id="0zr-i0-GbO"/>
                         <outlet property="collectionViewTagsNewPost" destination="17t-xo-4sE" id="EzU-lh-gUp"/>
                         <outlet property="imageViewPhotoNewPost" destination="Moc-A9-L9I" id="yMs-fp-v4k"/>
                         <outlet property="inputDirectionNewPost" destination="faf-f3-dXt" id="kdZ-Yc-FDp"/>

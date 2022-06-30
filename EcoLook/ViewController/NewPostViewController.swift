@@ -19,6 +19,8 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var textViewDescriptionNewPost: UITextView!
     @IBOutlet weak var sliderRiskLevelNewPost: UISlider!
     @IBOutlet weak var collectionViewTagsNewPost: UICollectionView!
+    @IBOutlet weak var buttonSaveNewPost: UIButton!
+    
     
     var newPost = Post()
     var setTagsSelectedNewPost = Set<String>()
@@ -48,7 +50,12 @@ class NewPostViewController: UIViewController {
         collectionViewTagsNewPost.backgroundColor = ThemeColors.verdeBackground
         collectionViewTagsNewPost.dataSource = self
         
-
+        buttonSaveNewPost.backgroundColor = ThemeColors.verdePrimary
+        buttonSaveNewPost.tintColor = .white
+        buttonSaveNewPost.layer.cornerRadius = 15
+        
+        
+        
         
     }
     @IBAction func actionButtonGoBackHeader(_ sender: Any) {
