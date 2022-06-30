@@ -45,6 +45,7 @@ class NewPostViewController: UIViewController {
         
         sliderRiskLevelNewPost.thumbTintColor = ThemeColors.verdePrimary
         sliderRiskLevelNewPost.tintColor = ThemeColors.verdePrimary
+        sliderRiskLevelNewPost.isContinuous = false
         
         collectionViewTagsNewPost.showsVerticalScrollIndicator = false
         collectionViewTagsNewPost.backgroundColor = ThemeColors.verdeBackground
@@ -67,6 +68,38 @@ class NewPostViewController: UIViewController {
         imageViewPhotoNewPost.image = UIImage(named: "Contaminacion-2")
         
 //        sender.isEnabled = false
+        
+        
+    }
+    
+    @IBAction func actionSliderChange(_ sender: UISlider) {
+        
+        switch sender.value{
+            
+            case 1..<1.5:
+                //print("Seria Lvl 1")
+                sender.value = 1
+            case 1.5..<2.5:
+                //print("Seria Lvl 2")
+                sender.value = 2
+            case 2.5..<3.5:
+                //print("Seria Lvl 3")
+                sender.value = 3
+            case 3.5..<4.5:
+                //print("Seria Lvl 4")
+                sender.value = 4
+            case 4.5...5:
+                //print("Seria Lvl 5")
+                sender.value = 5
+            default:
+                print("Valor invalido")
+                
+            
+        }
+        
+        
+//        print("Quiero ver que trae: \(sender.value)")
+        
         
         
     }

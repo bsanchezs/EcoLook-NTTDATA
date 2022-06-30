@@ -500,6 +500,9 @@
                                 <rect key="frame" x="25" y="503" width="364" height="31"/>
                                 <imageReference key="minimumValueImage" image="1.square.fill" catalog="system" symbolScale="default"/>
                                 <imageReference key="maximumValueImage" image="5.square.fill" catalog="system" symbolScale="default"/>
+                                <connections>
+                                    <action selector="actionSliderChange:" destination="uM2-cT-7ec" eventType="valueChanged" id="XUX-AX-kzt"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etiquetas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTa-7p-9Ll">
                                 <rect key="frame" x="27" y="548" width="87" height="19"/>
