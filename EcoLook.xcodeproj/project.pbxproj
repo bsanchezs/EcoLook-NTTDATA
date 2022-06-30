@@ -24,6 +24,7 @@
 		1FAC4550286934F10070ECAC /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC454F286934F10070ECAC /* Posts.swift */; };
 		1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC455228693E1A0070ECAC /* PostsTableViewCell.swift */; };
 		1FAC455528693E1A0070ECAC /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */; };
+		1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
@@ -49,6 +50,7 @@
 		1FAC454F286934F10070ECAC /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		1FAC455228693E1A0070ECAC /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
+		1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsNewPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */,
 				1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */,
 				1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */,
+				1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				1F05812D28657465008D95C4 /* Colors.swift in Sources */,
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,
 				1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */,
+				1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */,
 				1FE05B262867B3B400C3160D /* Tags.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
