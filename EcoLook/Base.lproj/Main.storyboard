@@ -562,6 +562,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Guardar">
                                     <fontDescription key="titleFontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="32"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionButtonSaveNewPost:" destination="uM2-cT-7ec" eventType="touchUpInside" id="tyC-bB-hb2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wI8-O1-feE"/>

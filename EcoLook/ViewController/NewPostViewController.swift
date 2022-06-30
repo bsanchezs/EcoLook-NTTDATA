@@ -104,8 +104,29 @@ class NewPostViewController: UIViewController {
         
     }
     
+    @IBAction func actionButtonSaveNewPost(_ sender: Any) {
+        
+        verifyInputsNewPost()
+        
+        
+        
+    }
     
 
+}
+
+extension NewPostViewController {
+    
+    func verifyInputsNewPost() {
+        
+        guard let titulo = inputTitleNewPost.text, let direccion = inputDirectionNewPost.text, let descripcion = textViewDescriptionNewPost.text else{
+            return
+        }
+        
+        print("Que sale por la imagen: \(imageViewPhotoNewPost.image)")
+        
+    }
+    
 }
 
 extension NewPostViewController: UICollectionViewDataSource{
