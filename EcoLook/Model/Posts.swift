@@ -22,6 +22,22 @@ struct Post {
     let idUsuario: Int
     let estado: Int
     
+    
+    
+    func getShortDescription(descripcion: String) -> String{
+        
+        if descripcion.count > 25 {
+            return (String(descripcion.prefix(24))) + ".."
+        }else{
+            return descripcion
+        }
+        
+    }
+    
+}
+
+extension Post {
+    
     init (){
         
         self.idPublicacion = 0
@@ -55,15 +71,6 @@ struct Post {
         self.estado = 1
     }
     
-    func getShortDescription(descripcion: String) -> String{
-        
-        if descripcion.count > 25 {
-            return (String(descripcion.prefix(24))) + ".."
-        }else{
-            return descripcion
-        }
-        
-    }
     
 }
 
