@@ -24,7 +24,8 @@ class NewPostViewController: UIViewController {
     
     var newPost = Post()
     var setTagsSelectedNewPost = Set<String>()
-    
+    var latNewPost: Double?
+    var lngNewPost: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,7 +123,39 @@ class NewPostViewController: UIViewController {
                 showErrorAlert(message: message)
                 
             case .success:
-                print("TODO OK")
+                //TODO
+                
+                var arrayTagsSelected: [Tag] = []
+            
+                if !setTagsSelectedNewPost.isEmpty {
+                        
+                    for nameTag in setTagsSelectedNewPost {
+                        
+                        let tag = arrEtiquetasTotales.filter( {$0.name == nameTag } )
+                        arrayTagsSelected.append(tag[0])
+                        
+                    }
+                    
+                }
+            
+                if let lat = latNewPost, let lng = lngNewPost{
+                    
+                    print("Los dos tienen valores")
+                    
+                }else{
+                    
+                    print("Alguno de los dos son nulos")
+                    
+                    let newPost = Post(idPublicacion: <#T##Int#>, titulo: <#T##String#>, descripcion: <#T##String#>, nivelRiesgo: <#T##Int#>, direccion: <#T##String#>, fecha: <#T##String#>, arrayEtiquetas: <#T##[Tag]#>, idUsuario: <#T##Int#>)
+                    
+                }
+                
+                
+            
+            
+                
+                
+            
         }
         
         
