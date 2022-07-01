@@ -138,28 +138,37 @@ class NewPostViewController: UIViewController {
                     
                 }
             
-                let image = imageViewPhotoNewPost.image?.jpegData(compressionQuality: 1)?.base64EncodedString()
+                let image = imageViewPhotoNewPost.image!.jpegData(compressionQuality: 1)?.base64EncodedString()
+                
+                guard let imageSafe = image else{
+                    return
+                }
+                
 //                print("Imagen en b64?: \(image!)")
             
                 let title = inputTitleNewPost.text!
                 let direction = inputDirectionNewPost.text!
                 let description = textViewDescriptionNewPost.text!
-                let risklvl = sliderRiskLevelNewPost.value
-                let fecha = Date().getFormattedDate(format: "dd/MM/yyyy")
+                let risklvl = Int(sliderRiskLevelNewPost.value)
+                let date = Date().getFormattedDate(format: "dd/MM/yyyy")
             
                 if let lat = latNewPost, let lng = lngNewPost{
                     
                     print("Los dos tienen valores")
+//                    let newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1)
+                    let newPost = Post()
+
                     
                 }else{
                     
                     print("Alguno de los dos son nulos")
                     
-//                    let newPost = Post(idPublicacion: 0, titulo: in, descripcion: <#T##String#>, nivelRiesgo: <#T##Int#>, direccion: <#T##String#>, fecha: <#T##String#>, arrayEtiquetas: <#T##[Tag]#>, idUsuario: <#T##Int#>)
+                    let newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1)
+
                     
                 }
                 
-                
+                print("El post a enviar seria: \(newPost)")
             
             
                 

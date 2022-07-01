@@ -70,10 +70,10 @@ struct Post {
 
 let arrMockPosts = [
 
-    Post(idPublicacion: 1, titulo: "Publicacion 1", descripcion: "Primera descripcion", nivelRiesgo: 3, direccion: "direccion 1", fecha: "10/02/2021", arrayEtiquetas: [Tag(id: 1, name: "#basura", status: 1), Tag(id: 2, name: "#plastico", status: 1)], idUsuario: 1),
-    Post(idPublicacion: 2, titulo: "Publicacion 2", descripcion: "Segunda descripcion", nivelRiesgo: 1, direccion: "direccion 2", fecha: "11/02/2021", arrayEtiquetas: [Tag(id: 3, name: "#playa", status: 1)], idUsuario: 1),
-    Post(idPublicacion: 3, titulo: "Publicacion 3", descripcion: "Tercera descripcion", nivelRiesgo: 4, direccion: "direccion 3", fecha: "11/02/2021", arrayEtiquetas: [Tag(id: 5, name: "#desechos_toxicos", status: 1), Tag(id: 1, name: "#basura", status: 1), Tag(id: 6, name: "#urgente", status: 1)], idUsuario: 1),
-    Post(idPublicacion: 4, titulo: "Publicacion 4", descripcion: "Cuarta descripcion", nivelRiesgo: 2, direccion: "direccion 4", fecha: "12/02/2021", arrayEtiquetas: [], idUsuario: 1),
+    Post(idPublicacion: 1, titulo: "Publicacion 1", descripcion: "Primera descripcion", nivelRiesgo: 3, direccion: "direccion 1", imagen: "1.jpg", fecha: "10/02/2021", arrayEtiquetas: [Tag(id: 1, name: "#basura", status: 1), Tag(id: 2, name: "#plastico", status: 1)], idUsuario: 1),
+    Post(idPublicacion: 2, titulo: "Publicacion 2", descripcion: "Segunda descripcion", nivelRiesgo: 1, direccion: "direccion 2", imagen: "2.jpg", fecha: "11/02/2021", arrayEtiquetas: [Tag(id: 3, name: "#playa", status: 1)], idUsuario: 1),
+    Post(idPublicacion: 3, titulo: "Publicacion 3", descripcion: "Tercera descripcion", nivelRiesgo: 4, direccion: "direccion 3", imagen: "3.jpg", fecha: "11/02/2021", arrayEtiquetas: [Tag(id: 5, name: "#desechos_toxicos", status: 1), Tag(id: 1, name: "#basura", status: 1), Tag(id: 6, name: "#urgente", status: 1)], idUsuario: 1),
+    Post(idPublicacion: 4, titulo: "Publicacion 4", descripcion: "Cuarta descripcion", nivelRiesgo: 2, direccion: "direccion 4", imagen: "4.jpg", fecha: "12/02/2021", arrayEtiquetas: [], idUsuario: 1),
 
 ]
 
