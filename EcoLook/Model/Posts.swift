@@ -16,7 +16,7 @@ struct Post {
     let direccion: String
     let latitud: Double?
     let longitud: Double?
-    let imagen: String?
+    let imagen: String
     let fecha: String
     let arrayEtiquetas: [Tag]?
     let idUsuario: Int
@@ -31,7 +31,7 @@ struct Post {
         self.direccion = ""
         self.latitud = nil
         self.longitud = nil
-        self.imagen = nil
+        self.imagen = ""
         self.fecha = "Error"
         self.arrayEtiquetas = []
         self.idUsuario = 0
@@ -39,7 +39,7 @@ struct Post {
         
     }
     
-    init (idPublicacion: Int, titulo: String, descripcion: String, nivelRiesgo: Int, direccion: String, fecha: String, arrayEtiquetas: [Tag], idUsuario: Int){
+    init (idPublicacion: Int, titulo: String, descripcion: String, nivelRiesgo: Int, direccion: String, imagen: String, fecha: String, arrayEtiquetas: [Tag], idUsuario: Int){
         
         self.idPublicacion = idPublicacion
         self.titulo = titulo
@@ -48,7 +48,7 @@ struct Post {
         self.direccion = direccion
         self.latitud = nil
         self.longitud = nil
-        self.imagen = nil
+        self.imagen = imagen
         self.fecha = fecha
         self.arrayEtiquetas = arrayEtiquetas
         self.idUsuario = idUsuario

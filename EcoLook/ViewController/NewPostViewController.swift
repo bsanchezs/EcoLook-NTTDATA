@@ -140,13 +140,11 @@ class NewPostViewController: UIViewController {
             
                 let image = imageViewPhotoNewPost.image?.jpegData(compressionQuality: 1)?.base64EncodedString()
 //                print("Imagen en b64?: \(image!)")
-                //Now use image to create into NSData format
-//                let imageData:NSData = UIImagePNGRepresentation(image!)! as NSData
             
-//                let title = inputTitleNewPost.text!
-//                let direction = inputDirectionNewPost.text!
-//                let description = textViewDescriptionNewPost.text!
-//                let risklvl = sliderRiskLevelNewPost.value
+                let title = inputTitleNewPost.text!
+                let direction = inputDirectionNewPost.text!
+                let description = textViewDescriptionNewPost.text!
+                let risklvl = sliderRiskLevelNewPost.value
                 let fecha = Date().getFormattedDate(format: "dd/MM/yyyy")
             
                 if let lat = latNewPost, let lng = lngNewPost{
