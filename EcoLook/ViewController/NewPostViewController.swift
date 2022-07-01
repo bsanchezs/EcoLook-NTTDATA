@@ -21,8 +21,6 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var collectionViewTagsNewPost: UICollectionView!
     @IBOutlet weak var buttonSaveNewPost: UIButton!
     
-    
-    var newPost = Post()
     var setTagsSelectedNewPost = Set<String>()
     var latNewPost: Double?
     var lngNewPost: Double?
@@ -152,18 +150,20 @@ class NewPostViewController: UIViewController {
                 let risklvl = Int(sliderRiskLevelNewPost.value)
                 let date = Date().getFormattedDate(format: "dd/MM/yyyy")
             
+                var newPost = Post()
+            
                 if let lat = latNewPost, let lng = lngNewPost{
                     
                     print("Los dos tienen valores")
 //                    let newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1)
-                    let newPost = Post()
+                    newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1, estado: 1)
 
                     
                 }else{
                     
                     print("Alguno de los dos son nulos")
                     
-                    let newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1)
+                    newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1)
 
                     
                 }
