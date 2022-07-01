@@ -138,6 +138,17 @@ class NewPostViewController: UIViewController {
                     
                 }
             
+                let image = imageViewPhotoNewPost.image?.jpegData(compressionQuality: 1)?.base64EncodedString()
+//                print("Imagen en b64?: \(image!)")
+                //Now use image to create into NSData format
+//                let imageData:NSData = UIImagePNGRepresentation(image!)! as NSData
+            
+//                let title = inputTitleNewPost.text!
+//                let direction = inputDirectionNewPost.text!
+//                let description = textViewDescriptionNewPost.text!
+//                let risklvl = sliderRiskLevelNewPost.value
+                let fecha = Date().getFormattedDate(format: "dd/MM/yyyy")
+            
                 if let lat = latNewPost, let lng = lngNewPost{
                     
                     print("Los dos tienen valores")
@@ -146,7 +157,7 @@ class NewPostViewController: UIViewController {
                     
                     print("Alguno de los dos son nulos")
                     
-                    let newPost = Post(idPublicacion: <#T##Int#>, titulo: <#T##String#>, descripcion: <#T##String#>, nivelRiesgo: <#T##Int#>, direccion: <#T##String#>, fecha: <#T##String#>, arrayEtiquetas: <#T##[Tag]#>, idUsuario: <#T##Int#>)
+//                    let newPost = Post(idPublicacion: 0, titulo: in, descripcion: <#T##String#>, nivelRiesgo: <#T##Int#>, direccion: <#T##String#>, fecha: <#T##String#>, arrayEtiquetas: <#T##[Tag]#>, idUsuario: <#T##Int#>)
                     
                 }
                 
