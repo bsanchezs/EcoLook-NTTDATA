@@ -142,7 +142,16 @@ class NewPostViewController: UIViewController {
                     
                 }
             
-                let image = imageViewPhotoNewPost.image!.jpegData(compressionQuality: 1)?.base64EncodedString()
+                let image = imageViewPhotoNewPost.image!.jpegData(compressionQuality: 0.2)?.base64EncodedString()
+            
+                //let imagen = imageViewPhotoNewPost.image!
+                //let compresion = imagen.jpegData(compressionQuality: 0.2)
+                //print("Tipo de la compresion: ", type(of: compresion))
+                //print("resultado de compresion: ", compresion)
+                //let b64 = compresion?.base64EncodedString(options: .lineLength64Characters)
+                //print("Tipo de b64: ", type(of: b64))
+                //print("B64: ", b64)
+    
                 
                 guard let imageSafe = image else{
                     return
