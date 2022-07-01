@@ -64,7 +64,13 @@ class NewPostViewController: UIViewController {
     }
     @IBAction func actionButtonAddImage(_ sender: UIButton) {
         
-        imageViewPhotoNewPost.image = UIImage(named: "Contaminacion-2")
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true)
+        
+//        imageViewPhotoNewPost.image = UIImage(named: "Contaminacion-2")
         
 //        sender.isEnabled = false
         
@@ -155,7 +161,7 @@ class NewPostViewController: UIViewController {
                 if let lat = latNewPost, let lng = lngNewPost{
                     
                     print("Los dos tienen valores")
-//                    let newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1)
+
                     newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1, estado: 1)
 
                     
@@ -211,6 +217,24 @@ extension NewPostViewController {
         alert.addAction(okay)
         present(alert, animated: true, completion: nil)
         
+    }
+    
+}
+
+extension NewPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
+            imageViewPhotoNewPost.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }
