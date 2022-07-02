@@ -6,24 +6,25 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class GeolocalizationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let camera = GMSCameraPosition.camera(withLatitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        self.view.addSubview(mapView)
+
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -8.1121075, longitude: -79.028297)
+        marker.map = mapView
+        marker.isDraggable = true
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
