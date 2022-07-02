@@ -30,6 +30,7 @@
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
+		9639D126EB4C92E56BF18CA5 /* Pods_EcoLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253E9A327C0B9D8637C5D2A /* Pods_EcoLook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,9 @@
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
+		47368188A1315B1E24113B39 /* Pods-EcoLook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoLook.release.xcconfig"; path = "Target Support Files/Pods-EcoLook/Pods-EcoLook.release.xcconfig"; sourceTree = "<group>"; };
+		D253E9A327C0B9D8637C5D2A /* Pods_EcoLook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoLook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7BB08D975BEFB8E71434F8 /* Pods-EcoLook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoLook.debug.xcconfig"; path = "Target Support Files/Pods-EcoLook/Pods-EcoLook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +69,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9639D126EB4C92E56BF18CA5 /* Pods_EcoLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172E9964B4ED0C550C61F0A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D253E9A327C0B9D8637C5D2A /* Pods_EcoLook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1F05812E286584FB008D95C4 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,8 @@
 			children = (
 				1F46D3D7285BEA87008F84CA /* EcoLook */,
 				1F46D3D6285BEA87008F84CA /* Products */,
+				8D2C0048EBAE9FA1CF279A8A /* Pods */,
+				172E9964B4ED0C550C61F0A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +189,16 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		8D2C0048EBAE9FA1CF279A8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC7BB08D975BEFB8E71434F8 /* Pods-EcoLook.debug.xcconfig */,
+				47368188A1315B1E24113B39 /* Pods-EcoLook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F46D3E9285BEA87008F84CA /* Build configuration list for PBXNativeTarget "EcoLook" */;
 			buildPhases = (
+				AA45C23F36B32ABB043DD746 /* [CP] Check Pods Manifest.lock */,
 				1F46D3D1285BEA87008F84CA /* Sources */,
 				1F46D3D2285BEA87008F84CA /* Frameworks */,
 				1F46D3D3285BEA87008F84CA /* Resources */,
@@ -243,6 +269,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA45C23F36B32ABB043DD746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EcoLook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F46D3D1285BEA87008F84CA /* Sources */ = {
@@ -410,6 +461,7 @@
 		};
 		1F46D3EA285BEA87008F84CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC7BB08D975BEFB8E71434F8 /* Pods-EcoLook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,6 +489,7 @@
 		};
 		1F46D3EB285BEA87008F84CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47368188A1315B1E24113B39 /* Pods-EcoLook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
