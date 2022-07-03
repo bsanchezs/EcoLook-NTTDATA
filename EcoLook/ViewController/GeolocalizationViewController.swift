@@ -15,6 +15,20 @@ class GeolocalizationViewController: UIViewController {
 
         let camera = GMSCameraPosition.camera(withLatitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
         let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        mapView.isMyLocationEnabled = true
+        
+//        if let mylocation = mapView.myLocation {
+//            print("User's location: \(mylocation)")
+//        } else {
+//            print("User's location is unknown")
+//        }
+        
+        mapView.settings.myLocationButton = true
+//        if let myLocation
+        
+//        print("mi ubicacion es ----------: \(String(describing: mapView.myLocation))")
+        
+        mapView.delegate = self
         self.view.addSubview(mapView)
 
         // Creates a marker in the center of the map.
@@ -22,9 +36,30 @@ class GeolocalizationViewController: UIViewController {
         marker.position = CLLocationCoordinate2D(latitude: -8.1121075, longitude: -79.028297)
         marker.map = mapView
         marker.isDraggable = true
+        
+        
     }
     
 
     
 
+}
+
+extension GeolocalizationViewController: GMSMapViewDelegate{
+    
+    
+    func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
+        print("Aer que sale: \(marker.position)")
+        print("Dame la direccion: ")
+        
+        
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        print("Lo tocoooo!!")
+//        print("mi ubicacion es ----------: \(String(describing: mapView.myLocation))")
+        return true
+    }
+    
+    
 }
