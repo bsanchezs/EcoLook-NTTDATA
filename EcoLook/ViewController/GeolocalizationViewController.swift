@@ -8,10 +8,18 @@
 import UIKit
 import GoogleMaps
 
+protocol GeolocalizationViewControllerDelegate: AnyObject {
+    
+    func markerDidChange(directionGeo: String, latGeo: Double, lngGeo: Double)
+}
+
+
 class GeolocalizationViewController: UIViewController {
     
     
     let geocoder = GMSGeocoder()
+    
+    weak var delegate: GeolocalizationViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +65,14 @@ extension GeolocalizationViewController: GMSMapViewDelegate{
         geocoder.reverseGeocodeCoordinate(marker.position){ response, error in
             
             if let address = response?.firstResult() {
-                let lines = address.lines! as [String]
-
+                
+                let lines = address.lines!
+                
+                print("address: \(address)")
                 print("direccion?: \(lines[0])")
+                print("tipo del lat: \(type(of: marker.position.latitude))")
+                
+                self.delegate?.markerDidChange(directionGeo: lines[0], latGeo: marker.position.latitude, lngGeo: marker.position.longitude)
             }
             
         }
