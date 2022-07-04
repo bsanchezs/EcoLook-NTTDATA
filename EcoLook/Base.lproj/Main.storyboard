@@ -638,9 +638,24 @@
                     <view key="view" contentMode="scaleToFill" id="UxK-Fh-oGg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edh-mt-ERx" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="788"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JEm-sR-xGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JEm-sR-xGC" firstAttribute="trailing" secondItem="edh-mt-ERx" secondAttribute="trailing" id="FVL-5E-S8r"/>
+                            <constraint firstItem="edh-mt-ERx" firstAttribute="leading" secondItem="JEm-sR-xGC" secondAttribute="leading" id="FZs-It-XMG"/>
+                            <constraint firstItem="edh-mt-ERx" firstAttribute="top" secondItem="JEm-sR-xGC" secondAttribute="top" constant="20" id="ZkN-eD-mvK"/>
+                            <constraint firstItem="JEm-sR-xGC" firstAttribute="bottom" secondItem="edh-mt-ERx" secondAttribute="bottom" id="vEJ-km-Ufg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customMapView" destination="edh-mt-ERx" id="spn-Bx-OL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VT7-Yb-E1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -673,6 +688,9 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

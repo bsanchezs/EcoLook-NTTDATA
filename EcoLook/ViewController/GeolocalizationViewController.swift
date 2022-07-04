@@ -17,6 +17,7 @@ protocol GeolocalizationViewControllerDelegate: AnyObject {
 class GeolocalizationViewController: UIViewController {
 
     weak var delegate: GeolocalizationViewControllerDelegate?
+    @IBOutlet weak var customMapView: GMSMapView!
     
     
     let geocoder = GMSGeocoder()
@@ -26,19 +27,21 @@ class GeolocalizationViewController: UIViewController {
         super.viewDidLoad()
 
         let camera = GMSCameraPosition.camera(withLatitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+//        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        customMapView.camera = camera
         
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
+        
+        customMapView.isMyLocationEnabled = true
+        customMapView.settings.myLocationButton = true
 
         
-        mapView.delegate = self
-        self.view.addSubview(mapView)
+        customMapView.delegate = self
+//        self.view.addSubview(mapView)
 
         // Creates a marker in the center of the map.
         
         marker.position = CLLocationCoordinate2D(latitude: -8.1121075, longitude: -79.028297)
-        marker.map = mapView
+        marker.map = customMapView
         marker.isDraggable = true
         
         
