@@ -58,6 +58,22 @@ class NewPostViewController: UIViewController {
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueId = segue.identifier else {
+            return
+        }
+        
+        if segueId == "newPostToGeolocalizationSegue" {
+            
+            let viewControllerDestination = segue.destination as! GeolocalizationViewController
+            
+            viewControllerDestination.delegate = self
+            
+            
+        }
+    }
+    
     @IBAction func actionButtonGoBackHeader(_ sender: Any) {
         
         navigationController?.popViewController(animated: true)
@@ -245,6 +261,16 @@ extension NewPostViewController: UIImagePickerControllerDelegate, UINavigationCo
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
+}
+
+extension NewPostViewController: GeolocalizationViewControllerDelegate{
+    
+    
+    func markerDidChange(directionGeo: String, latGeo: Double, lngGeo: Double) {
+        <#code#>
+    }
+    
     
 }
 
