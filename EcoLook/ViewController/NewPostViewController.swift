@@ -92,6 +92,11 @@ class NewPostViewController: UIViewController {
         
         
     }
+    @IBAction func actionButtonGoGeolocalization(_ sender: Any) {
+        
+        performSegue(withIdentifier: "newPostToGeolocalizationSegue", sender: nil)
+        
+    }
     
     @IBAction func actionSliderChange(_ sender: UISlider) {
         

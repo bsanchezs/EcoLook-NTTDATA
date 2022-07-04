@@ -474,6 +474,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="location" catalog="system"/>
+                                <connections>
+                                    <action selector="actionButtonGoGeolocalization:" destination="uM2-cT-7ec" eventType="touchUpInside" id="2dw-bY-ffc"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faf-f3-dXt">
                                 <rect key="frame" x="27" y="288" width="321" height="34"/>
