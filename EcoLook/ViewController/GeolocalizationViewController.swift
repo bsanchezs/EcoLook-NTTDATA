@@ -15,11 +15,11 @@ protocol GeolocalizationViewControllerDelegate: AnyObject {
 
 
 class GeolocalizationViewController: UIViewController {
+
+    weak var delegate: GeolocalizationViewControllerDelegate?
     
     
     let geocoder = GMSGeocoder()
-    
-    weak var delegate: GeolocalizationViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,6 @@ class GeolocalizationViewController: UIViewController {
 //        }
         
         mapView.settings.myLocationButton = true
-//        if let myLocation
         
 //        print("mi ubicacion es ----------: \(String(describing: mapView.myLocation))")
         
@@ -84,7 +83,9 @@ extension GeolocalizationViewController: GMSMapViewDelegate{
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
         print("Lo tocoooo!!")
-//        print("mi ubicacion es ----------: \(String(describing: mapView.myLocation))")
+//        -8.103485946815995, -79.01666208299132 -- Coordenadas de mi casa
+        print("mi ubicacion es ----------: \(String(describing: mapView.myLocation))")
+
         return true
     }
     
