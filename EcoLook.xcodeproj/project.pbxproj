@@ -29,6 +29,7 @@
 		1FB90B49286EA93500F1A28E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB90B48286EA93500F1A28E /* Date.swift */; };
 		1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
+		1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC767287361F4009A4970 /* MyHouse.gpx */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
 		9639D126EB4C92E56BF18CA5 /* Pods_EcoLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253E9A327C0B9D8637C5D2A /* Pods_EcoLook.framework */; };
@@ -59,6 +60,7 @@
 		1FB90B48286EA93500F1A28E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsNewPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		1FDBC767287361F4009A4970 /* MyHouse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyHouse.gpx; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		47368188A1315B1E24113B39 /* Pods-EcoLook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoLook.release.xcconfig"; path = "Target Support Files/Pods-EcoLook/Pods-EcoLook.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		1F46D3D7285BEA87008F84CA /* EcoLook */ = {
 			isa = PBXGroup;
 			children = (
+				1FDBC76628736121009A4970 /* Locations */,
 				1FAC455128693DD40070ECAC /* TableViewCell */,
 				1F8614F128680EAD00036DE7 /* CollectionViewCell */,
 				1F05812E286584FB008D95C4 /* TabBarController */,
@@ -190,6 +193,14 @@
 				1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		1FDBC76628736121009A4970 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				1FDBC767287361F4009A4970 /* MyHouse.gpx */,
+			);
+			path = Locations;
 			sourceTree = "<group>";
 		};
 		8D2C0048EBAE9FA1CF279A8A /* Pods */ = {
@@ -263,6 +274,7 @@
 			files = (
 				1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */,
 				1FAC454E2868A6BB0070ECAC /* TagsCollectionViewCell.xib in Resources */,
+				1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */,
 				1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */,
 				1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */,
 				1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */,
