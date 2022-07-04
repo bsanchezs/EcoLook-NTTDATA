@@ -268,7 +268,11 @@ extension NewPostViewController: GeolocalizationViewControllerDelegate{
     
     
     func markerDidChange(directionGeo: String, latGeo: Double, lngGeo: Double) {
-        <#code#>
+        
+        inputDirectionNewPost.text = directionGeo
+        latNewPost = latGeo
+        lngNewPost = lngGeo
+        
     }
     
     
