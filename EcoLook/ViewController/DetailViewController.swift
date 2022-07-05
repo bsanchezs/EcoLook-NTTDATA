@@ -53,6 +53,8 @@ class DetailViewController: UIViewController {
         labelTitlePostDetail.text = post?.titulo
         labelDatePostDetail.text = post?.fecha
         labelDescriptionPostDetail.text = post?.descripcion
+        
+//        setMapByLatLng(lat: post?.latitud, lng: post?.latitud)
         labelDirectionPostDetail.text = post?.direccion
         
         
@@ -66,6 +68,10 @@ class DetailViewController: UIViewController {
         
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setMapByLatLng(lat: post?.latitud, lng: post?.latitud)
     }
     
 
@@ -90,15 +96,24 @@ extension DetailViewController {
         
         if let latSafe = lat, let lngSafe = lng {
             
-            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+            let camera = GMSCameraPosition(latitude: latSafe, longitude: lngSafe, zoom: 17.4)
+            viewMapPostDetail.camera = camera
             
-//            return "https://www.google.com/maps/@"+String(latSafe)+","+String(lngSafe)+",18.6z"
+            
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: latSafe, longitude: lngSafe)
+            marker.map = viewMapPostDetail
+            marker.isDraggable = false
             
         }else{
             
-            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
-            
-//            return "https://www.google.com/maps/@-8.1114925,-79.0287559,18.6z"
+            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 14.4)
+            viewMapPostDetail.camera = camera
+            viewMapPostDetail.settings.rotateGestures = false
+            viewMapPostDetail.settings.scrollGestures = false
+            viewMapPostDetail.settings.tiltGestures = false
+            viewMapPostDetail.settings.zoomGestures = false
+            viewMapPostDetail.settings.consumesGesturesInView = false
             
             
         }
