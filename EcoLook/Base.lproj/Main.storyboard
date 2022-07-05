@@ -250,17 +250,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kue-gT-K3f">
-                                                <rect key="frame" x="23" y="156" width="368" height="90"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="DXZ-p2-Du2"/>
-                                                </constraints>
-                                                <wkWebViewConfiguration key="configuration">
-                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                    <wkPreferences key="preferences"/>
-                                                </wkWebViewConfiguration>
-                                            </wkWebView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-vI-fDn">
                                                 <rect key="frame" x="23" y="254" width="368" height="12"/>
                                                 <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="10"/>
@@ -329,9 +318,18 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-51-WEA" customClass="GMSMapView">
+                                                <rect key="frame" x="23" y="156" width="368" height="90"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="R94-ZI-spa"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="w3G-51-WEA" secondAttribute="trailing" constant="23" id="0SP-WH-PcW"/>
+                                            <constraint firstItem="w3G-51-WEA" firstAttribute="top" secondItem="72M-iS-dW1" secondAttribute="bottom" constant="10" id="1ep-Or-b7u"/>
                                             <constraint firstItem="EWd-MA-jrS" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="3GK-yo-PhD"/>
                                             <constraint firstItem="Vf2-6r-LiM" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="34" id="7WC-i7-B5S"/>
                                             <constraint firstItem="065-eT-pZ7" firstAttribute="top" secondItem="KpX-VU-g7l" secondAttribute="bottom" constant="15" id="7gV-qh-W0U"/>
@@ -340,7 +338,6 @@
                                             <constraint firstAttribute="trailing" secondItem="vto-Bs-mPS" secondAttribute="trailing" constant="23" id="BvA-7Z-1cB"/>
                                             <constraint firstItem="e1G-vI-fDn" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="CnX-dZ-Vsc"/>
                                             <constraint firstAttribute="trailing" secondItem="72M-iS-dW1" secondAttribute="trailing" constant="23" id="EIS-je-KhD"/>
-                                            <constraint firstAttribute="trailing" secondItem="kue-gT-K3f" secondAttribute="trailing" constant="23" id="EYk-dx-38L"/>
                                             <constraint firstItem="Vf2-6r-LiM" firstAttribute="top" secondItem="fad-9U-vWr" secondAttribute="bottom" constant="15" id="G3Q-F8-8FH"/>
                                             <constraint firstItem="HsU-ob-89P" firstAttribute="top" secondItem="v51-Cz-rAk" secondAttribute="bottom" constant="3" id="Hh3-Kg-OEf"/>
                                             <constraint firstItem="OLK-QV-Kjm" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="HlI-Zt-BRe"/>
@@ -350,14 +347,14 @@
                                             <constraint firstItem="KpX-VU-g7l" firstAttribute="top" secondItem="e1G-vI-fDn" secondAttribute="bottom" constant="8" symbolic="YES" id="UPx-QX-gma"/>
                                             <constraint firstItem="7N4-R3-sp7" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="VY3-UC-bGl"/>
                                             <constraint firstAttribute="trailing" secondItem="HsU-ob-89P" secondAttribute="trailing" constant="23" id="VYQ-st-eD4"/>
-                                            <constraint firstItem="kue-gT-K3f" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="YNV-Bn-OvV"/>
                                             <constraint firstAttribute="trailing" secondItem="v51-Cz-rAk" secondAttribute="trailing" constant="23" id="YQb-ot-hDZ"/>
                                             <constraint firstItem="72M-iS-dW1" firstAttribute="top" secondItem="EWd-MA-jrS" secondAttribute="bottom" constant="12" id="ZEf-7L-lJ9"/>
                                             <constraint firstItem="fad-9U-vWr" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="a4J-6L-3Vq"/>
                                             <constraint firstAttribute="trailing" secondItem="OLK-QV-Kjm" secondAttribute="trailing" constant="300" id="aN1-6w-E4F"/>
-                                            <constraint firstItem="kue-gT-K3f" firstAttribute="top" secondItem="72M-iS-dW1" secondAttribute="bottom" constant="10" id="awx-C2-gV0"/>
+                                            <constraint firstItem="w3G-51-WEA" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="d73-Gf-laA"/>
                                             <constraint firstItem="OLK-QV-Kjm" firstAttribute="top" secondItem="vto-Bs-mPS" secondAttribute="bottom" constant="8" symbolic="YES" id="dtD-q8-4b9"/>
                                             <constraint firstAttribute="trailing" secondItem="EWd-MA-jrS" secondAttribute="trailing" constant="23" id="evz-VO-pJm"/>
+                                            <constraint firstItem="e1G-vI-fDn" firstAttribute="top" secondItem="w3G-51-WEA" secondAttribute="bottom" constant="8" id="fYk-FM-6cK"/>
                                             <constraint firstItem="v51-Cz-rAk" firstAttribute="top" secondItem="qXW-D5-3h0" secondAttribute="top" constant="8" id="lzm-3B-5Ql"/>
                                             <constraint firstAttribute="trailing" secondItem="065-eT-pZ7" secondAttribute="trailing" constant="34" id="n0r-8r-bnL"/>
                                             <constraint firstItem="72M-iS-dW1" firstAttribute="leading" secondItem="qXW-D5-3h0" secondAttribute="leading" constant="23" id="nZJ-mI-d3s"/>
@@ -366,7 +363,6 @@
                                             <constraint firstAttribute="trailing" secondItem="KpX-VU-g7l" secondAttribute="trailing" constant="75" id="sOB-fZ-ql2"/>
                                             <constraint firstItem="7N4-R3-sp7" firstAttribute="top" secondItem="v51-Cz-rAk" secondAttribute="bottom" constant="6" id="u1l-hc-EA5"/>
                                             <constraint firstItem="vto-Bs-mPS" firstAttribute="top" secondItem="HsU-ob-89P" secondAttribute="bottom" constant="8" symbolic="YES" id="wWJ-Y0-O49"/>
-                                            <constraint firstItem="e1G-vI-fDn" firstAttribute="top" secondItem="kue-gT-K3f" secondAttribute="bottom" constant="8" id="yEm-W2-cT6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -404,12 +400,12 @@
                         <outlet property="labelTitlePostDetail" destination="v51-Cz-rAk" id="Xg5-fg-xBI"/>
                         <outlet property="scrollDetailView" destination="8Qt-BW-aGW" id="kPQ-Kc-YGq"/>
                         <outlet property="viewDetail" destination="qXW-D5-3h0" id="0Ot-Qw-xJ5"/>
-                        <outlet property="webViewPostDetail" destination="kue-gT-K3f" id="6KF-lk-azE"/>
+                        <outlet property="viewMapPostDetail" destination="w3G-51-WEA" id="JhJ-B3-hnq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-Lw-MnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3200" y="-468"/>
+            <point key="canvasLocation" x="3200.0000000000005" y="-468.08035714285711"/>
         </scene>
         <!--New Post View Controller-->
         <scene sceneID="ZZ7-ms-Cc1">

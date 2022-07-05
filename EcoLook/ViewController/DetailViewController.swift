@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import WebKit
+import GoogleMaps
 
 class DetailViewController: UIViewController {
     
@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var labelDatePostDetail: UILabel!
     @IBOutlet weak var buttonFavoritePostDetail: UIButton!
     @IBOutlet weak var labelDescriptionPostDetail: UILabel!
-    @IBOutlet weak var webViewPostDetail: WKWebView!
+    @IBOutlet weak var viewMapPostDetail: GMSMapView!
     @IBOutlet weak var labelDirectionPostDetail: UILabel!
     @IBOutlet weak var imageViewRiskLevel: UIImageView!
     @IBOutlet weak var collectionViewTagsPostDetail: UICollectionView!
@@ -56,7 +56,7 @@ class DetailViewController: UIViewController {
         labelDirectionPostDetail.text = post?.direccion
         
         let googleMapsEmbed = getUrlGoogleMapsByLatLng(lat: post?.latitud, lng: post?.longitud)
-        webViewPostDetail.load(URLRequest(url: URL(string: googleMapsEmbed)!))
+        
         
         let icon = getNameIconByRiskLevel(riskLevel: post?.nivelRiesgo)
         imageViewRiskLevel.image = UIImage(systemName: icon)
