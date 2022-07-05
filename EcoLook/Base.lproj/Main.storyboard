@@ -653,6 +653,7 @@
                             <constraint firstItem="JEm-sR-xGC" firstAttribute="bottom" secondItem="edh-mt-ERx" secondAttribute="bottom" id="vEJ-km-Ufg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vMx-ky-WEI"/>
                     <connections>
                         <outlet property="customMapView" destination="edh-mt-ERx" id="spn-Bx-OL2"/>
                     </connections>

@@ -25,17 +25,45 @@ class GeolocalizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let camera = GMSCameraPosition.camera(withLatitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+        
+//        customMapView.delegate = self
+////        let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+//        let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+//
+////        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+//        customMapView.camera = camera
+//
+//
+//        customMapView.isMyLocationEnabled = true
+//        customMapView.settings.myLocationButton = true
+//
+//
+//
+////        self.view.addSubview(mapView)
+//
+//        // Creates a marker in the center of the map.
+//
+//        marker.position = CLLocationCoordinate2D(latitude: -8.1121075, longitude: -79.028297)
+//        marker.map = customMapView
+//        marker.isDraggable = true
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+        let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+        
 //        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         customMapView.camera = camera
         
         
         customMapView.isMyLocationEnabled = true
         customMapView.settings.myLocationButton = true
-
-        
         customMapView.delegate = self
+        
+        
 //        self.view.addSubview(mapView)
 
         // Creates a marker in the center of the map.
@@ -43,8 +71,6 @@ class GeolocalizationViewController: UIViewController {
         marker.position = CLLocationCoordinate2D(latitude: -8.1121075, longitude: -79.028297)
         marker.map = customMapView
         marker.isDraggable = true
-        
-        
     }
     
 
