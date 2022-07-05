@@ -78,11 +78,24 @@ class GeolocalizationViewController: UIViewController {
 
 }
 
+extension GeolocalizationViewController {
+    
+    func showDirectionHasChange(){
+        
+        let okay = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alerta = UIAlertController(title: "Direccion actualizada", message: "La direccion se ha actualizado", preferredStyle: .alert)
+        alerta.addAction(okay)
+        present(alerta, animated: true, completion: nil)
+        
+    }
+    
+}
+
 extension GeolocalizationViewController: GMSMapViewDelegate{
     
     
     func mapView(_ mapView: GMSMapView, didEndDragging marker: GMSMarker) {
-        print("Aer que sale: \(marker.position)")
+//        print("Aer que sale: \(marker.position)")
         
         geocoder.reverseGeocodeCoordinate(marker.position){ response, error in
             
@@ -96,6 +109,8 @@ extension GeolocalizationViewController: GMSMapViewDelegate{
 //                print("tipo del lat: \(type(of: marker.position.latitude))")
                 
                 self.delegate?.markerDidChange(directionGeo: lines[0], latGeo: marker.position.latitude, lngGeo: marker.position.longitude)
+                
+                self.showDirectionHasChange()
             }
             
         }
@@ -129,6 +144,8 @@ extension GeolocalizationViewController: GMSMapViewDelegate{
 //                print("direccion?: \(lines[0])")
                 
                 self.delegate?.markerDidChange(directionGeo: lines[0], latGeo: myLat, lngGeo: myLng)
+                
+                showDirectionHasChange()
             }
             
         }
