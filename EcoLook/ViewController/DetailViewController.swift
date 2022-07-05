@@ -55,8 +55,6 @@ class DetailViewController: UIViewController {
         labelDescriptionPostDetail.text = post?.descripcion
         labelDirectionPostDetail.text = post?.direccion
         
-        let googleMapsEmbed = getUrlGoogleMapsByLatLng(lat: post?.latitud, lng: post?.longitud)
-        
         
         let icon = getNameIconByRiskLevel(riskLevel: post?.nivelRiesgo)
         imageViewRiskLevel.image = UIImage(systemName: icon)
@@ -73,42 +71,54 @@ class DetailViewController: UIViewController {
 
 }
 
-func getPostSelected(idPost: Int?) -> Post{
+extension DetailViewController {
     
-    guard let idPostSafe = idPost else{
-        return Post()
-    }
-    
-    let post = arrMockPosts.filter( {$0.idPublicacion == idPostSafe} )
-    
-    return post[0]
-    
-}
-
-func getUrlGoogleMapsByLatLng(lat: Double?, lng: Double?) -> String {
-    
-    
-    if let latSafe = lat, let lngSafe = lng {
+    func getPostSelected(idPost: Int?) -> Post{
         
-        return "https://www.google.com/maps/@"+String(latSafe)+","+String(lngSafe)+",18.6z"
+        guard let idPostSafe = idPost else{
+            return Post()
+        }
         
-    }else{
-        return "https://www.google.com/maps/@-8.1114925,-79.0287559,18.6z"
+        let post = arrMockPosts.filter( {$0.idPublicacion == idPostSafe} )
+        
+        return post[0]
+        
     }
-    
-    
-    
-    
-}
+
+    func setMapByLatLng(lat: Double?, lng: Double?) {
+        
+        
+        if let latSafe = lat, let lngSafe = lng {
+            
+            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+            
+//            return "https://www.google.com/maps/@"+String(latSafe)+","+String(lngSafe)+",18.6z"
+            
+        }else{
+            
+            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 17.4)
+            
+//            return "https://www.google.com/maps/@-8.1114925,-79.0287559,18.6z"
+            
+            
+        }
+        
+        
+    }
 
 
-func getNameIconByRiskLevel(riskLevel: Int?) -> String {
-    
-    guard let risklvl = riskLevel else{
-        return "0.square.fill"
+    func getNameIconByRiskLevel(riskLevel: Int?) -> String {
+        
+        guard let risklvl = riskLevel else{
+            return "0.square.fill"
+        }
+        
+        return String(risklvl)+".square.fill"
     }
+
     
-    return String(risklvl)+".square.fill"
+    
+    
 }
 
 extension DetailViewController: UICollectionViewDataSource{
