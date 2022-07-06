@@ -24,24 +24,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = ThemeColors.verdeBackground
-        
-        labelTitle.textColor = ThemeColors.verdePrimary
-        
-        buttonNewPost.tintColor = ThemeColors.verdePrimary
-        
-        inputSearch.backgroundColor = ThemeColors.verdeInput
-        inputSearch.borderStyle = .none
-        
-        sliderTags.backgroundColor = ThemeColors.verdeBackground
-        sliderTags.dataSource = self
-        sliderTags.register(UINib(nibName: "TagsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCellTag")
-        
-        tableViewPostsCards.separatorStyle = .none
-        tableViewPostsCards.showsVerticalScrollIndicator = false
-        tableViewPostsCards.backgroundColor = ThemeColors.verdeBackground
-        tableViewPostsCards.dataSource = self
-        tableViewPostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
+        setConfigurationHomeViewController()
         
         
         
@@ -88,6 +71,33 @@ class HomeViewController: UIViewController {
     
 
 
+}
+
+extension HomeViewController {
+    
+    func setConfigurationHomeViewController() {
+        
+        self.view.backgroundColor = ThemeColors.verdeBackground
+        
+        labelTitle.textColor = ThemeColors.verdePrimary
+        
+        buttonNewPost.tintColor = ThemeColors.verdePrimary
+        
+        inputSearch.backgroundColor = ThemeColors.verdeInput
+        inputSearch.borderStyle = .none
+        
+        sliderTags.backgroundColor = ThemeColors.verdeBackground
+        sliderTags.dataSource = self
+        sliderTags.register(UINib(nibName: "TagsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "customCellTag")
+        
+        tableViewPostsCards.separatorStyle = .none
+        tableViewPostsCards.showsVerticalScrollIndicator = false
+        tableViewPostsCards.backgroundColor = ThemeColors.verdeBackground
+        tableViewPostsCards.dataSource = self
+        tableViewPostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
+        
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource{

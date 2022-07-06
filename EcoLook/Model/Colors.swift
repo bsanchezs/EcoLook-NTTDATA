@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThemeColors {
+enum ThemeColors {
     
     
     static let verdeBackground: UIColor = UIColor(red: CGFloat(235/255.0), green: CGFloat(248/255.0), blue: CGFloat(227/255.0), alpha: 1)
