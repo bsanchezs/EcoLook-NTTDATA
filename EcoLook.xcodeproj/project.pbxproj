@@ -99,12 +99,8 @@
 		1F1542892864FA3400FC48F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1F05812C28657465008D95C4 /* Colors.swift */,
-				1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */,
 				1FE05B252867B3B400C3160D /* Tags.swift */,
 				1FAC454F286934F10070ECAC /* Posts.swift */,
-				1FAC3A2F286E343700B21386 /* FormStatus.swift */,
-				1FB90B48286EA93500F1A28E /* Date.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +134,17 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		1F2ACCBC287550F30099F4D1 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1F05812C28657465008D95C4 /* Colors.swift */,
+				1FAC3A2F286E343700B21386 /* FormStatus.swift */,
+				1FB90B48286EA93500F1A28E /* Date.swift */,
+				1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
 		1F46D3CC285BEA87008F84CA = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +166,7 @@
 		1F46D3D7285BEA87008F84CA /* EcoLook */ = {
 			isa = PBXGroup;
 			children = (
+				1F2ACCBC287550F30099F4D1 /* helpers */,
 				1FDBC76628736121009A4970 /* Locations */,
 				1FAC455128693DD40070ECAC /* TableViewCell */,
 				1F8614F128680EAD00036DE7 /* CollectionViewCell */,
