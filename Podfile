@@ -10,5 +10,6 @@ target 'EcoLook' do
   # Pods for EcoLook
   
   pod 'GoogleMaps'
+  pod 'Alamofire'
   
 end
