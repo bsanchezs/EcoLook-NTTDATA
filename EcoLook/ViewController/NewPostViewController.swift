@@ -28,33 +28,7 @@ class NewPostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = ThemeColors.verdeBackground
-        
-        labelTitleHeader.textColor = ThemeColors.verdePrimary
-        buttonGoBackHeader.tintColor = ThemeColors.verdePrimary
-        
-        imageViewPhotoNewPost.layer.cornerRadius = 15
-        
-        buttonDirectionNewPost.tintColor = ThemeColors.verdePrimary
-        
-        textViewDescriptionNewPost.backgroundColor = .white
-        textViewDescriptionNewPost.layer.borderWidth = 1
-        textViewDescriptionNewPost.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 0.08)
-        textViewDescriptionNewPost.layer.cornerRadius = 15
-        
-        sliderRiskLevelNewPost.thumbTintColor = ThemeColors.verdePrimary
-        sliderRiskLevelNewPost.tintColor = ThemeColors.verdePrimary
-        sliderRiskLevelNewPost.isContinuous = false
-        
-        collectionViewTagsNewPost.showsVerticalScrollIndicator = false
-        collectionViewTagsNewPost.backgroundColor = ThemeColors.verdeBackground
-        collectionViewTagsNewPost.dataSource = self
-        
-        buttonSaveNewPost.backgroundColor = ThemeColors.verdePrimary
-        buttonSaveNewPost.tintColor = .white
-        buttonSaveNewPost.layer.cornerRadius = 15
-        
-        
+        setConfigurationNewPostViewController()
         
         
     }
@@ -220,6 +194,36 @@ class NewPostViewController: UIViewController {
 }
 
 extension NewPostViewController {
+    
+    func setConfigurationNewPostViewController() {
+        
+        self.view.backgroundColor = ThemeColors.verdeBackground
+        
+        labelTitleHeader.textColor = ThemeColors.verdePrimary
+        buttonGoBackHeader.tintColor = ThemeColors.verdePrimary
+        
+        imageViewPhotoNewPost.layer.cornerRadius = 15
+        
+        buttonDirectionNewPost.tintColor = ThemeColors.verdePrimary
+        
+        textViewDescriptionNewPost.backgroundColor = .white
+        textViewDescriptionNewPost.layer.borderWidth = 1
+        textViewDescriptionNewPost.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 0.08)
+        textViewDescriptionNewPost.layer.cornerRadius = 15
+        
+        sliderRiskLevelNewPost.thumbTintColor = ThemeColors.verdePrimary
+        sliderRiskLevelNewPost.tintColor = ThemeColors.verdePrimary
+        sliderRiskLevelNewPost.isContinuous = false
+        
+        collectionViewTagsNewPost.showsVerticalScrollIndicator = false
+        collectionViewTagsNewPost.backgroundColor = ThemeColors.verdeBackground
+        collectionViewTagsNewPost.dataSource = self
+        
+        buttonSaveNewPost.backgroundColor = ThemeColors.verdePrimary
+        buttonSaveNewPost.tintColor = .white
+        buttonSaveNewPost.layer.cornerRadius = 15
+        
+    }
     
     func verifyInputsNewPost() -> FormStatus {
         
