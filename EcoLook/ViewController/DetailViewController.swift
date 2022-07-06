@@ -31,6 +31,22 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setConfigurationDetailViewController()
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setMapByLatLng(lat: post?.latitud, lng: post?.latitud)
+    }
+    
+
+}
+
+extension DetailViewController {
+    
+    func setConfigurationDetailViewController() {
+        
         post = getPostSelected(idPost: idSelectedPost)
         
 //        print("recibio el post? : \(post)")
@@ -63,21 +79,7 @@ class DetailViewController: UIViewController {
         
         collectionViewTagsPostDetail.dataSource = self
         
-        
-        
-        
-        
-        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        setMapByLatLng(lat: post?.latitud, lng: post?.latitud)
-    }
-    
-
-}
-
-extension DetailViewController {
     
     func getPostSelected(idPost: Int?) -> Post{
         
