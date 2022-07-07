@@ -28,6 +28,7 @@
 		1FAC455528693E1A0070ECAC /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */; };
 		1FB90B49286EA93500F1A28E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB90B48286EA93500F1A28E /* Date.swift */; };
 		1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */; };
+		1FD13D28287754E20031B9D9 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D27287754E20031B9D9 /* VIPERProtocols.swift */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 		1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC767287361F4009A4970 /* MyHouse.gpx */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
@@ -59,6 +60,7 @@
 		1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 		1FB90B48286EA93500F1A28E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsNewPostCollectionViewCell.swift; sourceTree = "<group>"; };
+		1FD13D27287754E20031B9D9 /* VIPERProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		1FDBC767287361F4009A4970 /* MyHouse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyHouse.gpx; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
@@ -200,6 +202,8 @@
 		1FD13D17287749780031B9D9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1FD13D27287754E20031B9D9 /* VIPERProtocols.swift */,
+				1FD13D25287754B50031B9D9 /* VIPERLayers */,
 				1FD13D1A28774C3C0031B9D9 /* Views */,
 			);
 			path = Home;
@@ -265,6 +269,13 @@
 				1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1FD13D25287754B50031B9D9 /* VIPERLayers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIPERLayers;
 			sourceTree = "<group>";
 		};
 		1FDBC76628736121009A4970 /* Locations */ = {
@@ -426,6 +437,7 @@
 				1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */,
 				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
 				1FB90B49286EA93500F1A28E /* Date.swift in Sources */,
+				1FD13D28287754E20031B9D9 /* VIPERProtocols.swift in Sources */,
 				1F05812D28657465008D95C4 /* Colors.swift in Sources */,
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,
 				1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */,
