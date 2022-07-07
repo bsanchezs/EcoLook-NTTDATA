@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController {
+extension HomeViewController: HomeViewProtocol {
     
     func setConfigurationHomeViewController() {
         

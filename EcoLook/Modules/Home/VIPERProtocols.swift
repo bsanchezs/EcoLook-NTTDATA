@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+protocol HomeViewProtocol {
+    
+}
+
+protocol HomePresenterProtocol{
+    
+}
+
+protocol HomeRouterProtocol{
+    
+}
+
+protocol HomeInteractorProtocol{
+    
+}
+
+
+

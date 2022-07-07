@@ -29,6 +29,9 @@
 		1FB90B49286EA93500F1A28E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB90B48286EA93500F1A28E /* Date.swift */; };
 		1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */; };
 		1FD13D28287754E20031B9D9 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D27287754E20031B9D9 /* VIPERProtocols.swift */; };
+		1FD13D2A287758640031B9D9 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D29287758640031B9D9 /* Presenter.swift */; };
+		1FD13D2C287758740031B9D9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D2B287758740031B9D9 /* Router.swift */; };
+		1FD13D2E287758810031B9D9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D2D287758810031B9D9 /* Interactor.swift */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
 		1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC767287361F4009A4970 /* MyHouse.gpx */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
@@ -61,6 +64,9 @@
 		1FB90B48286EA93500F1A28E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsNewPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FD13D27287754E20031B9D9 /* VIPERProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
+		1FD13D29287758640031B9D9 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		1FD13D2B287758740031B9D9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1FD13D2D287758810031B9D9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		1FDBC767287361F4009A4970 /* MyHouse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyHouse.gpx; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
@@ -274,6 +280,9 @@
 		1FD13D25287754B50031B9D9 /* VIPERLayers */ = {
 			isa = PBXGroup;
 			children = (
+				1FD13D29287758640031B9D9 /* Presenter.swift */,
+				1FD13D2B287758740031B9D9 /* Router.swift */,
+				1FD13D2D287758810031B9D9 /* Interactor.swift */,
 			);
 			path = VIPERLayers;
 			sourceTree = "<group>";
@@ -434,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F63BC1D286A0F580070AE08 /* DetailViewController.swift in Sources */,
+				1FD13D2A287758640031B9D9 /* Presenter.swift in Sources */,
 				1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */,
 				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
 				1FB90B49286EA93500F1A28E /* Date.swift in Sources */,
@@ -444,6 +454,8 @@
 				1FAC3A30286E343700B21386 /* FormStatus.swift in Sources */,
 				1F762D642870F0F3001AD67D /* GeolocalizationViewController.swift in Sources */,
 				1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */,
+				1FD13D2E287758810031B9D9 /* Interactor.swift in Sources */,
+				1FD13D2C287758740031B9D9 /* Router.swift in Sources */,
 				1FE05B262867B3B400C3160D /* Tags.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
