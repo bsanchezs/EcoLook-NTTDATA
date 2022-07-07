@@ -114,35 +114,26 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		1F15428B2864FD6300FC48F4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1F15428C2865066E00FC48F4 /* HomeViewController.swift */,
-				1F63BC1C286A0F580070AE08 /* DetailViewController.swift */,
-				1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */,
-				1F762D632870F0F3001AD67D /* GeolocalizationViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		1F15428E28651B6400FC48F4 /* fonts */ = {
+		1F15428E28651B6400FC48F4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */,
 				1FA70A692865394700BDB740 /* Playball-Regular.ttf */,
 			);
-			path = fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
-		1F2ACCBC287550F30099F4D1 /* helpers */ = {
+		1F2ACCBC287550F30099F4D1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				1F05812C28657465008D95C4 /* Colors.swift */,
 				1FAC3A2F286E343700B21386 /* FormStatus.swift */,
 				1FB90B48286EA93500F1A28E /* Date.swift */,
 				1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */,
+				1FDBC76628736121009A4970 /* Locations */,
+				1F15428E28651B6400FC48F4 /* Fonts */,
 			);
-			path = helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1F46D3CC285BEA87008F84CA = {
@@ -166,14 +157,9 @@
 		1F46D3D7285BEA87008F84CA /* EcoLook */ = {
 			isa = PBXGroup;
 			children = (
-				1F2ACCBC287550F30099F4D1 /* helpers */,
-				1FDBC76628736121009A4970 /* Locations */,
-				1FAC455128693DD40070ECAC /* TableViewCell */,
-				1F8614F128680EAD00036DE7 /* CollectionViewCell */,
-				1F05812E286584FB008D95C4 /* TabBarController */,
-				1F15428E28651B6400FC48F4 /* fonts */,
-				1F15428B2864FD6300FC48F4 /* ViewController */,
 				1F15428A2864FA6700FC48F4 /* Common */,
+				1FD13D16287749670031B9D9 /* Modules */,
+				1F2ACCBC287550F30099F4D1 /* Helpers */,
 				1F1542892864FA3400FC48F4 /* Model */,
 				1F46D3DE285BEA87008F84CA /* Main.storyboard */,
 				1F46D3E1285BEA87008F84CA /* Assets.xcassets */,
@@ -188,8 +174,6 @@
 			children = (
 				1FAC454B2868A6BB0070ECAC /* TagsCollectionViewCell.swift */,
 				1FAC454C2868A6BB0070ECAC /* TagsCollectionViewCell.xib */,
-				1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */,
-				1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -201,6 +185,86 @@
 				1FAC455328693E1A0070ECAC /* PostsTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		1FD13D16287749670031B9D9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1FD13D192877498B0031B9D9 /* NewPost */,
+				1FD13D18287749800031B9D9 /* Detail */,
+				1FD13D17287749780031B9D9 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1FD13D17287749780031B9D9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1FD13D1A28774C3C0031B9D9 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1FD13D18287749800031B9D9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1FD13D1B28774C480031B9D9 /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		1FD13D192877498B0031B9D9 /* NewPost */ = {
+			isa = PBXGroup;
+			children = (
+				1FD13D1C28774C5E0031B9D9 /* Views */,
+			);
+			path = NewPost;
+			sourceTree = "<group>";
+		};
+		1FD13D1A28774C3C0031B9D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F15428C2865066E00FC48F4 /* HomeViewController.swift */,
+				1F05812E286584FB008D95C4 /* TabBarController */,
+				1F8614F128680EAD00036DE7 /* CollectionViewCell */,
+				1FAC455128693DD40070ECAC /* TableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FD13D1B28774C480031B9D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F63BC1C286A0F580070AE08 /* DetailViewController.swift */,
+				1FD13D1D28774CB60031B9D9 /* CollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FD13D1C28774C5E0031B9D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */,
+				1F762D632870F0F3001AD67D /* GeolocalizationViewController.swift */,
+				1FD13D1E28774CD50031B9D9 /* CollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FD13D1D28774CB60031B9D9 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		1FD13D1E28774CD50031B9D9 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1FC50166286D3968004D5327 /* TagsNewPostCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		1FDBC76628736121009A4970 /* Locations */ = {
