@@ -7,11 +7,12 @@
 
 import Foundation
 
-protocol HomeViewProtocol {
+protocol HomeViewProtocol: AnyObject {
     
+    func setConfigurationHomeViewController()
 }
 
-protocol HomePresenterProtocol{
+protocol HomePresenterProtocol: AnyObject{
     
 }
 

@@ -9,6 +9,10 @@ import Foundation
 
 class HomePresenter {
     
+    weak var view: HomeViewProtocol?
+    var router: HomeRouterProtocol?
+    var interactor: HomeInteractorProtocol?
+    
 }
 
 extension HomePresenter: HomePresenterProtocol {

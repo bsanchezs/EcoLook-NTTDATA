@@ -9,6 +9,8 @@ import Foundation
 
 class HomeRouter {
     
+    weak var presenter: HomePresenter?
+    
 }
 
 extension HomeRouter: HomeRouterProtocol {

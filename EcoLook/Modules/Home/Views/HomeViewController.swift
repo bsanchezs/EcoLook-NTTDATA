@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     //    ----------------------------------------
     
-    
+    var homePresenter: HomePresenterProtocol?
     
     
     
@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         
         setConfigurationHomeViewController()
         
+        HomeConfiguration.setHomeVIPER()
         
         
         
