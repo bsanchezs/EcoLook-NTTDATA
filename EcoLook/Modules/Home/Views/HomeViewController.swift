@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     //    ----------------------------------------
     
-    var homePresenter: HomePresenterProtocol?
+    var homePresenter: HomePresenterProtocol? 
     
     
     
@@ -25,9 +25,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setConfigurationHomeViewController()
-        
-        HomeConfiguration.setHomeVIPER()
-        
         
         
         // Do any additional setup after loading the view.
@@ -49,6 +46,7 @@ class HomeViewController: UIViewController {
 //        return false
 //    }
     
+    // Creo que esto se va al para el router
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let segueId = segue.identifier else {

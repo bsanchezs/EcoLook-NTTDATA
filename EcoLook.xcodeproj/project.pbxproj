@@ -169,6 +169,7 @@
 			children = (
 				1F15428A2864FA6700FC48F4 /* Common */,
 				1FD13D16287749670031B9D9 /* Modules */,
+				1FD13D312877BE120031B9D9 /* Data */,
 				1F2ACCBC287550F30099F4D1 /* Helpers */,
 				1F1542892864FA3400FC48F4 /* Model */,
 				1F46D3DE285BEA87008F84CA /* Main.storyboard */,
@@ -288,6 +289,21 @@
 				1FD13D2F287785FF0031B9D9 /* Configuration.swift */,
 			);
 			path = VIPERLayers;
+			sourceTree = "<group>";
+		};
+		1FD13D312877BE120031B9D9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1FD13D322877BE4D0031B9D9 /* Post */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1FD13D322877BE4D0031B9D9 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		1FDBC76628736121009A4970 /* Locations */ = {

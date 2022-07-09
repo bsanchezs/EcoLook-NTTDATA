@@ -10,16 +10,17 @@ import UIKit
 
 class HomeConfiguration {
     
-    class func setHomeVIPER() {
+    class func setHomeVIPER() -> UIViewController {
 
         let homePresenter = HomePresenter()
         let homeRouter = HomeRouter()
         let homeInteractor = HomeInteractor()
-
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
-            fatalError("aaaaaaaaaaaaa")
+            fatalError("no se encontró viewcontroller")
         }
+        
         
         viewController.homePresenter = homePresenter
         
@@ -27,8 +28,11 @@ class HomeConfiguration {
         homePresenter.interactor = homeInteractor
         homePresenter.router = homeRouter
         
+        homeInteractor.presenter = homePresenter
+        
         homeRouter.presenter = homePresenter
         
+        return viewController
 
 
     }
