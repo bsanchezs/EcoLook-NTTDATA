@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     //    ----------------------------------------
     
-    var homePresenter: HomePresenterProtocol? 
+    var presenter: HomePresenterProtocol? 
     
     
     
@@ -27,7 +27,14 @@ class HomeViewController: UIViewController {
         setConfigurationHomeViewController()
         
         
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        print("Apareceeee")
+        
+        presenter?.fetchAllPostsByUser(idUser: 1)
+        
     }
     
     
@@ -40,13 +47,6 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        print("Should perform: \(identifier)")
-//        return false
-//    }
-    
-    // Creo que esto se va al para el router
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let segueId = segue.identifier else {
@@ -110,6 +110,8 @@ extension HomeViewController: UICollectionViewDataSource{
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        print("siuu")
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTag", for: indexPath) as? TagsCollectionViewCell
         

@@ -22,7 +22,7 @@ class HomeConfiguration {
         }
         
         
-        viewController.homePresenter = homePresenter
+        viewController.presenter = homePresenter
         
         homePresenter.view = viewController
         homePresenter.interactor = homeInteractor

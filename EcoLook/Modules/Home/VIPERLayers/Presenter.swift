@@ -17,5 +17,10 @@ class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
     
+    func fetchAllPostsByUser(idUser: Int) {
+        
+        print("El dato que llego es: \(idUser)")
+        
+    }
     
 }

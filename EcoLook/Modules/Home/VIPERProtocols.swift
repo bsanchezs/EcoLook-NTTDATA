@@ -14,6 +14,8 @@ protocol HomeViewProtocol: AnyObject {
 
 protocol HomePresenterProtocol: AnyObject{
     
+    func fetchAllPostsByUser( idUser: Int )
+    
 }
 
 protocol HomeRouterProtocol{
