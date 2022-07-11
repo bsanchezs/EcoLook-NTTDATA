@@ -173,7 +173,7 @@ extension HomeViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrMockPosts.count
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -181,9 +181,9 @@ extension HomeViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customPostsCardsCell", for: indexPath) as? PostsTableViewCell
         
-        cell?.labelTitleCard.text = arrMockPosts[indexPath.row].titulo
-        cell?.labelShortDescCard.text = arrMockPosts[indexPath.row].getShortDescription(descripcion: arrMockPosts[indexPath.row].descripcion)
-        cell?.btnGoDetailCard.tag = arrMockPosts[indexPath.row].idPublicacion
+        cell?.labelTitleCard.text = posts[indexPath.row].titulo
+        cell?.labelShortDescCard.text = posts[indexPath.row].getShortDescription(descripcion: posts[indexPath.row].descripcion)
+        cell?.btnGoDetailCard.tag = posts[indexPath.row].idPublicacion
         cell?.selectionStyle = .none
         cell?.delegate = self
         

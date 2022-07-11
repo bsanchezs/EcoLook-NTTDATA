@@ -87,7 +87,7 @@ extension DetailViewController {
             return Post()
         }
         
-        let post = arrMockPosts.filter( {$0.idPublicacion == idPostSafe} )
+        let post = posts.filter( {$0.idPublicacion == idPostSafe} )
         
         return post[0]
         

@@ -78,7 +78,7 @@ extension Post {
 }
 
 
-let arrMockPosts = [
+let posts = [
 
     Post(idPublicacion: 1, titulo: "Publicacion 1", descripcion: "Primera descripcion", nivelRiesgo: 3, direccion: "direccion 1", imagen: "1.jpg", fecha: "10/02/2021", arrayEtiquetas: [Tag(id: 1, name: "#basura", status: 1), Tag(id: 2, name: "#plastico", status: 1)], idUsuario: 1),
     Post(idPublicacion: 2, titulo: "Publicacion 2", descripcion: "Segunda descripcion", nivelRiesgo: 1, direccion: "direccion 2", imagen: "2.jpg", fecha: "11/02/2021", arrayEtiquetas: [Tag(id: 3, name: "#playa", status: 1)], idUsuario: 1),
