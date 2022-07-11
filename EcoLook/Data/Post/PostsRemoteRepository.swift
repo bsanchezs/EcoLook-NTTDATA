@@ -22,9 +22,9 @@ class PostsRemoteRepository: PostsRepository {
             print("Respuestaaaa: \(response.result)")
             
             switch response.result {
-            case .success(let postsGet):
+            case .success(let allPosts):
 
-                success(postsGet)
+                success(allPosts)
 
             case .failure(let error):
                 

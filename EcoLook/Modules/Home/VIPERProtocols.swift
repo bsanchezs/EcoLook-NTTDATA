@@ -9,12 +9,13 @@ import Foundation
 
 protocol HomeViewProtocol: AnyObject {
     
-    func setConfigurationHomeViewController()
+    func showSuccessAllPostsByUser(allPosts: [Post])
 }
 
 protocol HomePresenterProtocol: AnyObject{
     
     func fetchAllPostsByUser(idUser: Int)
+    func loadSuccessAllPostsByUser(allPosts: [Post]?)
     
 }
 

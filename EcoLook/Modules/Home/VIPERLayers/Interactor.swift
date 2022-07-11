@@ -19,11 +19,12 @@ extension HomeInteractor: HomeInteractorProtocol {
     
     func getAllPostsByUser(idUser: Int) {
         
-        print("Dato del interactor: \(idUser)")
+//        print("Dato del interactor: \(idUser)")
         
-        postRepository?.getAllPostsByUser(idUser: idUser, success: { posts in
+        postRepository?.getAllPostsByUser(idUser: idUser, success: { allPosts in
             
-            print("Saludos desde el interactor: \(posts)")
+            self.presenter?.loadSuccessAllPostsByUser(allPosts: allPosts)
+            
             
         }, failure: { _ in })
         

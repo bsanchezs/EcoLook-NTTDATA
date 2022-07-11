@@ -72,7 +72,7 @@ class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController: HomeViewProtocol {
+extension HomeViewController {
     
     func setConfigurationHomeViewController() {
         
@@ -96,6 +96,18 @@ extension HomeViewController: HomeViewProtocol {
         tableViewPostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
         
     }
+    
+}
+
+extension HomeViewController: HomeViewProtocol {
+    
+    func showSuccessAllPostsByUser(allPosts: [Post]) {
+        
+        posts = allPosts
+        tableViewPostsCards.reloadData()
+        
+    }
+    
     
 }
 
