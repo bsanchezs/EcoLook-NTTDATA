@@ -9,10 +9,17 @@ import Foundation
 
 class HomeInteractor {
     
+    
     weak var presenter: HomePresenterProtocol?
     
 }
 
 extension HomeInteractor: HomeInteractorProtocol {
+    
+    func getAllPostsByUser(idUser: Int) {
+        
+        print("Dato del interactor: \(idUser)")
+        
+    }
     
 }

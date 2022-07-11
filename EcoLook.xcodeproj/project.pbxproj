@@ -16,6 +16,7 @@
 		1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E1285BEA87008F84CA /* Assets.xcassets */; };
 		1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E3285BEA87008F84CA /* LaunchScreen.storyboard */; };
 		1F63BC1D286A0F580070AE08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63BC1C286A0F580070AE08 /* DetailViewController.swift */; };
+		1F6F5924287BA5EC00CC2CBA /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F5923287BA5EC00CC2CBA /* Repositories.swift */; };
 		1F762D642870F0F3001AD67D /* GeolocalizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F762D632870F0F3001AD67D /* GeolocalizationViewController.swift */; };
 		1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */; };
 		1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */; };
@@ -52,6 +53,7 @@
 		1F46D3E4285BEA87008F84CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F46D3E6285BEA87008F84CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F63BC1C286A0F580070AE08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1F6F5923287BA5EC00CC2CBA /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		1F762D632870F0F3001AD67D /* GeolocalizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocalizationViewController.swift; sourceTree = "<group>"; };
 		1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsPostDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		1FD13D322877BE4D0031B9D9 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				1F6F5923287BA5EC00CC2CBA /* Repositories.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */,
 				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
 				1FB90B49286EA93500F1A28E /* Date.swift in Sources */,
+				1F6F5924287BA5EC00CC2CBA /* Repositories.swift in Sources */,
 				1FD13D28287754E20031B9D9 /* VIPERProtocols.swift in Sources */,
 				1F05812D28657465008D95C4 /* Colors.swift in Sources */,
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,

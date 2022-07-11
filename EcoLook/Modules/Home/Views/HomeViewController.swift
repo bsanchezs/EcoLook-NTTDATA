@@ -111,8 +111,6 @@ extension HomeViewController: UICollectionViewDataSource{
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        print("siuu")
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTag", for: indexPath) as? TagsCollectionViewCell
         
         cell?.btnTagHS.setTitle(arrEtiquetasTotales[indexPath.row].name, for: .normal)
