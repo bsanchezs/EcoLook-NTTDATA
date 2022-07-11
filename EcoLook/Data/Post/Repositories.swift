@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol PostsRepositories {
+protocol PostsRepository {
     
 //    func getPosts
     
