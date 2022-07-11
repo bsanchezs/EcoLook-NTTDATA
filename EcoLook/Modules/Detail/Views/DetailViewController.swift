@@ -51,7 +51,7 @@ extension DetailViewController {
         
 //        print("recibio el post? : \(post)")
         
-        imageViewDetail.image = UIImage(named: "Contaminacion")
+        imageViewDetail.image = UIImage(named: "no-image")
         imageViewDetail.contentMode = .scaleAspectFill
         
         
