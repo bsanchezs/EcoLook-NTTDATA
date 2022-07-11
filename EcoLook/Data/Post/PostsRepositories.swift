@@ -9,6 +9,6 @@ import Foundation
 
 protocol PostsRepository {
     
-    func getAllPostsByUser(idUser : Int)
+    func getAllPostsByUser(idUser: Int, success: @escaping ([Post]?) -> Void, failure: @escaping (Error?) -> Void)
     
 }
