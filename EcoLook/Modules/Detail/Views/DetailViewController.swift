@@ -145,7 +145,7 @@ extension DetailViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return post?.arrayEtiquetas?.count ?? 0
+        return post?.etiquetas?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -153,7 +153,7 @@ extension DetailViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTagDetail", for: indexPath) as? TagsPostDetailCollectionViewCell
         
         
-        cell?.labelTagPostDetail.text = post?.arrayEtiquetas?[indexPath.row].name
+        cell?.labelTagPostDetail.text = post?.etiquetas?[indexPath.row].name
         
         
         guard let cellDesempaquetado = cell else{

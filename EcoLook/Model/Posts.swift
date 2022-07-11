@@ -18,8 +18,9 @@ struct Post {
     let longitud: Double?
     let imagen: String
     let fecha: String
-    let arrayEtiquetas: [Tag]?
+    let etiquetas: [Tag]?
     let idUsuario: Int
+    let esFavorito: Int
     let estado: Int
     
     
@@ -49,8 +50,9 @@ extension Post {
         self.longitud = nil
         self.imagen = ""
         self.fecha = "Error"
-        self.arrayEtiquetas = []
+        self.etiquetas = []
         self.idUsuario = 0
+        self.esFavorito = 0
         self.estado = 0
         
     }
@@ -66,8 +68,9 @@ extension Post {
         self.longitud = nil
         self.imagen = imagen
         self.fecha = fecha
-        self.arrayEtiquetas = arrayEtiquetas
+        self.etiquetas = arrayEtiquetas
         self.idUsuario = idUsuario
+        self.esFavorito = 0
         self.estado = 1
     }
     

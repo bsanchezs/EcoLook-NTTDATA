@@ -21,7 +21,7 @@ extension HomeInteractor: HomeInteractorProtocol {
         
         //print("Dato del interactor: \(idUser)")
         
-        postRepository?.getAllPostsByUser(idUser: idUser)
+        postRepository?.getAllPostsByUser(idUser: idUser, success: { _ in }, failure: { _ in })
         
     }
     
