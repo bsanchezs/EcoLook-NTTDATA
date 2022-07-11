@@ -9,6 +9,6 @@ import Foundation
 
 protocol PostsRepository {
     
-//    func getPosts
+    func getAllPostsByUser(idUser : Int)
     
 }

@@ -9,6 +9,7 @@ import Foundation
 
 class HomeInteractor {
     
+    let postRepository: PostsRepository? = PostsRemoteRepository()
     
     weak var presenter: HomePresenterProtocol?
     
@@ -18,7 +19,9 @@ extension HomeInteractor: HomeInteractorProtocol {
     
     func getAllPostsByUser(idUser: Int) {
         
-        print("Dato del interactor: \(idUser)")
+        //print("Dato del interactor: \(idUser)")
+        
+        postRepository?.getAllPostsByUser(idUser: idUser)
         
     }
     
