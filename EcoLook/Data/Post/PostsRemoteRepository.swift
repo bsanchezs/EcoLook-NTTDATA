@@ -16,21 +16,23 @@ class PostsRemoteRepository: PostsRepository {
         let idUserString = String(idUser)
         let url = "https://apiecolook.improntux.online/public/api/obtenerTodasPublicacionesPorUsuario/" + idUserString
         
-//        AF.request(url).responseDecodable(of: [Post].self){
-//            response in
-//
-//            switch response.result {
-//            case .success(let beers):
-//
-//                self.beerList = beers
-//                self.tableView.reloadData()
-//
-////                debugPrint(beers)
-//            case .failure(let error):
-//                print(error)
-//            }
-//
-//        }
+        AF.request(url).responseDecodable(of: [Post].self){
+            response in
+            
+            print("Respuestaaaa: \(response.result)")
+            
+            switch response.result {
+            case .success(let postsGet):
+
+                success(postsGet)
+
+            case .failure(let error):
+                
+                failure(error)
+                
+            }
+
+        }
         
     }
     
