@@ -16,6 +16,7 @@ protocol HomePresenterProtocol: AnyObject{
     
     func fetchAllPostsByUser(idUser: Int)
     func loadSuccessAllPostsByUser(allPosts: [Post]?)
+    func fetchImagePostByUrl(url: String, cell: PostsTableViewCell?)
     
 }
 
@@ -26,7 +27,7 @@ protocol HomeRouterProtocol{
 protocol HomeInteractorProtocol{
     
     func getAllPostsByUser(idUser: Int)
-    
+    func getImagePostByUrl(url: String, cell: PostsTableViewCell?)
 }
 
 

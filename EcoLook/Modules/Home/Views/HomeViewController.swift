@@ -193,6 +193,10 @@ extension HomeViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customPostsCardsCell", for: indexPath) as? PostsTableViewCell
         
+        let url = posts[indexPath.row].getUrlImage(imagen: posts[indexPath.row].imagen)
+        
+        presenter?.fetchImagePostByUrl(url: url, cell: cell)
+        
         cell?.labelTitleCard.text = posts[indexPath.row].titulo
         cell?.labelShortDescCard.text = posts[indexPath.row].getShortDescription(descripcion: posts[indexPath.row].descripcion)
         cell?.btnGoDetailCard.tag = posts[indexPath.row].idPublicacion
