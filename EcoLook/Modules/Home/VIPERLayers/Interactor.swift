@@ -35,7 +35,9 @@ extension HomeInteractor: HomeInteractorProtocol {
         
         networkingImages?.getImageByUrl(url: url, success: { dataImage in
             
-            print("Hay data? : \(dataImage)")
+//            print("Hay data? : \(dataImage)")
+            
+            self.presenter?.loadSuccessImagePostByUrl(dataImage: dataImage, cell: cell)
             
         }, failure: { _ in })
         
