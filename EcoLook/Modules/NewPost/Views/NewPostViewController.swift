@@ -166,7 +166,7 @@ class NewPostViewController: UIViewController {
                     
                     print("Los dos tienen valores")
 
-                    newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, arrayEtiquetas: arrayTagsSelected, idUsuario: 1, estado: 1)
+                    newPost = Post(idPublicacion: 0, titulo: title, descripcion: description, nivelRiesgo: risklvl, direccion: direction, latitud: lat, longitud: lng, imagen: imageSafe, fecha: date, etiquetas: arrayTagsSelected, idUsuario: 1, esFavorito: 0, estado: 1)
 
                     
                 }else{

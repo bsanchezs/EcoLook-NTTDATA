@@ -51,7 +51,7 @@ extension DetailViewController {
         
 //        print("recibio el post? : \(post)")
         
-        imageViewDetail.image = UIImage(named: "Contaminacion")
+        imageViewDetail.image = UIImage(named: "no-image")
         imageViewDetail.contentMode = .scaleAspectFill
         
         
@@ -87,7 +87,7 @@ extension DetailViewController {
             return Post()
         }
         
-        let post = arrMockPosts.filter( {$0.idPublicacion == idPostSafe} )
+        let post = posts.filter( {$0.idPublicacion == idPostSafe} )
         
         return post[0]
         
@@ -145,7 +145,7 @@ extension DetailViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return post?.arrayEtiquetas?.count ?? 0
+        return post?.etiquetas?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -153,7 +153,7 @@ extension DetailViewController: UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTagDetail", for: indexPath) as? TagsPostDetailCollectionViewCell
         
         
-        cell?.labelTagPostDetail.text = post?.arrayEtiquetas?[indexPath.row].name
+        cell?.labelTagPostDetail.text = post?.etiquetas?[indexPath.row].name
         
         
         guard let cellDesempaquetado = cell else{

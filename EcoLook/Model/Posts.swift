@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post {
+struct Post: Decodable {
     
     let idPublicacion: Int
     let titulo: String
@@ -18,8 +18,9 @@ struct Post {
     let longitud: Double?
     let imagen: String
     let fecha: String
-    let arrayEtiquetas: [Tag]?
+    let etiquetas: [Tag]?
     let idUsuario: Int
+    let esFavorito: Int
     let estado: Int
     
     
@@ -31,6 +32,12 @@ struct Post {
         }else{
             return descripcion
         }
+        
+    }
+    
+    func getUrlImage(imagen: String) -> String {
+        
+        return "https://apiecolook.improntux.online/resources/imgs/" + imagen
         
     }
     
@@ -49,8 +56,9 @@ extension Post {
         self.longitud = nil
         self.imagen = ""
         self.fecha = "Error"
-        self.arrayEtiquetas = []
+        self.etiquetas = []
         self.idUsuario = 0
+        self.esFavorito = 0
         self.estado = 0
         
     }
@@ -66,8 +74,9 @@ extension Post {
         self.longitud = nil
         self.imagen = imagen
         self.fecha = fecha
-        self.arrayEtiquetas = arrayEtiquetas
+        self.etiquetas = arrayEtiquetas
         self.idUsuario = idUsuario
+        self.esFavorito = 0
         self.estado = 1
     }
     
@@ -75,7 +84,7 @@ extension Post {
 }
 
 
-let arrMockPosts = [
+var posts = [
 
     Post(idPublicacion: 1, titulo: "Publicacion 1", descripcion: "Primera descripcion", nivelRiesgo: 3, direccion: "direccion 1", imagen: "1.jpg", fecha: "10/02/2021", arrayEtiquetas: [Tag(id: 1, name: "#basura", status: 1), Tag(id: 2, name: "#plastico", status: 1)], idUsuario: 1),
     Post(idPublicacion: 2, titulo: "Publicacion 2", descripcion: "Segunda descripcion", nivelRiesgo: 1, direccion: "direccion 2", imagen: "2.jpg", fecha: "11/02/2021", arrayEtiquetas: [Tag(id: 3, name: "#playa", status: 1)], idUsuario: 1),

@@ -10,7 +10,7 @@ import UIKit
 
 protocol ButtonGoViewCellDelegate: AnyObject{
     
-    func goToDetail(btnGo: UIButton)
+    func goToDetail(idPost: Int)
     
 }
 
@@ -31,7 +31,7 @@ class PostsTableViewCell: UITableViewCell {
         viewCard.layer.cornerRadius = 15
         viewCard.backgroundColor = .white
         
-        imageViewCard.image = UIImage(named: "Contaminacion")
+        imageViewCard.image = UIImage(named: "no-image")
         imageViewCard.layer.cornerRadius = 15
         imageViewCard.contentMode = .scaleAspectFill
         
@@ -54,7 +54,7 @@ class PostsTableViewCell: UITableViewCell {
     
     @IBAction func btnAction(_ sender: UIButton) {
         
-        delegate?.goToDetail(btnGo: btnGoDetailCard)
+        delegate?.goToDetail(idPost: btnGoDetailCard.tag)
         
     }
 }

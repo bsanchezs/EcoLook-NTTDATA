@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     
     //    ----------------------------------------
     
-    
+    var presenter: HomePresenterProtocol? 
     
     
     
@@ -27,9 +27,14 @@ class HomeViewController: UIViewController {
         setConfigurationHomeViewController()
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
+        print("Apareceeee")
         
-        // Do any additional setup after loading the view.
+        presenter?.fetchAllPostsByUser(idUser: 1)
+        
     }
     
     
@@ -42,12 +47,6 @@ class HomeViewController: UIViewController {
     }
     
     
-    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        print("Should perform: \(identifier)")
-//        return false
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let segueId = segue.identifier else {
@@ -55,9 +54,8 @@ class HomeViewController: UIViewController {
         }
         
         if segueId == "homeToDetailSegue" || segueId == "favoritesToDetailSegue" || segueId == "personalToDetailSegue" {
-            let buttonPressed = sender as? UIButton
             
-            let idPostToSend = buttonPressed?.tag
+            let idPostToSend = sender as? Int
             
             
             let viewControllerDestination = segue.destination as! DetailViewController
@@ -97,6 +95,24 @@ extension HomeViewController {
         tableViewPostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
         
     }
+    
+}
+
+extension HomeViewController: HomeViewProtocol {
+    
+    func showSuccessAllPostsByUser(allPosts: [Post]) {
+        
+        posts = allPosts
+        tableViewPostsCards.reloadData()
+        
+    }
+    
+    func showSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+        DispatchQueue.main.async {
+            cell?.imageViewCard.image = UIImage(data: dataImage)
+        }
+    }
+    
     
 }
 
@@ -174,7 +190,7 @@ extension HomeViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrMockPosts.count
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -182,9 +198,15 @@ extension HomeViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customPostsCardsCell", for: indexPath) as? PostsTableViewCell
         
-        cell?.labelTitleCard.text = arrMockPosts[indexPath.row].titulo
-        cell?.labelShortDescCard.text = arrMockPosts[indexPath.row].getShortDescription(descripcion: arrMockPosts[indexPath.row].descripcion)
-        cell?.btnGoDetailCard.tag = arrMockPosts[indexPath.row].idPublicacion
+        print("imagen: \(posts[indexPath.row].imagen)")
+        
+        let url = posts[indexPath.row].getUrlImage(imagen: posts[indexPath.row].imagen)
+        
+        presenter?.fetchImagePostByUrl(url: url, cell: cell)
+        
+        cell?.labelTitleCard.text = posts[indexPath.row].titulo
+        cell?.labelShortDescCard.text = posts[indexPath.row].getShortDescription(descripcion: posts[indexPath.row].descripcion)
+        cell?.btnGoDetailCard.tag = posts[indexPath.row].idPublicacion
         cell?.selectionStyle = .none
         cell?.delegate = self
         
@@ -198,14 +220,9 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: ButtonGoViewCellDelegate{
     
     
-    func goToDetail(btnGo: UIButton) {
+    func goToDetail(idPost: Int) {
         
-//        let storyboard = UIStoryboard(name:"Main", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        viewController.idSelectedPost = btnGo.tag
-        
-        
-        performSegue(withIdentifier: "homeToDetailSegue", sender: btnGo)
+        performSegue(withIdentifier: "homeToDetailSegue", sender: idPost)
         
         
         

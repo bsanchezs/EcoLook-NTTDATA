@@ -58,7 +58,7 @@
         <!--Item 1-->
         <scene sceneID="zsi-2P-6AW">
             <objects>
-                <viewController id="lxn-er-nkW" customClass="HomeViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="lxn-er-nkW" customClass="HomeViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KRI-Tg-QM1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

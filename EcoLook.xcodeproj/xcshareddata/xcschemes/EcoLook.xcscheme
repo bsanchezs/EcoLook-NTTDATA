@@ -51,7 +51,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <LocationScenarioReference
-         identifier = "../EcoLook/Locations/MyHouse.gpx"
+         identifier = "../EcoLook/Helpers/Locations/MyHouse.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>
