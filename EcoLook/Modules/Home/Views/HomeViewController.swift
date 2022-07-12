@@ -54,9 +54,8 @@ class HomeViewController: UIViewController {
         }
         
         if segueId == "homeToDetailSegue" || segueId == "favoritesToDetailSegue" || segueId == "personalToDetailSegue" {
-            let buttonPressed = sender as? UIButton
             
-            let idPostToSend = buttonPressed?.tag
+            let idPostToSend = sender as? Int
             
             
             let viewControllerDestination = segue.destination as! DetailViewController
@@ -221,9 +220,9 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: ButtonGoViewCellDelegate{
     
     
-    func goToDetail(btnGo: UIButton) {        
+    func goToDetail(idPost: Int) {
         
-        performSegue(withIdentifier: "homeToDetailSegue", sender: btnGo)
+        performSegue(withIdentifier: "homeToDetailSegue", sender: idPost)
         
         
         

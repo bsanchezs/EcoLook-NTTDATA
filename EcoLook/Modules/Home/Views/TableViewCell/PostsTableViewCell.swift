@@ -10,7 +10,7 @@ import UIKit
 
 protocol ButtonGoViewCellDelegate: AnyObject{
     
-    func goToDetail(btnGo: UIButton)
+    func goToDetail(idPost: Int)
     
 }
 
@@ -54,7 +54,7 @@ class PostsTableViewCell: UITableViewCell {
     
     @IBAction func btnAction(_ sender: UIButton) {
         
-        delegate?.goToDetail(btnGo: btnGoDetailCard)
+        delegate?.goToDetail(idPost: btnGoDetailCard.tag)
         
     }
 }
