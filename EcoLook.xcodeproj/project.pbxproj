@@ -10,6 +10,8 @@
 		1F05812D28657465008D95C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05812C28657465008D95C4 /* Colors.swift */; };
 		1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15428C2865066E00FC48F4 /* HomeViewController.swift */; };
 		1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */; };
+		1F3DDC5F287D1A0900D5CD3B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DDC5E287D1A0900D5CD3B /* Networking.swift */; };
+		1F3DDC61287D21E100D5CD3B /* NetworkingImagesByUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DDC60287D21E100D5CD3B /* NetworkingImagesByUrl.swift */; };
 		1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D3D8285BEA87008F84CA /* AppDelegate.swift */; };
 		1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46D3DA285BEA87008F84CA /* SceneDelegate.swift */; };
 		1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3DE285BEA87008F84CA /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		1F05812C28657465008D95C4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1F15428C2865066E00FC48F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarOptions.swift; sourceTree = "<group>"; };
+		1F3DDC5E287D1A0900D5CD3B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1F3DDC60287D21E100D5CD3B /* NetworkingImagesByUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingImagesByUrl.swift; sourceTree = "<group>"; };
 		1F46D3D5285BEA87008F84CA /* EcoLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F46D3D8285BEA87008F84CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F46D3DA285BEA87008F84CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 				1F15428E28651B6400FC48F4 /* Fonts */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1F3DDC5D287D19F900D5CD3B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1F3DDC5E287D1A0900D5CD3B /* Networking.swift */,
+				1F3DDC60287D21E100D5CD3B /* NetworkingImagesByUrl.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		1F46D3CC285BEA87008F84CA = {
@@ -298,6 +311,7 @@
 		1FD13D312877BE120031B9D9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1F3DDC5D287D19F900D5CD3B /* Images */,
 				1FD13D322877BE4D0031B9D9 /* Post */,
 			);
 			path = Data;
@@ -481,6 +495,7 @@
 				1FAC3A30286E343700B21386 /* FormStatus.swift in Sources */,
 				1FD13D30287785FF0031B9D9 /* Configuration.swift in Sources */,
 				1F762D642870F0F3001AD67D /* GeolocalizationViewController.swift in Sources */,
+				1F3DDC61287D21E100D5CD3B /* NetworkingImagesByUrl.swift in Sources */,
 				1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */,
 				1FD13D2E287758810031B9D9 /* Interactor.swift in Sources */,
 				1FD13D2C287758740031B9D9 /* Router.swift in Sources */,
@@ -488,6 +503,7 @@
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
+				1F3DDC5F287D1A0900D5CD3B /* Networking.swift in Sources */,
 				1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */,
 				1FAC4550286934F10070ECAC /* Posts.swift in Sources */,
 				1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 class HomeInteractor {
     
     let postRepository: PostsRepository? = PostsRemoteRepository()
+    let networkingImages: NetworkingImages? = NetworkingImagesByUrl()
     
     weak var presenter: HomePresenterProtocol?
     
@@ -32,20 +33,13 @@ extension HomeInteractor: HomeInteractorProtocol {
     
     func getImagePostByUrl(url: String, cell: PostsTableViewCell?) {
         
+        networkingImages?.getImageByUrl(url: url, success: { dataImage in
+            
+            print("Hay data? : \(dataImage)")
+            
+        }, failure: { _ in })
         
         
-//        if let url = URL(string: url) {
-//
-//            let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
-//
-//                DispatchQueue.main.async {
-//
-//
-//                }
-//            }
-//
-//            task.resume()
-//        }
         
     }
     
