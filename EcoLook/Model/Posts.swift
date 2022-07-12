@@ -35,6 +35,12 @@ struct Post: Decodable {
         
     }
     
+    func getUrlImage(imagen: String) -> String {
+        
+        return "https://apiecolook.improntux.online/resources/imgs/" + imagen
+        
+    }
+    
 }
 
 extension Post {

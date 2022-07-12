@@ -34,5 +34,17 @@ extension HomePresenter: HomePresenterProtocol {
         
     }
     
+    func fetchImagePostByUrl(url: String, cell: PostsTableViewCell?) {
+        
+        interactor?.getImagePostByUrl(url: url, cell: cell)
+        
+    }
+    
+    func loadSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+        
+        view?.showSuccessImagePostByUrl(dataImage: dataImage, cell: cell)
+        
+    }
+    
     
 }

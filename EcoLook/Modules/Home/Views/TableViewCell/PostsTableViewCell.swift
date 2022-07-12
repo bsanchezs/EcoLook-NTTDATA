@@ -31,7 +31,7 @@ class PostsTableViewCell: UITableViewCell {
         viewCard.layer.cornerRadius = 15
         viewCard.backgroundColor = .white
         
-        imageViewCard.image = UIImage(named: "Contaminacion")
+        imageViewCard.image = UIImage(named: "no-image")
         imageViewCard.layer.cornerRadius = 15
         imageViewCard.contentMode = .scaleAspectFill
         

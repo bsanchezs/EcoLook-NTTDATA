@@ -108,6 +108,12 @@ extension HomeViewController: HomeViewProtocol {
         
     }
     
+    func showSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+        DispatchQueue.main.async {
+            cell?.imageViewCard.image = UIImage(data: dataImage)
+        }
+    }
+    
     
 }
 
@@ -192,6 +198,12 @@ extension HomeViewController: UITableViewDataSource{
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customPostsCardsCell", for: indexPath) as? PostsTableViewCell
+        
+        print("imagen: \(posts[indexPath.row].imagen)")
+        
+        let url = posts[indexPath.row].getUrlImage(imagen: posts[indexPath.row].imagen)
+        
+        presenter?.fetchImagePostByUrl(url: url, cell: cell)
         
         cell?.labelTitleCard.text = posts[indexPath.row].titulo
         cell?.labelShortDescCard.text = posts[indexPath.row].getShortDescription(descripcion: posts[indexPath.row].descripcion)
