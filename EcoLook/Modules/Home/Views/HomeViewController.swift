@@ -222,8 +222,7 @@ extension HomeViewController: ButtonGoViewCellDelegate{
     
     func goToDetail(idPost: Int) {
         
-        performSegue(withIdentifier: "homeToDetailSegue", sender: idPost)
-        
+        presenter?.requestSendToDetail(idPost: idPost)
         
         
         print("Esto lo manda para alla")

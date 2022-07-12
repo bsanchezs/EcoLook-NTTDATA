@@ -5,7 +5,7 @@
 //  Created by Brian Antonio Sanchez Solorsano on 7/07/22.
 //
 
-import Foundation
+import UIKit
 
 class HomePresenter {
     
@@ -43,6 +43,12 @@ extension HomePresenter: HomePresenterProtocol {
     func loadSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
         
         view?.showSuccessImagePostByUrl(dataImage: dataImage, cell: cell)
+        
+    }
+    
+    func requestSendToDetail(idPost: Int) {
+        
+        router?.sendToDetail(idPost: idPost)
         
     }
     

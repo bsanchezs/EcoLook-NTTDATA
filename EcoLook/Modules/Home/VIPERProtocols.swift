@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     
@@ -21,9 +22,13 @@ protocol HomePresenterProtocol: AnyObject{
     func fetchImagePostByUrl(url: String, cell: PostsTableViewCell?)
     func loadSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?)
     
+    func requestSendToDetail(idPost: Int)
+    
 }
 
 protocol HomeRouterProtocol{
+    
+    func sendToDetail(idPost: Int)
     
 }
 

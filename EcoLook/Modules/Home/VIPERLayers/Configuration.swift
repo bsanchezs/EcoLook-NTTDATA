@@ -12,14 +12,14 @@ class HomeConfiguration {
     
     class func setHomeVIPER() -> UIViewController {
 
-        let homePresenter = HomePresenter()
-        let homeRouter = HomeRouter()
-        let homeInteractor = HomeInteractor()
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
             fatalError("no se encontró viewcontroller")
         }
+        
+        let homePresenter = HomePresenter()
+        let homeRouter = HomeRouter(currentViewController: viewController)
+        let homeInteractor = HomeInteractor()
         
         
         viewController.presenter = homePresenter
