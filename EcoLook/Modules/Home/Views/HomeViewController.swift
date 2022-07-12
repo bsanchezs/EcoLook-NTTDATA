@@ -221,12 +221,7 @@ extension HomeViewController: UITableViewDataSource{
 extension HomeViewController: ButtonGoViewCellDelegate{
     
     
-    func goToDetail(btnGo: UIButton) {
-        
-//        let storyboard = UIStoryboard(name:"Main", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        viewController.idSelectedPost = btnGo.tag
-        
+    func goToDetail(btnGo: UIButton) {        
         
         performSegue(withIdentifier: "homeToDetailSegue", sender: btnGo)
         
