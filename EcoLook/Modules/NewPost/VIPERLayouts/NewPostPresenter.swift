@@ -9,6 +9,9 @@ import Foundation
 
 class NewPostPresenter {
     
+    weak var view: NewPostViewProtocol?
+    var router: NewPostRouterProtocol?
+    var interactor: NewPostInteractorProtocol?
     
 }
 

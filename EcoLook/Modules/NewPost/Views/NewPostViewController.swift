@@ -21,6 +21,7 @@ class NewPostViewController: UIViewController {
     @IBOutlet weak var collectionViewTagsNewPost: UICollectionView!
     @IBOutlet weak var buttonSaveNewPost: UIButton!
     
+    var presenter: NewPostPresenterProtocol?
     var setTagsSelectedNewPost = Set<String>()
     var latNewPost: Double?
     var lngNewPost: Double?

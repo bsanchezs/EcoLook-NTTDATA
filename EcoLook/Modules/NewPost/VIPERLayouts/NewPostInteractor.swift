@@ -9,6 +9,7 @@ import Foundation
 
 class NewPostInteractor {
     
+    weak var presenter: NewPostPresenterProtocol?
     
 }
 
