@@ -47,25 +47,25 @@ class HomeViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        guard let segueId = segue.identifier else {
-            return
-        }
-        
-        if segueId == "homeToDetailSegue" || segueId == "favoritesToDetailSegue" || segueId == "personalToDetailSegue" {
-            
-            let idPostToSend = sender as? Int
-            
-            
-            let viewControllerDestination = segue.destination as! DetailViewController
-            viewControllerDestination.idSelectedPost = idPostToSend
-        }
-        //print("El segue del prepare es: \(segueId!)")
-        
-        
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        guard let segueId = segue.identifier else {
+//            return
+//        }
+//
+//        if segueId == "homeToDetailSegue" || segueId == "favoritesToDetailSegue" || segueId == "personalToDetailSegue" {
+//
+//            let idPostToSend = sender as? Int
+//
+//            
+//            let viewControllerDestination = segue.destination as! DetailViewController
+//            viewControllerDestination.idSelectedPost = idPostToSend
+//        }
+//        //print("El segue del prepare es: \(segueId!)")
+//
+//
+//
+//    }
     
 
 
