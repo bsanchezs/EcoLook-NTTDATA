@@ -9,7 +9,7 @@ import UIKit
 
 class DetailConfiguration {
     
-    class func setDetailVIPER() -> UIViewController {
+    class func setDetailVIPER(idPost: Int) -> UIViewController {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
@@ -30,7 +30,7 @@ class DetailConfiguration {
 
         detailRouter.presenter = detailPresenter
         
-//        viewController.idSelectedPost = idPost
+        viewController.idSelectedPost = idPost
         
         return viewController
 

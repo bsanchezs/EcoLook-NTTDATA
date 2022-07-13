@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageViewRiskLevel: UIImageView!
     @IBOutlet weak var collectionViewTagsPostDetail: UICollectionView!
 
-    weak var presenter: DetailPresenterProtocol?
+    var presenter: DetailPresenterProtocol?
     var idSelectedPost: Int?
     var post: Post?
 
