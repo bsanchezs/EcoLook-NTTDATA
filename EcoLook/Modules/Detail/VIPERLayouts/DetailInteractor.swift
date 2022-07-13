@@ -32,7 +32,7 @@ extension DetailInteractor: DetailInteractorProtocol {
         
         postsRepository?.insertFavoritePostByUserAndPost(idUser: idUser, idPost: idPost, success: { respuesta in
             
-            self.presenter?.loadSuccessResponseDeleteFavoritePostByIdUserAndIdPost(response: respuesta)
+            self.presenter?.loadSuccessResponseInsertFavoritePostByIdUserAndIdPost(response: respuesta)
             
 //            print("mandalo de regreso \(respuesta)")
             
@@ -41,6 +41,14 @@ extension DetailInteractor: DetailInteractorProtocol {
     }
     
     func deleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
-        print("TODO")
+        
+        postsRepository?.deleteFavoritePostByUserAndPost(idUser: idUser, idPost: idPost, success: { respuesta in
+            
+            self.presenter?.loadSuccessResponseDeleteFavoritePostByIdUserAndIdPost(response: respuesta)
+            
+//            print("mandalo de regreso \(respuesta)")
+            
+        }, failure: { _ in })
+        
     }
 }

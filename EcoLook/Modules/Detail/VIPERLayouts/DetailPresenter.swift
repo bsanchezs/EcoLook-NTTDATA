@@ -49,7 +49,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     
     func loadSuccessResponseDeleteFavoritePostByIdUserAndIdPost(response: Int) {
         
-        
+        view?.changeImageButtonByResponse(response: response)
         
     }
     

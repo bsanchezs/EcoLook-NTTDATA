@@ -67,7 +67,35 @@ class PostsRemoteRepository: PostsRepository {
     }
     
     func deleteFavoritePostByUserAndPost(idUser: Int, idPost: Int, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
-        print("ss")
+        
+        let idUserString = String(idUser)
+        let idPostString = String(idPost)
+        let url = "https://apiecolook.improntux.online/public/api/borrarFavoritoPorUsuarioPublicacion/" + idUserString + "/" + idPostString
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: 1,
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil,
+                   interceptor: nil,
+                   requestModifier: nil
+                  ).responseDecodable(of: Int.self) { response in
+                        
+                        switch response.result {
+                            
+                            case .success(let respuesta):
+                                
+                                success(respuesta)
+                                
+                            case .failure(let error):
+                                
+                                failure(error)
+                            
+                        }
+            
+                    }
+        
+        
     }
     
 }
