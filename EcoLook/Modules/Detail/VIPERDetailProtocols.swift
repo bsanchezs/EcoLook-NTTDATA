@@ -9,11 +9,14 @@ import Foundation
 
 protocol DetailViewProtocol: AnyObject {
     
+    func showSuccessImageDetailPostByUrl(dataImage: Data)
+    
 }
 
 protocol DetailPresenterProtocol: AnyObject {
     
-    func pruebaVIPER()
+    func fetchImageDetailPostByUrl(url: String)
+    func loadSuccessImageDetailPostByUrl(dataImage: Data)
     
 }
 
@@ -22,5 +25,7 @@ protocol DetailRouterProtocol {
 }
 
 protocol DetailInteractorProtocol{
+    
+    func getImagePostDetailByUrl(url: String)
     
 }
