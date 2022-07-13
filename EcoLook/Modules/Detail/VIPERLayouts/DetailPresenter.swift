@@ -17,9 +17,18 @@ class DetailPresenter {
 
 extension DetailPresenter: DetailPresenterProtocol {
     
-    
-    func pruebaVIPER() {
-        print("AMOOOOS VIPER")
+    func fetchImageDetailPostByUrl(url: String) {
+        
+        interactor?.getImagePostDetailByUrl(url: url)
+        
     }
+    
+    func loadSuccessImageDetailPostByUrl(dataImage: Data) {
+        
+        view?.showSuccessImageDetailPostByUrl(dataImage: dataImage)
+        
+    }
+    
+    
     
 }

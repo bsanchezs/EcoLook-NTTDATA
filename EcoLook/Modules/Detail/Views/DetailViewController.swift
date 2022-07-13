@@ -34,8 +34,9 @@ class DetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         setConfigurationDetailViewController()
-        presenter?.pruebaVIPER()
+        
     }
     
 
@@ -51,7 +52,13 @@ extension DetailViewController {
         
         imageViewDetail.image = UIImage(named: "no-image")
         imageViewDetail.contentMode = .scaleAspectFill
-        
+        guard let imageName = post?.imagen else {
+            return
+        }
+        guard let url = post?.getUrlImage(imagen: imageName) else{
+            return
+        }
+        presenter?.fetchImageDetailPostByUrl(url: url)
         
         // Redondear el scrollView y el view
         scrollDetailView.clipsToBounds = true
@@ -137,6 +144,14 @@ extension DetailViewController {
 }
 
 extension DetailViewController: DetailViewProtocol {
+    
+    func showSuccessImageDetailPostByUrl(dataImage: Data) {
+        
+        DispatchQueue.main.async {
+            self.imageViewDetail.image = UIImage(data: dataImage)
+        }
+        
+    }
     
     
 }

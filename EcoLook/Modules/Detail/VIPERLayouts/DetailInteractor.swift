@@ -17,7 +17,14 @@ class DetailInteractor {
 
 extension DetailInteractor: DetailInteractorProtocol {
     
-    
-    
+    func getImagePostDetailByUrl(url: String) {
+        
+        networkingImages?.getImageByUrl(url: url, success: { dataImage in
+            
+            self.presenter?.loadSuccessImageDetailPostByUrl(dataImage: dataImage)
+            
+        }, failure: { _ in })
+        
+    }
     
 }
