@@ -18,6 +18,8 @@ protocol DetailPresenterProtocol: AnyObject {
     func fetchImageDetailPostByUrl(url: String)
     func loadSuccessImageDetailPostByUrl(dataImage: Data)
     
+    func fetch
+    
 }
 
 protocol DetailRouterProtocol {

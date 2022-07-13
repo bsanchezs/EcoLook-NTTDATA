@@ -41,7 +41,16 @@ class DetailViewController: UIViewController {
     
     @IBAction func actionButtonSetUnsetFavorite(_ sender: UIButton) {
         
-        
+        if buttonFavoritePostDetail.currentImage == UIImage(systemName: "star"){
+            
+            print("SIIIIUUU")
+            
+            
+        }else {
+            
+            print("NOOOOUUU")
+            
+        }
         
     }
     
