@@ -43,6 +43,11 @@
 		1FD13D2E287758810031B9D9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D2D287758810031B9D9 /* Interactor.swift */; };
 		1FD13D30287785FF0031B9D9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD13D2F287785FF0031B9D9 /* Configuration.swift */; };
 		1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */; };
+		1FD33554287F77C500FF7852 /* VIPERNewPostProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD33553287F77C500FF7852 /* VIPERNewPostProtocols.swift */; };
+		1FD33557287F781100FF7852 /* NewPostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD33556287F781100FF7852 /* NewPostPresenter.swift */; };
+		1FD33559287F782400FF7852 /* NewPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD33558287F782400FF7852 /* NewPostRouter.swift */; };
+		1FD3355B287F78AF00FF7852 /* NewPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3355A287F78AF00FF7852 /* NewPostInteractor.swift */; };
+		1FD3355D287F78C900FF7852 /* NewPostConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3355C287F78C900FF7852 /* NewPostConfiguration.swift */; };
 		1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC767287361F4009A4970 /* MyHouse.gpx */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
@@ -88,6 +93,11 @@
 		1FD13D2D287758810031B9D9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		1FD13D2F287785FF0031B9D9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		1FD1FD04286609600035EAC1 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		1FD33553287F77C500FF7852 /* VIPERNewPostProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERNewPostProtocols.swift; sourceTree = "<group>"; };
+		1FD33556287F781100FF7852 /* NewPostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPresenter.swift; sourceTree = "<group>"; };
+		1FD33558287F782400FF7852 /* NewPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostRouter.swift; sourceTree = "<group>"; };
+		1FD3355A287F78AF00FF7852 /* NewPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostInteractor.swift; sourceTree = "<group>"; };
+		1FD3355C287F78C900FF7852 /* NewPostConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostConfiguration.swift; sourceTree = "<group>"; };
 		1FDBC767287361F4009A4970 /* MyHouse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyHouse.gpx; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
@@ -269,6 +279,8 @@
 		1FD13D192877498B0031B9D9 /* NewPost */ = {
 			isa = PBXGroup;
 			children = (
+				1FD33553287F77C500FF7852 /* VIPERNewPostProtocols.swift */,
+				1FD33555287F77D100FF7852 /* VIPERLayouts */,
 				1FD13D1C28774C5E0031B9D9 /* Views */,
 			);
 			path = NewPost;
@@ -347,6 +359,17 @@
 				1F6F5925287BAB5500CC2CBA /* PostsRemoteRepository.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		1FD33555287F77D100FF7852 /* VIPERLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				1FD33556287F781100FF7852 /* NewPostPresenter.swift */,
+				1FD33558287F782400FF7852 /* NewPostRouter.swift */,
+				1FD3355A287F78AF00FF7852 /* NewPostInteractor.swift */,
+				1FD3355C287F78C900FF7852 /* NewPostConfiguration.swift */,
+			);
+			path = VIPERLayouts;
 			sourceTree = "<group>";
 		};
 		1FDBC76628736121009A4970 /* Locations */ = {
@@ -505,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F63BC1D286A0F580070AE08 /* DetailViewController.swift in Sources */,
+				1FD3355D287F78C900FF7852 /* NewPostConfiguration.swift in Sources */,
 				1FD13D2A287758640031B9D9 /* Presenter.swift in Sources */,
 				1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */,
 				1F6F5926287BAB5500CC2CBA /* PostsRemoteRepository.swift in Sources */,
@@ -521,12 +545,15 @@
 				1FD13D30287785FF0031B9D9 /* Configuration.swift in Sources */,
 				1F762D642870F0F3001AD67D /* GeolocalizationViewController.swift in Sources */,
 				1F3DDC61287D21E100D5CD3B /* NetworkingImagesByUrl.swift in Sources */,
+				1FD33554287F77C500FF7852 /* VIPERNewPostProtocols.swift in Sources */,
 				1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */,
 				1FD13D2E287758810031B9D9 /* Interactor.swift in Sources */,
 				1FD13D2C287758740031B9D9 /* Router.swift in Sources */,
+				1FD33559287F782400FF7852 /* NewPostRouter.swift in Sources */,
 				1FE05B262867B3B400C3160D /* Tags.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
+				1FD3355B287F78AF00FF7852 /* NewPostInteractor.swift in Sources */,
 				1F0F7466287E54C50089B9F8 /* DetailRouter.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
 				1F0F7464287E54B40089B9F8 /* DetailPresenter.swift in Sources */,
@@ -535,6 +562,7 @@
 				1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */,
 				1FAC4550286934F10070ECAC /* Posts.swift in Sources */,
 				1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */,
+				1FD33557287F781100FF7852 /* NewPostPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
