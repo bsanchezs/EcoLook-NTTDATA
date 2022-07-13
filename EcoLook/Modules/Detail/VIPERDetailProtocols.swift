@@ -13,6 +13,8 @@ protocol DetailViewProtocol: AnyObject {
 
 protocol DetailPresenterProtocol: AnyObject {
     
+    func pruebaVIPER()
+    
 }
 
 protocol DetailRouterProtocol {

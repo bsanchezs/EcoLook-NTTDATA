@@ -16,7 +16,10 @@ class DetailPresenter {
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
-
-
-
+    
+    
+    func pruebaVIPER() {
+        print("AMOOOOS VIPER")
+    }
+    
 }

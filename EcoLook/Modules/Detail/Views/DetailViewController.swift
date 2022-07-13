@@ -35,6 +35,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setConfigurationDetailViewController()
+        presenter?.pruebaVIPER()
     }
     
 

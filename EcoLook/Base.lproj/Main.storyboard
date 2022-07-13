@@ -185,7 +185,7 @@
         <!--Detail View Controller-->
         <scene sceneID="fW7-1m-5e0">
             <objects>
-                <viewController id="hvi-A6-xZM" customClass="DetailViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="hvi-A6-xZM" customClass="DetailViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bzd-77-IeJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

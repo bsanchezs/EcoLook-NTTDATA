@@ -12,24 +12,24 @@ class DetailConfiguration {
     class func setDetailVIPER() -> UIViewController {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? DetailViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
             fatalError("no se encontró viewcontroller")
         }
         
-//        let homePresenter = HomePresenter()
-//        let homeRouter = HomeRouter(currentViewController: viewController)
-//        let homeInteractor = HomeInteractor()
-//
-//
-//        viewController.presenter = homePresenter
-//
-//        homePresenter.view = viewController
-//        homePresenter.interactor = homeInteractor
-//        homePresenter.router = homeRouter
-//
-//        homeInteractor.presenter = homePresenter
-//
-//        homeRouter.presenter = homePresenter
+        let detailPresenter = DetailPresenter()
+        let detailRouter = DetailRouter()
+        let detailInteractor = DetailInteractor()
+
+
+        viewController.presenter = detailPresenter
+
+        detailPresenter.view = viewController
+        detailPresenter.interactor = detailInteractor
+        detailPresenter.router = detailRouter
+
+        detailInteractor.presenter = detailPresenter
+
+        detailRouter.presenter = detailPresenter
         
         return viewController
 
