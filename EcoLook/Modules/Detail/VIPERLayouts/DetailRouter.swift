@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class DetailRouter {
+    
+    
+}
+
+extension DetailRouter: DetailRouterProtocol {
+    
+    
+    
+    
+}

@@ -135,6 +135,11 @@ extension DetailViewController {
     
 }
 
+extension DetailViewController: DetailViewProtocol {
+    
+    
+}
+
 extension DetailViewController: UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

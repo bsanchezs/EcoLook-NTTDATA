@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class DetailPresenter {
+
+
+}
+
+extension DetailPresenter: DetailPresenterProtocol {
+
+
+
+}

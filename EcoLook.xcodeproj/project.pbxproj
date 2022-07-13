@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1F05812D28657465008D95C4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05812C28657465008D95C4 /* Colors.swift */; };
-		1F0F7461287E54960089B9F8 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7460287E54960089B9F8 /* VIPERProtocols.swift */; };
-		1F0F7464287E54B40089B9F8 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7463287E54B40089B9F8 /* Presenter.swift */; };
-		1F0F7466287E54C50089B9F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7465287E54C50089B9F8 /* Router.swift */; };
-		1F0F7468287E552E0089B9F8 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7467287E552E0089B9F8 /* Interactor.swift */; };
-		1F0F746A287E553F0089B9F8 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7469287E553F0089B9F8 /* Configuration.swift */; };
+		1F0F7461287E54960089B9F8 /* VIPERDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7460287E54960089B9F8 /* VIPERDetailProtocols.swift */; };
+		1F0F7464287E54B40089B9F8 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7463287E54B40089B9F8 /* DetailPresenter.swift */; };
+		1F0F7466287E54C50089B9F8 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7465287E54C50089B9F8 /* DetailRouter.swift */; };
+		1F0F7468287E552E0089B9F8 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7467287E552E0089B9F8 /* DetailInteractor.swift */; };
+		1F0F746A287E553F0089B9F8 /* DetailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F7469287E553F0089B9F8 /* DetailConfiguration.swift */; };
 		1F15428D2865066E00FC48F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15428C2865066E00FC48F4 /* HomeViewController.swift */; };
 		1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */; };
 		1F3DDC5F287D1A0900D5CD3B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DDC5E287D1A0900D5CD3B /* Networking.swift */; };
@@ -51,11 +51,11 @@
 
 /* Begin PBXFileReference section */
 		1F05812C28657465008D95C4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		1F0F7460287E54960089B9F8 /* VIPERProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
-		1F0F7463287E54B40089B9F8 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		1F0F7465287E54C50089B9F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		1F0F7467287E552E0089B9F8 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		1F0F7469287E553F0089B9F8 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		1F0F7460287E54960089B9F8 /* VIPERDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERDetailProtocols.swift; sourceTree = "<group>"; };
+		1F0F7463287E54B40089B9F8 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		1F0F7465287E54C50089B9F8 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		1F0F7467287E552E0089B9F8 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		1F0F7469287E553F0089B9F8 /* DetailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConfiguration.swift; sourceTree = "<group>"; };
 		1F15428C2865066E00FC48F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarOptions.swift; sourceTree = "<group>"; };
 		1F3DDC5E287D1A0900D5CD3B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -127,10 +127,10 @@
 		1F0F7462287E54A00089B9F8 /* VIPERLayouts */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F7463287E54B40089B9F8 /* Presenter.swift */,
-				1F0F7465287E54C50089B9F8 /* Router.swift */,
-				1F0F7467287E552E0089B9F8 /* Interactor.swift */,
-				1F0F7469287E553F0089B9F8 /* Configuration.swift */,
+				1F0F7463287E54B40089B9F8 /* DetailPresenter.swift */,
+				1F0F7465287E54C50089B9F8 /* DetailRouter.swift */,
+				1F0F7467287E552E0089B9F8 /* DetailInteractor.swift */,
+				1F0F7469287E553F0089B9F8 /* DetailConfiguration.swift */,
 			);
 			path = VIPERLayouts;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 		1FD13D18287749800031B9D9 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F7460287E54960089B9F8 /* VIPERProtocols.swift */,
+				1F0F7460287E54960089B9F8 /* VIPERDetailProtocols.swift */,
 				1F0F7462287E54A00089B9F8 /* VIPERLayouts */,
 				1FD13D1B28774C480031B9D9 /* Views */,
 			);
@@ -510,14 +510,14 @@
 				1F6F5926287BAB5500CC2CBA /* PostsRemoteRepository.swift in Sources */,
 				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
 				1FB90B49286EA93500F1A28E /* Date.swift in Sources */,
-				1F0F746A287E553F0089B9F8 /* Configuration.swift in Sources */,
+				1F0F746A287E553F0089B9F8 /* DetailConfiguration.swift in Sources */,
 				1F6F5924287BA5EC00CC2CBA /* PostsRepositories.swift in Sources */,
 				1FD13D28287754E20031B9D9 /* VIPERProtocols.swift in Sources */,
 				1F05812D28657465008D95C4 /* Colors.swift in Sources */,
 				1F46D3D9285BEA87008F84CA /* AppDelegate.swift in Sources */,
 				1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */,
 				1FAC3A30286E343700B21386 /* FormStatus.swift in Sources */,
-				1F0F7468287E552E0089B9F8 /* Interactor.swift in Sources */,
+				1F0F7468287E552E0089B9F8 /* DetailInteractor.swift in Sources */,
 				1FD13D30287785FF0031B9D9 /* Configuration.swift in Sources */,
 				1F762D642870F0F3001AD67D /* GeolocalizationViewController.swift in Sources */,
 				1F3DDC61287D21E100D5CD3B /* NetworkingImagesByUrl.swift in Sources */,
@@ -527,10 +527,10 @@
 				1FE05B262867B3B400C3160D /* Tags.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
-				1F0F7466287E54C50089B9F8 /* Router.swift in Sources */,
+				1F0F7466287E54C50089B9F8 /* DetailRouter.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
-				1F0F7464287E54B40089B9F8 /* Presenter.swift in Sources */,
-				1F0F7461287E54960089B9F8 /* VIPERProtocols.swift in Sources */,
+				1F0F7464287E54B40089B9F8 /* DetailPresenter.swift in Sources */,
+				1F0F7461287E54960089B9F8 /* VIPERDetailProtocols.swift in Sources */,
 				1F3DDC5F287D1A0900D5CD3B /* Networking.swift in Sources */,
 				1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */,
 				1FAC4550286934F10070ECAC /* Posts.swift in Sources */,
