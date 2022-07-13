@@ -49,28 +49,20 @@ class PostsRemoteRepository: PostsRepository {
                    interceptor: nil,
                    requestModifier: nil
                   ).responseDecodable(of: Int.self) { response in
-            
-                        print("inserto? : \(response.result)")
+                        
+                        switch response.result {
+                            
+                            case .success(let respuesta):
+                                
+                                success(respuesta)
+                                
+                            case .failure(let error):
+                                
+                                failure(error)
+                            
+                        }
             
                     }
-        
-//        AF.request(url).responseDecodable(of: Int.self){
-//            response in
-//
-//            print("inserto? : \(response.result)")
-//
-//            switch response.result {
-//            case .success(let respuesta):
-//
-//                success(respuesta)
-//
-//            case .failure(let error):
-//
-//                failure(error)
-//
-//            }
-//
-//        }
         
     }
     
