@@ -31,8 +31,6 @@ class NewPostViewController: UIViewController {
         
         setConfigurationNewPostViewController()
         
-        presenter?.pruebaVIPER()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -183,7 +181,7 @@ class NewPostViewController: UIViewController {
                 print("El post a enviar seria: \(newPost)")
             
             
-                
+            presenter?.fetchInsertNewPostByUser(idUser: 1, newPost: newPost)
                 
             
         }

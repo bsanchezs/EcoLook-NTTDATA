@@ -13,7 +13,7 @@ protocol NewPostViewProtocol: AnyObject {
 
 protocol NewPostPresenterProtocol: AnyObject {
     
-    func pruebaVIPER()
+    func fetchInsertNewPostByUser(idUser: Int, newPost: Post)
     
 }
 
@@ -22,5 +22,7 @@ protocol NewPostRouterProtocol {
 }
 
 protocol NewPostInteractorProtocol{
+    
+    func insertNewpostByUser(idUser: Int, newPost: Post)
     
 }

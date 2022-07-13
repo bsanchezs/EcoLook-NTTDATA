@@ -17,8 +17,10 @@ class NewPostPresenter {
 
 extension NewPostPresenter: NewPostPresenterProtocol {
     
-    func pruebaVIPER() {
-        print("AMOOOOS VIPER")
+    func fetchInsertNewPostByUser(idUser: Int, newPost: Post) {
+        
+        interactor?.insertNewpostByUser(idUser: idUser, newPost: newPost)
+        
     }
     
 }

@@ -15,5 +15,10 @@ class NewPostInteractor {
 
 extension NewPostInteractor: NewPostInteractorProtocol {
     
+    func insertNewpostByUser(idUser: Int, newPost: Post) {
+        
+        print("TODO: Armar el repository")
+        
+    }
     
 }
