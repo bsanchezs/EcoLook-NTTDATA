@@ -39,6 +39,12 @@ class DetailViewController: UIViewController {
         
     }
     
+    @IBAction func actionButtonSetUnsetFavorite(_ sender: UIButton) {
+        
+        
+        
+    }
+    
 
 }
 

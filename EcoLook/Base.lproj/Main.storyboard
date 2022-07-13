@@ -231,6 +231,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="actionButtonSetUnsetFavorite:" destination="hvi-A6-xZM" eventType="touchUpInside" id="wBn-BK-n2Q"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-QV-Kjm">
                                                 <rect key="frame" x="23" y="80" width="91" height="17"/>
