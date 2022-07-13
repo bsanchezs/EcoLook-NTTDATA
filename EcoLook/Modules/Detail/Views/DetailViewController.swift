@@ -181,7 +181,22 @@ extension DetailViewController: DetailViewProtocol {
     }
     
     func changeImageButtonByResponse(response: Int) {
-        print("TODO")
+        
+        if response == 1 {
+            
+            if buttonFavoritePostDetail.currentImage == UIImage(systemName: "star"){
+                
+                setIconButtonFavorite(esFavorito: 1)
+                
+                
+            }else {
+                
+                setIconButtonFavorite(esFavorito: 0)
+                
+            }
+            
+        }
+        
     }
     
     
