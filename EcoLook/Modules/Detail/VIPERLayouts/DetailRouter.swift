@@ -9,6 +9,7 @@ import Foundation
 
 class DetailRouter {
     
+    weak var presenter: DetailPresenterProtocol?
     
 }
 

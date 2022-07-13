@@ -9,7 +9,9 @@ import Foundation
 
 class DetailInteractor {
     
+    let networkingImages: NetworkingImages? = NetworkingImagesByUrl()
     
+    weak var presenter: DetailPresenterProtocol?
     
 }
 

@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol DetailViewProtocol {
+protocol DetailViewProtocol: AnyObject {
     
 }
 
-protocol DetailPresenterProtocol {
+protocol DetailPresenterProtocol: AnyObject {
     
 }
 
