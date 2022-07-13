@@ -255,6 +255,12 @@ extension NewPostViewController {
     
 }
 
+extension NewPostViewController: NewPostViewProtocol {
+    
+    
+    
+}
+
 extension NewPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

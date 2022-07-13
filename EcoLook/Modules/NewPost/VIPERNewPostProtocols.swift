@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol NewPostViewProtocol: AnyObject {
+    
+}
+
+protocol NewPostPresenterProtocol: AnyObject {
+    
+}
+
+protocol NewPostRouterProtocol {
+    
+}
+
+protocol NewPostInteractorProtocol{
+    
+}

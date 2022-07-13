@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class NewPostPresenter {
+    
+    
+}
+
+extension NewPostPresenter: NewPostPresenterProtocol {
+    
+    
+}

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class NewPostRouter {
+    
+    
+}
+
+extension NewPostRouter: NewPostRouterProtocol {
+    
+    
+}

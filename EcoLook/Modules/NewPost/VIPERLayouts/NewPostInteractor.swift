@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class NewPostInteractor {
+    
+    
+}
+
+extension NewPostInteractor: NewPostInteractorProtocol {
+    
+    
+}
