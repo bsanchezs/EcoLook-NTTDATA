@@ -37,7 +37,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     
     func loadSuccessResponseInsertFavoritePostByIdUserAndIdPost(response: Int) {
         
-        
+        view?.changeImageButtonByResponse(response: response)
         
     }
     

@@ -32,7 +32,9 @@ extension DetailInteractor: DetailInteractorProtocol {
         
         postsRepository?.insertFavoritePostByUserAndPost(idUser: idUser, idPost: idPost, success: { respuesta in
             
-            print("mandalo de regreso \(respuesta)")
+            self.presenter?.loadSuccessResponseDeleteFavoritePostByIdUserAndIdPost(response: respuesta)
+            
+//            print("mandalo de regreso \(respuesta)")
             
         }, failure: { _ in })
         
