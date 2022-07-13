@@ -10,6 +10,7 @@ import Foundation
 class DetailInteractor {
     
     let networkingImages: NetworkingImages? = NetworkingImagesByUrl()
+    let postsRepository: PostsRepository? = PostsRemoteRepository()
     
     weak var presenter: DetailPresenterProtocol?
     
@@ -28,10 +29,16 @@ extension DetailInteractor: DetailInteractorProtocol {
     }
     
     func insertFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
-        <#code#>
+        
+        postsRepository?.insertFavoritePostByUserAndPost(idUser: idUser, idPost: idPost, success: { respuesta in
+            
+            print("mandalo de regreso")
+            
+        }, failure: { _ in })
+        
     }
     
     func deleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
-        <#code#>
+        print("TODO")
     }
 }

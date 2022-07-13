@@ -180,6 +180,10 @@ extension DetailViewController: DetailViewProtocol {
         
     }
     
+    func changeImageButtonByResponse(response: Int) {
+        print("TODO")
+    }
+    
     
 }
 

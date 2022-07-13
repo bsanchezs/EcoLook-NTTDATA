@@ -10,7 +10,6 @@ import Alamofire
 
 class PostsRemoteRepository: PostsRepository {
     
-    
     func getAllPostsByUser(idUser: Int, success: @escaping ([Post]?) -> Void, failure: @escaping (Error?) -> Void) {
         
         let idUserString = String(idUser)
@@ -34,6 +33,49 @@ class PostsRemoteRepository: PostsRepository {
 
         }
         
+    }
+    
+    func insertFavoritePostByUserAndPost(idUser: Int, idPost: Int, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
+        
+        let idUserString = String(idUser)
+        let idPostString = String(idPost)
+        let url = "https://apiecolook.improntux.online/public/api/insertarFavoritoPorUsuarioPublicacion/" + idUserString + "/" + idPostString
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: 1,
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil,
+                   interceptor: nil,
+                   requestModifier: nil
+                  ).responseDecodable(of: Int.self) { response in
+            
+                        print("inserto? : \(response.result)")
+            
+                    }
+        
+//        AF.request(url).responseDecodable(of: Int.self){
+//            response in
+//
+//            print("inserto? : \(response.result)")
+//
+//            switch response.result {
+//            case .success(let respuesta):
+//
+//                success(respuesta)
+//
+//            case .failure(let error):
+//
+//                failure(error)
+//
+//            }
+//
+//        }
+        
+    }
+    
+    func deleteFavoritePostByUserAndPost(idUser: Int, idPost: Int, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
+        print("ss")
     }
     
 }
