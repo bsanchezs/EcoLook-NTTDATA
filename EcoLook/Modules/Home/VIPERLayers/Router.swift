@@ -23,7 +23,9 @@ extension HomeRouter: HomeRouterProtocol {
     
     func sendToDetail(idPost: Int) {
         
-        currentViewController!.performSegue(withIdentifier: "homeToDetailSegue", sender: idPost)
+//        currentViewController!.performSegue(withIdentifier: "homeToDetailSegue", sender: idPost)
+        let detailViewController = DetailConfiguration.setDetailVIPER()
+        currentViewController!.present(detailViewController, animated: true, completion: nil)
         
     }
     

@@ -20,7 +20,6 @@ class DetailConfiguration {
         let detailRouter = DetailRouter()
         let detailInteractor = DetailInteractor()
 
-
         viewController.presenter = detailPresenter
 
         detailPresenter.view = viewController
@@ -30,6 +29,8 @@ class DetailConfiguration {
         detailInteractor.presenter = detailPresenter
 
         detailRouter.presenter = detailPresenter
+        
+//        viewController.idSelectedPost = idPost
         
         return viewController
 

@@ -23,8 +23,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var labelDirectionPostDetail: UILabel!
     @IBOutlet weak var imageViewRiskLevel: UIImageView!
     @IBOutlet weak var collectionViewTagsPostDetail: UICollectionView!
-    
-    var presenter: DetailPresenterProtocol? 
+
+    weak var presenter: DetailPresenterProtocol?
     var idSelectedPost: Int?
     var post: Post?
 
