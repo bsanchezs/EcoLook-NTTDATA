@@ -29,6 +29,28 @@ extension DetailPresenter: DetailPresenterProtocol {
         
     }
     
+    func fetchInsertFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
+        
+        interactor?.insertFavoritePostByIdUserAndIdPost(idUser: idUser, idPost: idPost)
+        
+    }
     
+    func loadSuccessResponseInsertFavoritePostByIdUserAndIdPost(response: Int) {
+        
+        
+        
+    }
+    
+    func fetchDeleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
+        
+        interactor?.deleteFavoritePostByIdUserAndIdPost(idUser: idUser, idPost: idUser)
+        
+    }
+    
+    func loadSuccessResponseDeleteFavoritePostByIdUserAndIdPost(response: Int) {
+        
+        
+        
+    }
     
 }

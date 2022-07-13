@@ -41,14 +41,18 @@ class DetailViewController: UIViewController {
     
     @IBAction func actionButtonSetUnsetFavorite(_ sender: UIButton) {
         
+        guard let idPublicacion = post?.idPublicacion else {
+            return
+        }
+        
         if buttonFavoritePostDetail.currentImage == UIImage(systemName: "star"){
             
-            print("SIIIIUUU")
+            presenter?.fetchInsertFavoritePostByIdUserAndIdPost(idUser: 1, idPost: idPublicacion)
             
             
         }else {
             
-            print("NOOOOUUU")
+            presenter?.fetchDeleteFavoritePostByIdUserAndIdPost(idUser: 1, idPost: idPublicacion)
             
         }
         

@@ -27,4 +27,11 @@ extension DetailInteractor: DetailInteractorProtocol {
         
     }
     
+    func insertFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
+        <#code#>
+    }
+    
+    func deleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
+        <#code#>
+    }
 }

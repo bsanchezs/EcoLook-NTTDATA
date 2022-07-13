@@ -11,6 +11,8 @@ protocol DetailViewProtocol: AnyObject {
     
     func showSuccessImageDetailPostByUrl(dataImage: Data)
     
+    func changeImageButtonByResponse(response: Int)
+    
 }
 
 protocol DetailPresenterProtocol: AnyObject {
@@ -19,7 +21,7 @@ protocol DetailPresenterProtocol: AnyObject {
     func loadSuccessImageDetailPostByUrl(dataImage: Data)
     
     func fetchInsertFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int)
-    func loadSuccessResponseInsertFavoritePostByIdUserAndIdPost()
+    func loadSuccessResponseInsertFavoritePostByIdUserAndIdPost(response: Int)
     
     func fetchDeleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int)
     func loadSuccessResponseDeleteFavoritePostByIdUserAndIdPost(response: Int)
@@ -36,6 +38,6 @@ protocol DetailInteractorProtocol{
     func getImagePostDetailByUrl(url: String)
     
     func insertFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int)
-    func deleteFavoritePostByIdUserAndIdPost(response: Int)
+    func deleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int)
     
 }
