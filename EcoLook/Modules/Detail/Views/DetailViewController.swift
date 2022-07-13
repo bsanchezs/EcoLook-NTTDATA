@@ -184,18 +184,28 @@ extension DetailViewController: DetailViewProtocol {
         
         if response == 1 {
             
+            guard let index = posts.firstIndex(where: {$0.idPublicacion == post?.idPublicacion}) else{
+                return
+            }
+            
             if buttonFavoritePostDetail.currentImage == UIImage(systemName: "star"){
                 
                 setIconButtonFavorite(esFavorito: 1)
+                
+                posts[index].esFavorito = 1
                 
                 
             }else {
                 
                 setIconButtonFavorite(esFavorito: 0)
                 
+                posts[index].esFavorito = 0
+                
             }
             
         }
+        
+        
         
     }
     

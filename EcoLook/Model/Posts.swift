@@ -20,7 +20,7 @@ struct Post: Decodable {
     let fecha: String
     let etiquetas: [Tag]?
     let idUsuario: Int
-    let esFavorito: Int
+    var esFavorito: Int
     let estado: Int
     
     
