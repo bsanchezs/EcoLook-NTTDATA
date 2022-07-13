@@ -31,6 +31,7 @@ class NewPostViewController: UIViewController {
         
         setConfigurationNewPostViewController()
         
+        presenter?.pruebaVIPER()
         
     }
     

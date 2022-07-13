@@ -13,6 +13,8 @@ protocol NewPostViewProtocol: AnyObject {
 
 protocol NewPostPresenterProtocol: AnyObject {
     
+    func pruebaVIPER()
+    
 }
 
 protocol NewPostRouterProtocol {

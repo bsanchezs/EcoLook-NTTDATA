@@ -17,5 +17,8 @@ class NewPostPresenter {
 
 extension NewPostPresenter: NewPostPresenterProtocol {
     
+    func pruebaVIPER() {
+        print("AMOOOOS VIPER")
+    }
     
 }
