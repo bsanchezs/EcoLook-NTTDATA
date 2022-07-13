@@ -31,13 +31,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setConfigurationDetailViewController()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setMapByLatLng(lat: post?.latitud, lng: post?.latitud)
+        setConfigurationDetailViewController()
     }
     
 
@@ -70,7 +67,7 @@ extension DetailViewController {
         labelDatePostDetail.text = post?.fecha
         labelDescriptionPostDetail.text = post?.descripcion
         
-//        setMapByLatLng(lat: post?.latitud, lng: post?.latitud)
+        setMapByLatLng(lat: post?.latitud, lng: post?.longitud)
         labelDirectionPostDetail.text = post?.direccion
         
         
@@ -109,7 +106,7 @@ extension DetailViewController {
             
         }else{
             
-            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 14.4)
+            let camera = GMSCameraPosition(latitude: -8.1121075, longitude: -79.028297, zoom: 1.4)
             viewMapPostDetail.camera = camera
             viewMapPostDetail.settings.rotateGestures = false
             viewMapPostDetail.settings.scrollGestures = false

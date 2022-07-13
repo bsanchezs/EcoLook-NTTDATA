@@ -320,7 +320,7 @@
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3G-51-WEA" customClass="GMSMapView">
                                                 <rect key="frame" x="23" y="156" width="368" height="90"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="R94-ZI-spa"/>
                                                 </constraints>
