@@ -413,7 +413,7 @@
         <!--New Post View Controller-->
         <scene sceneID="ZZ7-ms-Cc1">
             <objects>
-                <viewController id="uM2-cT-7ec" customClass="NewPostViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostViewController" id="uM2-cT-7ec" customClass="NewPostViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I9l-7M-IZH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
