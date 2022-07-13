@@ -24,11 +24,15 @@ protocol HomePresenterProtocol: AnyObject{
     
     func requestSendToDetail(idPost: Int)
     
+    func requestSendToNewPost()
+    
 }
 
 protocol HomeRouterProtocol{
     
     func sendToDetail(idPost: Int)
+    
+    func sendToNewPost()
     
 }
 

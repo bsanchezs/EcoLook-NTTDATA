@@ -20,7 +20,6 @@ class HomeRouter {
 
 extension HomeRouter: HomeRouterProtocol {
     
-    
     func sendToDetail(idPost: Int) {
         
 //        currentViewController!.performSegue(withIdentifier: "homeToDetailSegue", sender: idPost)
@@ -29,6 +28,12 @@ extension HomeRouter: HomeRouterProtocol {
         
     }
     
+    func sendToNewPost() {
+        
+        let newPostViewController = NewPostConfiguration.setNewPostVIPER()
+        currentViewController?.navigationController?.pushViewController(newPostViewController, animated: true)
+        
+    }
     
     
 }

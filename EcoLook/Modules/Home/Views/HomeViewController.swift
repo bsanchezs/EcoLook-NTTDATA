@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func buttonGoNewPost(_ sender: Any) {
         
-        performSegue(withIdentifier: "homeToNewPostSegue", sender: nil)
+        presenter?.requestSendToNewPost()
         
         
     }

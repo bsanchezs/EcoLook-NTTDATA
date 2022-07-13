@@ -52,5 +52,10 @@ extension HomePresenter: HomePresenterProtocol {
         
     }
     
+    func requestSendToNewPost() {
+        
+        router?.sendToNewPost()
+        
+    }
     
 }
