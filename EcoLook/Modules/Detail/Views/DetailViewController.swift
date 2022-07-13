@@ -73,6 +73,8 @@ extension DetailViewController {
         
         labelTitlePostDetail.text = post?.titulo
         labelDatePostDetail.text = post?.fecha
+        setIconButtonFavorite(esFavorito: post?.esFavorito)
+        
         labelDescriptionPostDetail.text = post?.descripcion
         
         setMapByLatLng(lat: post?.latitud, lng: post?.longitud)
@@ -95,6 +97,12 @@ extension DetailViewController {
         let post = posts.filter( {$0.idPublicacion == idPostSafe} )
         
         return post[0]
+        
+    }
+    
+    func setIconButtonFavorite(esFavorito: Int?){
+        
+        esFavorito == 0 ? buttonFavoritePostDetail.setImage(UIImage(systemName: "star"), for: .normal) : buttonFavoritePostDetail.setImage(UIImage(systemName: "star.fill"), for: .normal)
         
     }
 
