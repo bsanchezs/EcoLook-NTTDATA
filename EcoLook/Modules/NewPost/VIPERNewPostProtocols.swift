@@ -16,12 +16,16 @@ protocol NewPostPresenterProtocol: AnyObject {
     func fetchInsertNewPostByUser(newPost: Post)
     func loadSuccessInsertNewPostByUser(response: Int)
     
+    func requestGoBackToHome()
+    
 }
 
 protocol NewPostRouterProtocol {
     
     func showSavingAlert()
     func showSuccessAlert()
+    
+    func goBackToHome()
     
 }
 

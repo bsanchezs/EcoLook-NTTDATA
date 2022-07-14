@@ -34,4 +34,10 @@ extension NewPostPresenter: NewPostPresenterProtocol {
         
     }
     
+    func requestGoBackToHome() {
+        
+        router?.goBackToHome()
+        
+    }
+    
 }

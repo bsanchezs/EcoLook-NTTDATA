@@ -47,4 +47,9 @@ extension NewPostRouter: NewPostRouterProtocol {
         
     }
     
+    func goBackToHome() {
+        
+        currentViewController?.navigationController?.popViewController(animated: true)
+        
+    }
 }

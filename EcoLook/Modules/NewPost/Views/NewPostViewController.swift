@@ -50,7 +50,8 @@ class NewPostViewController: UIViewController {
     
     @IBAction func actionButtonGoBackHeader(_ sender: Any) {
         
-        navigationController?.popViewController(animated: true)
+        presenter?.requestGoBackToHome()
+        
     }
     @IBAction func actionButtonAddImage(_ sender: UIButton) {
         
