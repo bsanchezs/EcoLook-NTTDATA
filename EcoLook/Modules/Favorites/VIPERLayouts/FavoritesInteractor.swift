@@ -11,6 +11,7 @@ class FavoritesInteractor {
     
     weak var presenter: FavoritesPresenterProtocol?
     var postsRepository: PostsRepository? = PostsRemoteRepository()
+    var networkImages: NetworkingImages? = NetworkingImagesByUrl()
     
 }
 
@@ -18,11 +19,23 @@ extension FavoritesInteractor: FavoritesInteractorProtocol {
     
     
     func getFavoritesPostsByUser(idUser: Int) {
-        print("Llega hasta aca: \(idUser)")
+        
+        postsRepository?.getFavoritesPostsByUser(idUser: idUser, success: { favoritesPosts in
+            
+            self.presenter?.loadSuccessFavoritesPostsByUser(favoritesPosts: favoritesPosts)
+            
+        }, failure: { _ in })
+        
     }
     
     func getImageFavoritePostByUrl(url: String, cell: PostsTableViewCell?) {
-        print("Para la imagen llega hasta aca: \(url)")
+        
+        networkImages?.getImageByUrl(url: url, success: { dataImage in
+            
+            self.presenter?.loadSuccessImageFavoritePostByUrl(dataImage: dataImage, cell: cell)
+            
+        }, failure: { _ in })
+        
     }
     
     
