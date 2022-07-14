@@ -65,6 +65,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="actionButtonGoNewPost:" destination="Qrn-oo-aii" eventType="touchUpInside" id="KtB-se-4bG"/>
+                                    <action selector="actionButtonGoNewPost:" destination="hlj-5x-ulc" eventType="touchUpInside" id="x5o-9J-ePd"/>
                                     <action selector="buttonGoNewPost:" destination="lxn-er-nkW" eventType="touchUpInside" id="hKi-TB-Ehs"/>
                                 </connections>
                             </button>
@@ -87,6 +88,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="5g4-0o-sUR"/>
+                    <connections>
+                        <outlet property="buttonGoNewPost" destination="g5m-gg-Evo" id="P10-l8-zIw"/>
+                        <outlet property="labelTitleHeaderPersonal" destination="nDn-CX-mUv" id="4SS-Rj-2iS"/>
+                        <outlet property="tableViewPersonalPostsCards" destination="g5m-gg-Evo" id="kr3-s2-QBq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kn-HD-txR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
