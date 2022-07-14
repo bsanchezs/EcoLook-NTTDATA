@@ -169,7 +169,7 @@
         <!--Item 2-->
         <scene sceneID="zEM-RC-uB6">
             <objects>
-                <viewController id="Qrn-oo-aii" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewController" id="Qrn-oo-aii" customClass="FavoritesViewController" customModule="EcoLook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hml-Tx-yFy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

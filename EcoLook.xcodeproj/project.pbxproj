@@ -48,6 +48,7 @@
 		1FD33559287F782400FF7852 /* NewPostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD33558287F782400FF7852 /* NewPostRouter.swift */; };
 		1FD3355B287F78AF00FF7852 /* NewPostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3355A287F78AF00FF7852 /* NewPostInteractor.swift */; };
 		1FD3355D287F78C900FF7852 /* NewPostConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3355C287F78C900FF7852 /* NewPostConfiguration.swift */; };
+		1FD33563287FF8A800FF7852 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD33562287FF8A800FF7852 /* FavoritesViewController.swift */; };
 		1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBC767287361F4009A4970 /* MyHouse.gpx */; };
 		1FE05B242867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */; };
 		1FE05B262867B3B400C3160D /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE05B252867B3B400C3160D /* Tags.swift */; };
@@ -98,6 +99,7 @@
 		1FD33558287F782400FF7852 /* NewPostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostRouter.swift; sourceTree = "<group>"; };
 		1FD3355A287F78AF00FF7852 /* NewPostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostInteractor.swift; sourceTree = "<group>"; };
 		1FD3355C287F78C900FF7852 /* NewPostConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostConfiguration.swift; sourceTree = "<group>"; };
+		1FD33562287FF8A800FF7852 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1FDBC767287361F4009A4970 /* MyHouse.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyHouse.gpx; sourceTree = "<group>"; };
 		1FE05B232867948600C3160D /* RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf"; sourceTree = "<group>"; };
 		1FE05B252867B3B400C3160D /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				1FD13D192877498B0031B9D9 /* NewPost */,
 				1FD13D18287749800031B9D9 /* Detail */,
 				1FD13D17287749780031B9D9 /* Home */,
+				1FD33560287FF84800FF7852 /* Favorites */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -370,6 +373,22 @@
 				1FD3355C287F78C900FF7852 /* NewPostConfiguration.swift */,
 			);
 			path = VIPERLayouts;
+			sourceTree = "<group>";
+		};
+		1FD33560287FF84800FF7852 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				1FD33561287FF86000FF7852 /* Views */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		1FD33561287FF86000FF7852 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FD33562287FF8A800FF7852 /* FavoritesViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1FDBC76628736121009A4970 /* Locations */ = {
@@ -558,6 +577,7 @@
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
 				1F0F7464287E54B40089B9F8 /* DetailPresenter.swift in Sources */,
 				1F0F7461287E54960089B9F8 /* VIPERDetailProtocols.swift in Sources */,
+				1FD33563287FF8A800FF7852 /* FavoritesViewController.swift in Sources */,
 				1F3DDC5F287D1A0900D5CD3B /* Networking.swift in Sources */,
 				1FAC455428693E1A0070ECAC /* PostsTableViewCell.swift in Sources */,
 				1FAC4550286934F10070ECAC /* Posts.swift in Sources */,
