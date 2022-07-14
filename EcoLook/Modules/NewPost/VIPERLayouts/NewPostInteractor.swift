@@ -18,7 +18,9 @@ extension NewPostInteractor: NewPostInteractorProtocol {
     
     func insertNewPostByUser(newPost: Post) {
         
-        postsRepository?.insertNewPost(newPost: newPost, success: { _ in
+        postsRepository?.insertNewPost(newPost: newPost, success: { response in
+            
+            self.presenter?.loadSuccessInsertNewPostByUser(response: response)
             
         }, failure: { _ in })
         
