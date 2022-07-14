@@ -5,11 +5,16 @@
 //  Created by Brian Antonio Sanchez Solorsano on 13/07/22.
 //
 
-import Foundation
+import UIKit
 
 class NewPostRouter {
     
     weak var presenter: NewPostPresenterProtocol?
+    var currentViewController: UIViewController?
+    
+    init(currentViewController: UIViewController) {
+        self.currentViewController = currentViewController
+    }
     
 }
 

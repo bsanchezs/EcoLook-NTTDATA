@@ -17,7 +17,7 @@ class NewPostConfiguration {
         }
         
         let newPostPresenter = NewPostPresenter()
-        let newPostRouter = NewPostRouter()
+        let newPostRouter = NewPostRouter(currentViewController: viewController)
         let newPostInteractor = NewPostInteractor()
 
         viewController.presenter = newPostPresenter
