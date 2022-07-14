@@ -32,6 +32,11 @@
 		1F93049F288082A6004649FA /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93049E288082A6004649FA /* FavoritesInteractor.swift */; };
 		1F9304A1288082D6004649FA /* FavoritesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304A0288082D6004649FA /* FavoritesConfiguration.swift */; };
 		1F9304A72880A787004649FA /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304A62880A787004649FA /* PersonalViewController.swift */; };
+		1F9304A92880AFA6004649FA /* VIPERPersonalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304A82880AFA6004649FA /* VIPERPersonalProtocols.swift */; };
+		1F9304AC2880B032004649FA /* PersonalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304AB2880B032004649FA /* PersonalPresenter.swift */; };
+		1F9304AE2880B043004649FA /* PersonalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304AD2880B043004649FA /* PersonalRouter.swift */; };
+		1F9304B02880B06D004649FA /* PersonalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304AF2880B06D004649FA /* PersonalInteractor.swift */; };
+		1F9304B22880B080004649FA /* PersonalConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9304B12880B080004649FA /* PersonalConfiguration.swift */; };
 		1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */; };
 		1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */; };
 		1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FA70A692865394700BDB740 /* Playball-Regular.ttf */; };
@@ -89,6 +94,11 @@
 		1F93049E288082A6004649FA /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		1F9304A0288082D6004649FA /* FavoritesConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesConfiguration.swift; sourceTree = "<group>"; };
 		1F9304A62880A787004649FA /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		1F9304A82880AFA6004649FA /* VIPERPersonalProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERPersonalProtocols.swift; sourceTree = "<group>"; };
+		1F9304AB2880B032004649FA /* PersonalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPresenter.swift; sourceTree = "<group>"; };
+		1F9304AD2880B043004649FA /* PersonalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalRouter.swift; sourceTree = "<group>"; };
+		1F9304AF2880B06D004649FA /* PersonalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInteractor.swift; sourceTree = "<group>"; };
+		1F9304B12880B080004649FA /* PersonalConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalConfiguration.swift; sourceTree = "<group>"; };
 		1FA6B793286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsPostDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		1FA6B797286BCB46007D3F42 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		1FA70A692865394700BDB740 /* Playball-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Playball-Regular.ttf"; sourceTree = "<group>"; };
@@ -265,6 +275,8 @@
 		1F9304A22880A727004649FA /* Personal */ = {
 			isa = PBXGroup;
 			children = (
+				1F9304A82880AFA6004649FA /* VIPERPersonalProtocols.swift */,
+				1F9304AA2880B018004649FA /* VIPERLayouts */,
 				1F9304A32880A757004649FA /* Views */,
 			);
 			path = Personal;
@@ -276,6 +288,17 @@
 				1F9304A62880A787004649FA /* PersonalViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1F9304AA2880B018004649FA /* VIPERLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				1F9304AB2880B032004649FA /* PersonalPresenter.swift */,
+				1F9304AD2880B043004649FA /* PersonalRouter.swift */,
+				1F9304AF2880B06D004649FA /* PersonalInteractor.swift */,
+				1F9304B12880B080004649FA /* PersonalConfiguration.swift */,
+			);
+			path = VIPERLayouts;
 			sourceTree = "<group>";
 		};
 		1FAC455128693DD40070ECAC /* TableViewCell */ = {
@@ -593,6 +616,7 @@
 				1FD13D2A287758640031B9D9 /* Presenter.swift in Sources */,
 				1FA6B798286BCB46007D3F42 /* NewPostViewController.swift in Sources */,
 				1F9304A1288082D6004649FA /* FavoritesConfiguration.swift in Sources */,
+				1F9304B02880B06D004649FA /* PersonalInteractor.swift in Sources */,
 				1F6F5926287BAB5500CC2CBA /* PostsRemoteRepository.swift in Sources */,
 				1FD1FD05286609600035EAC1 /* HomeTabBarController.swift in Sources */,
 				1FB90B49286EA93500F1A28E /* Date.swift in Sources */,
@@ -605,6 +629,7 @@
 				1F93049B2880820A004649FA /* FavoritesPresenter.swift in Sources */,
 				1FA6B795286B771B007D3F42 /* TagsPostDetailCollectionViewCell.swift in Sources */,
 				1FAC3A30286E343700B21386 /* FormStatus.swift in Sources */,
+				1F9304B22880B080004649FA /* PersonalConfiguration.swift in Sources */,
 				1F930498288081E2004649FA /* VIPERFavoritesProtocols.swift in Sources */,
 				1F0F7468287E552E0089B9F8 /* DetailInteractor.swift in Sources */,
 				1FD13D30287785FF0031B9D9 /* Configuration.swift in Sources */,
@@ -616,13 +641,16 @@
 				1FD13D2E287758810031B9D9 /* Interactor.swift in Sources */,
 				1FD13D2C287758740031B9D9 /* Router.swift in Sources */,
 				1FD33559287F782400FF7852 /* NewPostRouter.swift in Sources */,
+				1F9304AE2880B043004649FA /* PersonalRouter.swift in Sources */,
 				1FE05B262867B3B400C3160D /* Tags.swift in Sources */,
 				1F46D3DB285BEA87008F84CA /* SceneDelegate.swift in Sources */,
+				1F9304A92880AFA6004649FA /* VIPERPersonalProtocols.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
 				1FD3355B287F78AF00FF7852 /* NewPostInteractor.swift in Sources */,
 				1F0F7466287E54C50089B9F8 /* DetailRouter.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
 				1F0F7464287E54B40089B9F8 /* DetailPresenter.swift in Sources */,
+				1F9304AC2880B032004649FA /* PersonalPresenter.swift in Sources */,
 				1F0F7461287E54960089B9F8 /* VIPERDetailProtocols.swift in Sources */,
 				1FD33563287FF8A800FF7852 /* FavoritesViewController.swift in Sources */,
 				1F3DDC5F287D1A0900D5CD3B /* Networking.swift in Sources */,
