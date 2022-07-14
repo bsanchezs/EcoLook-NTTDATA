@@ -100,7 +100,7 @@ class PostsRemoteRepository: PostsRepository {
     
     func insertNewPost(newPost: Post, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
         
-        let url = "https://apiecolook.improntux.online/public/api/insertarPublicacionPorUsuario/"
+        let url = "https://apiecolook.improntux.online/public/api/insertarPublicacionPorUsuario"
         
         AF.request(url,
                    method: .post,
@@ -110,10 +110,20 @@ class PostsRemoteRepository: PostsRepository {
                    interceptor: nil,
                    requestModifier: nil
                   ).responseDecodable(of: Int.self) { response in
+            
+            switch response.result {
+                
+                case .success(let respuesta):
+                    
+                    success(respuesta)
+                    
+                case .failure(let error):
+                    
+                    failure(error)
+                
+            }
 
-                        response
-
-                    }
+        }
         
     }
     
