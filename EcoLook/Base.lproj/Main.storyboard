@@ -191,6 +191,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="actionButtonGoNewPost:" destination="Qrn-oo-aii" eventType="touchUpInside" id="opg-Zs-0c6"/>
                                     <action selector="buttonGoNewPost:" destination="lxn-er-nkW" eventType="touchUpInside" id="xhg-sx-yw5"/>
                                 </connections>
                             </button>

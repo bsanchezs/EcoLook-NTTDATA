@@ -27,7 +27,13 @@ class FavoritesViewController: UIViewController {
         presenter?.fetchFavoritesPostsByUser(idUser: 1)
         
     }
-
+    
+    @IBAction func actionButtonGoNewPost(_ sender: Any) {
+        
+        presenter?.requestSendToNewPost()
+        
+    }
+    
 }
 
 extension FavoritesViewController {
@@ -108,7 +114,7 @@ extension FavoritesViewController: ButtonGoViewCellDelegate{
     
     func goToDetail(idPost: Int) {
         
-//        presenter?.requestSendToDetail(idPost: idPost)
+        presenter?.requestSendToDetail(idPost: idPost)
 
     }
     
