@@ -233,10 +233,7 @@ extension NewPostViewController {
     
     func showErrorAlert( message: String ){
         
-        let okay = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(okay)
-        present(alert, animated: true, completion: nil)
+        presenter?.requestShowErrorFormAlert(message: message)
         
     }
     
@@ -326,9 +323,6 @@ extension NewPostViewController: ButtonNewPostViewCollectionCellDelegate{
             setTagsSelectedNewPost.insert(tagName)
             
         }
-        
-        
-//        setTagsSelectedNewPost.contains(tagName) == true ? setTagsSelectedNewPost.insert(tagName) : setTagsSelectedNewPost.remove(tagName)
         
         
         print(setTagsSelectedNewPost)

@@ -18,6 +18,8 @@ protocol NewPostPresenterProtocol: AnyObject {
     
     func requestGoBackToHome()
     
+    func requestShowErrorFormAlert(message: String)
+    
 }
 
 protocol NewPostRouterProtocol {
@@ -26,6 +28,8 @@ protocol NewPostRouterProtocol {
     func showSuccessAlert()
     
     func goBackToHome()
+    
+    func showErrorFormAlert(message: String)
     
 }
 

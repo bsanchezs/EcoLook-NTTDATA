@@ -40,4 +40,10 @@ extension NewPostPresenter: NewPostPresenterProtocol {
         
     }
     
+    func requestShowErrorFormAlert(message: String) {
+        
+        router?.showErrorFormAlert(message: message)
+        
+    }
+    
 }

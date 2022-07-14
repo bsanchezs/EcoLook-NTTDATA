@@ -35,13 +35,13 @@ extension NewPostRouter: NewPostRouterProtocol {
         
         let alert = UIAlertController(title: "Guardado exitoso", message: "Se ha guardado exitosamente su publicacion", preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+        let okay = UIAlertAction(title: "Ok", style: .default) { _ in
             
             self.currentViewController?.navigationController?.popViewController(animated: true)
             
         }
         
-        alert.addAction(okAction)
+        alert.addAction(okay)
         
         currentViewController?.present(alert, animated: true)
         
@@ -50,6 +50,18 @@ extension NewPostRouter: NewPostRouterProtocol {
     func goBackToHome() {
         
         currentViewController?.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    func showErrorFormAlert(message: String) {
+        
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        let okay = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        alert.addAction(okay)
+        
+        currentViewController?.present(alert, animated: true)
         
     }
 }
