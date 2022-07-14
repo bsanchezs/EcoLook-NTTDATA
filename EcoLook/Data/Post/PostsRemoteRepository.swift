@@ -111,19 +111,9 @@ class PostsRemoteRepository: PostsRepository {
                    interceptor: nil,
                    requestModifier: nil
                   ).responseDecodable(of: Int.self) { response in
-                        
-                        switch response.result {
-                            
-                            case .success(let respuesta):
-                                
-                                success(respuesta)
-                                
-                            case .failure(let error):
-                                
-                                failure(error)
-                            
-                        }
-            
+
+                        response
+
                     }
         
     }
