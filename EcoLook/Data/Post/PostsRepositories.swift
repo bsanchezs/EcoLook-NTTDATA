@@ -16,4 +16,6 @@ protocol PostsRepository {
     func deleteFavoritePostByUserAndPost(idUser: Int, idPost: Int, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void)
     
     func insertNewPost(newPost: Post, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void)
+    
+    func getFavoritesPostsByUser(idUser: Int, success: @escaping ([Post]?) -> Void, failure: @escaping (Error?) -> Void)
 }

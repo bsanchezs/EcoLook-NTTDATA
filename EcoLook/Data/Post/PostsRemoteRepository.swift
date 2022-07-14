@@ -127,5 +127,28 @@ class PostsRemoteRepository: PostsRepository {
         
     }
     
+    func getFavoritesPostsByUser(idUser: Int, success: @escaping ([Post]?) -> Void, failure: @escaping (Error?) -> Void) {
+        
+        let idUserString = String(idUser)
+        let url = "https://apiecolook.improntux.online/public/api/obtenerPublicacionesFavoritasPorUsuario/" + idUserString
+        
+        AF.request(url).responseDecodable(of: [Post].self){
+            response in
+            
+            switch response.result {
+            case .success(let favoritesPosts):
+
+                success(favoritesPosts)
+
+            case .failure(let error):
+                
+                failure(error)
+                
+            }
+
+        }
+        
+    }
+    
     
 }
