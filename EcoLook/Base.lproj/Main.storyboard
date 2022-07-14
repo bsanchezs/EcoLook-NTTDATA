@@ -173,14 +173,54 @@
                     <view key="view" contentMode="scaleToFill" id="Hml-Tx-yFy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favoritos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-9n-JNQ">
+                                <rect key="frame" x="140" y="44" width="134" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="l8V-Nd-j1F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Playball-Regular" family="Playball" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-2s-fKs">
+                                <rect key="frame" x="348" y="49" width="46" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGoNewPost:" destination="lxn-er-nkW" eventType="touchUpInside" id="xhg-sx-yw5"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="frr-2D-oue">
+                                <rect key="frame" x="20" y="99" width="374" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9lU-aJ-u2g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cep-9n-JNQ" firstAttribute="top" secondItem="9lU-aJ-u2g" secondAttribute="top" id="9mJ-DI-Jf9"/>
+                            <constraint firstItem="9lU-aJ-u2g" firstAttribute="bottom" secondItem="frr-2D-oue" secondAttribute="bottom" id="HXc-Ct-2Wa"/>
+                            <constraint firstItem="eJm-2s-fKs" firstAttribute="top" secondItem="9lU-aJ-u2g" secondAttribute="top" constant="5" id="J7G-Ks-uYO"/>
+                            <constraint firstItem="9lU-aJ-u2g" firstAttribute="trailing" secondItem="frr-2D-oue" secondAttribute="trailing" constant="20" id="TQ8-GF-8re"/>
+                            <constraint firstItem="Cep-9n-JNQ" firstAttribute="centerX" secondItem="Hml-Tx-yFy" secondAttribute="centerX" id="Vc4-dv-OYs"/>
+                            <constraint firstItem="frr-2D-oue" firstAttribute="leading" secondItem="9lU-aJ-u2g" secondAttribute="leading" constant="20" id="Ynr-tK-w4Z"/>
+                            <constraint firstItem="frr-2D-oue" firstAttribute="top" secondItem="Cep-9n-JNQ" secondAttribute="bottom" constant="15" id="kUi-xP-CPz"/>
+                            <constraint firstItem="9lU-aJ-u2g" firstAttribute="trailing" secondItem="eJm-2s-fKs" secondAttribute="trailing" constant="20" id="n1F-Nj-Avv"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="QFN-5T-ZDH"/>
+                    <connections>
+                        <segue destination="uM2-cT-7ec" kind="show" id="bY2-3n-wqw"/>
+                        <segue destination="hvi-A6-xZM" kind="presentation" id="vkQ-eM-It9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMh-i2-9xa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="130"/>
+            <point key="canvasLocation" x="734.78260869565224" y="129.91071428571428"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="fW7-1m-5e0">
@@ -662,6 +702,10 @@
             <point key="canvasLocation" x="4800" y="437"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Osf-Rk-Pco"/>
+        <segue reference="vkQ-eM-It9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="0.square.fill" catalog="system" width="128" height="114"/>
         <image name="1.square.fill" catalog="system" width="128" height="114"/>
