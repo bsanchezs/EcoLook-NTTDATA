@@ -15,9 +15,30 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setConfigurationFavoriteViewController()
 
-        // Do any additional setup after loading the view.
     }
     
 
+}
+
+extension FavoritesViewController {
+    
+    func setConfigurationFavoriteViewController() {
+        
+        self.view.backgroundColor = ThemeColors.verdeBackground
+        
+        labelTitleHeaderFavorite.textColor = ThemeColors.verdePrimary
+        
+        buttonGoNewPost.tintColor = ThemeColors.verdePrimary
+        
+        tableViewFavoritePostsCards.separatorStyle = .none
+        tableViewFavoritePostsCards.showsVerticalScrollIndicator = false
+        tableViewFavoritePostsCards.backgroundColor = ThemeColors.verdeBackground
+//        tableViewFavoritePostsCards.dataSource = self
+        tableViewFavoritePostsCards.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "customPostsCardsCell")
+        
+    }
+    
 }
