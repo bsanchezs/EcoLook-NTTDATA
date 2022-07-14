@@ -19,7 +19,8 @@ extension NewPostPresenter: NewPostPresenterProtocol {
     
     func fetchInsertNewPostByUser(newPost: Post) {
         
-        interactor?.insertNewPostByUser(newPost: newPost)
+//        interactor?.insertNewPostByUser(newPost: newPost)
+        router?.showSavingAlert()
         
     }
     

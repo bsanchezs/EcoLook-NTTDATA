@@ -19,6 +19,8 @@ protocol NewPostPresenterProtocol: AnyObject {
 
 protocol NewPostRouterProtocol {
     
+    func showSavingAlert()
+    
 }
 
 protocol NewPostInteractorProtocol{

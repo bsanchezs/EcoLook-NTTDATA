@@ -11,6 +11,7 @@ class NewPostRouter {
     
     weak var presenter: NewPostPresenterProtocol?
     var currentViewController: UIViewController?
+    var savingAlert: UIAlertController?
     
     init(currentViewController: UIViewController) {
         self.currentViewController = currentViewController
@@ -20,5 +21,12 @@ class NewPostRouter {
 
 extension NewPostRouter: NewPostRouterProtocol {
     
+    func showSavingAlert() {
+        
+        savingAlert = UIAlertController(title: "Guardando publicacion", message: "Espere un momento, por favor.", preferredStyle: .alert)
+        
+        currentViewController?.present(savingAlert!, animated: true)
+        
+    }
     
 }
