@@ -159,9 +159,9 @@ class PostsRemoteRepository: PostsRepository {
             response in
             
             switch response.result {
-            case .success(let favoritesPosts):
+            case .success(let personalPosts):
 
-                success(favoritesPosts)
+                success(personalPosts)
 
             case .failure(let error):
                 

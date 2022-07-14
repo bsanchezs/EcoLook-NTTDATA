@@ -19,7 +19,11 @@ extension PersonalInteractor: PersonalInteractorProtocol {
     
     func getPersonalPostsByUser(idUser: Int) {
         
-        print("asd")
+        postsRepository?.getPersonalPostsByUser(idUser: idUser, success: { personalPost in
+            
+            self.presenter?.loadSuccessPersonalPostsByUser(personalPosts: personalPost)
+            
+        }, failure: { _ in  })
         
     }
     
