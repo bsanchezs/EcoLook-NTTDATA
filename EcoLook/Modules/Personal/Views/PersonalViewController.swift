@@ -24,12 +24,13 @@ class PersonalViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        presenter?.fetchFavoritesPostsByUser(idUser: 1)
+        presenter?.fetchPersonalPostsByUser(idUser: 1)
         
     }
     
     @IBAction func actionButtonGoNewPost(_ sender: Any) {
         
+        presenter?.requestSendToNewPost()
         
     }
 }
@@ -57,6 +58,22 @@ extension PersonalViewController {
 
 extension PersonalViewController: PersonalViewProtocol {
     
+    func showSuccessPersonalPostsByUser(personalPosts: [Post]) {
+        
+        posts = personalPosts
+        tableViewPersonalPostsCards.reloadData()
+        
+    }
+    
+    func showSuccessImagePersonalPostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+        
+        DispatchQueue.main.async {
+            cell?.imageViewCard.image = UIImage(data: dataImage)
+        }
+        
+    }
+    
+    
     
 }
 
@@ -77,7 +94,7 @@ extension PersonalViewController: UITableViewDataSource{
         
         let url = posts[indexPath.row].getUrlImage(imagen: posts[indexPath.row].imagen)
         
-//        presenter?.fetchImageFavoritePostByUrl(url: url, cell: cell)
+        presenter?.fetchImagePersonalPostByUrl(url: url, cell: cell)
         
         cell?.labelTitleCard.text = posts[indexPath.row].titulo
         cell?.labelShortDescCard.text = posts[indexPath.row].getShortDescription(descripcion: posts[indexPath.row].descripcion)
@@ -97,7 +114,7 @@ extension PersonalViewController: ButtonGoViewCellDelegate{
     
     func goToDetail(idPost: Int) {
         
-//        presenter?.requestSendToDetail(idPost: idPost)
+        presenter?.requestSendToDetail(idPost: idPost)
 
     }
     

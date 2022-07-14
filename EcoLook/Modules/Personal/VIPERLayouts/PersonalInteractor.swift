@@ -17,6 +17,23 @@ class PersonalInteractor {
 
 extension PersonalInteractor: PersonalInteractorProtocol {
     
+    func getPersonalPostsByUser(idUser: Int) {
+        
+        print("asd")
+        
+    }
+    
+    func getImagePersonalPostByUrl(url: String, cell: PostsTableViewCell?) {
+        
+        networkImages?.getImageByUrl(url: url, success: { dataImage in
+            
+            self.presenter?.loadSuccessImagePersonalPostByUrl(dataImage: dataImage, cell: cell)
+            
+        }, failure: { _ in })
+        
+    }
+    
+    
     
     
 }

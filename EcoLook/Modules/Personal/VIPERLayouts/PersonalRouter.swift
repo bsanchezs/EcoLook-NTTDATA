@@ -22,6 +22,18 @@ class PersonalRouter {
 
 extension PersonalRouter: PersonalRouterProtocol {
     
+    func sendToDetail(idPost: Int) {
+        
+        let detailViewController = DetailConfiguration.setDetailVIPER(idPost: idPost)
+        currentViewController!.present(detailViewController, animated: true, completion: nil)
+        
+    }
     
+    func sendToNewPost() {
+        
+        let newPostViewController = NewPostConfiguration.setNewPostVIPER()
+        currentViewController?.navigationController?.pushViewController(newPostViewController, animated: true)
+        
+    }
     
 }
