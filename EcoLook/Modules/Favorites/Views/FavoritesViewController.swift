@@ -13,6 +13,8 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var buttonGoNewPost: UIButton!
     @IBOutlet weak var tableViewFavoritePostsCards: UITableView!
     
+    var presenter: FavoritesPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

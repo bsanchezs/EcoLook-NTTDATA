@@ -9,6 +9,10 @@ import Foundation
 
 class FavoritesPresenter {
     
+    weak var view: FavoritesViewProtocol?
+    var router: FavoritesRouterProtocol?
+    var interactor: FavoritesInteractorProtocol?
+    
 }
 
 extension FavoritesPresenter: FavoritesPresenterProtocol {

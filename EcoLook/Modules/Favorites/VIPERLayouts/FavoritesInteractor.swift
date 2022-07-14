@@ -9,6 +9,8 @@ import Foundation
 
 class FavoritesInteractor {
     
+    weak var presenter: FavoritesPresenterProtocol?
+    var postsRepository: PostsRepository? = PostsRemoteRepository()
     
 }
 
