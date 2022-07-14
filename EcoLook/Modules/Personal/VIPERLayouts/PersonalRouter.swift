@@ -9,6 +9,14 @@ import UIKit
 
 class PersonalRouter {
     
+    weak var presenter: PersonalPresenterProtocol?
+    var currentViewController: UIViewController?
+    
+    init(currentViewController: UIViewController){
+        
+        self.currentViewController = currentViewController
+        
+    }
     
 }
 

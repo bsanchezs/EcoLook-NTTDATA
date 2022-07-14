@@ -9,6 +9,9 @@ import UIKit
 
 class PersonalInteractor {
     
+    weak var presenter: PersonalPresenterProtocol?
+    var postsRepository: PostsRepository? = PostsRemoteRepository()
+    var networkImages: NetworkingImages? = NetworkingImagesByUrl()
     
 }
 

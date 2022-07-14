@@ -14,6 +14,7 @@ class PersonalViewController: UIViewController {
     @IBOutlet weak var buttonGoNewPost: UIButton!
     @IBOutlet weak var tableViewPersonalPostsCards: UITableView!
     
+    var presenter: PersonalPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

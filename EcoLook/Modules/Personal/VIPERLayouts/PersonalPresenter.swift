@@ -9,6 +9,9 @@ import UIKit
 
 class PersonalPresenter {
     
+    weak var view: PersonalViewProtocol?
+    var router: PersonalRouterProtocol?
+    var interactor: PersonalInteractorProtocol?
     
 }
 
