@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class FavoritesRouter {
+    
+    
+}
+
+extension FavoritesRouter: FavoritesRouterProtocol {
+    
+    
+    
+}

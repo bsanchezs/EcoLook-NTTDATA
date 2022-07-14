@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol FavoritesViewProtocol: AnyObject {
+    
+}
+
+protocol FavoritesPresenterProtocol: AnyObject{
+    
+}
+
+protocol FavoritesRouterProtocol{
+    
+}
+
+protocol FavoritesInteractorProtocol{
+    
+}

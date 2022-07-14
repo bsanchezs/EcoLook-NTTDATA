@@ -43,6 +43,12 @@ extension FavoritesViewController {
     
 }
 
+extension FavoritesViewController: FavoritesViewProtocol {
+    
+    
+    
+}
+
 extension FavoritesViewController: UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class FavoritesPresenter {
+    
+}
+
+extension FavoritesPresenter: FavoritesPresenterProtocol {
+    
+    
+    
+}

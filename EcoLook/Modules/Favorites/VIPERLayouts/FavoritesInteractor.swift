@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class FavoritesInteractor {
+    
+    
+}
+
+extension FavoritesInteractor: FavoritesInteractorProtocol {
+    
+    
+    
+}
