@@ -23,6 +23,6 @@ protocol NewPostRouterProtocol {
 
 protocol NewPostInteractorProtocol{
     
-    func insertNewpostByUser(idUser: Int, newPost: Post)
+    func insertNewPostByUser(idUser: Int, newPost: Post)
     
 }

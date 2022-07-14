@@ -98,4 +98,35 @@ class PostsRemoteRepository: PostsRepository {
         
     }
     
+    func insertNewPost(idUser: Int, newPost: Post, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
+        
+        let idUserString = String(idUser)
+        let url = "https://apiecolook.improntux.online/public/api/borrarFavoritoPorUsuarioPublicacion/" + idUserString
+        
+        AF.request(url,
+                   method: .post,
+                   parameters: newPost,
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil,
+                   interceptor: nil,
+                   requestModifier: nil
+                  ).responseDecodable(of: Int.self) { response in
+                        
+                        switch response.result {
+                            
+                            case .success(let respuesta):
+                                
+                                success(respuesta)
+                                
+                            case .failure(let error):
+                                
+                                failure(error)
+                            
+                        }
+            
+                    }
+        
+    }
+    
+    
 }

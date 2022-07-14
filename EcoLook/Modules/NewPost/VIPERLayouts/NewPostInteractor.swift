@@ -10,14 +10,15 @@ import Foundation
 class NewPostInteractor {
     
     weak var presenter: NewPostPresenterProtocol?
+    var postsRepository: PostsRepository? = PostsRemoteRepository()
     
 }
 
 extension NewPostInteractor: NewPostInteractorProtocol {
     
-    func insertNewpostByUser(idUser: Int, newPost: Post) {
+    func insertNewPostByUser(idUser: Int, newPost: Post) {
         
-        print("TODO: Armar el repository")
+        
         
     }
     
