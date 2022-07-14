@@ -5,7 +5,7 @@
 //  Created by Brian Antonio Sanchez Solorsano on 14/07/22.
 //
 
-import Foundation
+import UIKit
 
 class FavoritesPresenter {
     
@@ -16,6 +16,53 @@ class FavoritesPresenter {
 }
 
 extension FavoritesPresenter: FavoritesPresenterProtocol {
+    
+    func fetchFavoritesPostsByUser(idUser: Int) {
+        
+        interactor?.getFavoritesPostsByUser(idUser: idUser)
+        
+    }
+    
+    func loadSuccessFavoritesPostsByUser(favoritesPosts: [Post]?) {
+        
+        if let favoritesPosts = favoritesPosts {
+            
+            view?.showSuccessFavoritesPostsByUser(favoritesPosts: favoritesPosts)
+            
+        }else{
+            
+            view?.showSuccessFavoritesPostsByUser(favoritesPosts: [])
+            
+        }
+        
+        
+        
+    }
+    
+    func fetchImageFavoritePostByUrl(url: String, cell: PostsTableViewCell?) {
+        
+        interactor?.getImageFavoritePostByUrl(url: url, cell: cell)
+        
+    }
+    
+    func loadSuccessImageFavoritePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+        
+        view?.showSuccessImageFavoritePostByUrl(dataImage: dataImage, cell: cell)
+        
+    }
+    
+    func requestSendToDetail(idPost: Int) {
+        
+        router?.sendToDetail(idPost: idPost)
+        
+    }
+    
+    func requestSendToNewPost() {
+        
+        router?.sendToNewPost()
+        
+    }
+    
     
     
     

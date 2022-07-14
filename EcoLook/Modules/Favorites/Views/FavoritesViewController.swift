@@ -22,6 +22,11 @@ class FavoritesViewController: UIViewController {
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        presenter?.fetchFavoritesPostsByUser(idUser: 1)
+        
+    }
 
 }
 
@@ -47,6 +52,21 @@ extension FavoritesViewController {
 
 extension FavoritesViewController: FavoritesViewProtocol {
     
+    func showSuccessFavoritesPostsByUser(favoritesPosts: [Post]) {
+        
+        posts = favoritesPosts
+        tableViewFavoritePostsCards.reloadData()
+        
+    }
+    
+    func showSuccessImageFavoritePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+        
+        DispatchQueue.main.async {
+            cell?.imageViewCard.image = UIImage(data: dataImage)
+        }
+        
+    }
+    
     
     
 }
@@ -66,11 +86,9 @@ extension FavoritesViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customPostsCardsCell", for: indexPath) as? PostsTableViewCell
         
-        print("imagen: \(posts[indexPath.row].imagen)")
-        
         let url = posts[indexPath.row].getUrlImage(imagen: posts[indexPath.row].imagen)
         
-//        presenter?.fetchImagePostByUrl(url: url, cell: cell)
+        presenter?.fetchImageFavoritePostByUrl(url: url, cell: cell)
         
         cell?.labelTitleCard.text = posts[indexPath.row].titulo
         cell?.labelShortDescCard.text = posts[indexPath.row].getShortDescription(descripcion: posts[indexPath.row].descripcion)

@@ -27,9 +27,13 @@ extension HomePresenter: HomePresenterProtocol {
     func loadSuccessAllPostsByUser(allPosts: [Post]?) {
         
         if let allPosts = allPosts {
+            
             view?.showSuccessAllPostsByUser(allPosts: allPosts)
+            
         }else {
+            
             view?.showSuccessAllPostsByUser(allPosts: [])
+            
         }
         
     }
