@@ -16,7 +16,7 @@ class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.viewControllers = [HomeConfiguration.setHomeVIPER(), FavoritesConfiguration.setFavoritesVIPER(), UIViewController()]
+        self.viewControllers = [HomeConfiguration.setHomeVIPER(), FavoritesConfiguration.setFavoritesVIPER(), PersonalConfiguration.setPersonalVIPER()]
         
         tabBarHome.backgroundColor = ThemeColors.verdePrimary
         
