@@ -14,12 +14,14 @@ protocol NewPostViewProtocol: AnyObject {
 protocol NewPostPresenterProtocol: AnyObject {
     
     func fetchInsertNewPostByUser(newPost: Post)
+    func loadSuccessInsertNewPostByUser(response: Int)
     
 }
 
 protocol NewPostRouterProtocol {
     
     func showSavingAlert()
+    func showSuccessAlert()
     
 }
 

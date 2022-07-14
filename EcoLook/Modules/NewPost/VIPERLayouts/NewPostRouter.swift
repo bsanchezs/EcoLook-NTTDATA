@@ -23,9 +23,27 @@ extension NewPostRouter: NewPostRouterProtocol {
     
     func showSavingAlert() {
         
-        savingAlert = UIAlertController(title: "Guardando publicacion", message: "Espere un momento, por favor.", preferredStyle: .alert)
+        savingAlert = UIAlertController(title: "Guardando publicacion...", message: "Espere un momento, por favor.", preferredStyle: .alert)
         
         currentViewController?.present(savingAlert!, animated: true)
+        
+    }
+    
+    func showSuccessAlert() {
+        
+        savingAlert?.dismiss(animated: true, completion: nil)
+        
+        let alert = UIAlertController(title: "Guardado exitoso", message: "Se ha guardado exitosamente su publicacion", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            
+            self.currentViewController?.navigationController?.popViewController(animated: true)
+            
+        }
+        
+        alert.addAction(okAction)
+        
+        currentViewController?.present(alert, animated: true)
         
     }
     
