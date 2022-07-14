@@ -17,9 +17,9 @@ class NewPostPresenter {
 
 extension NewPostPresenter: NewPostPresenterProtocol {
     
-    func fetchInsertNewPostByUser(idUser: Int, newPost: Post) {
+    func fetchInsertNewPostByUser(newPost: Post) {
         
-        interactor?.insertNewPostByUser(idUser: idUser, newPost: newPost)
+        interactor?.insertNewPostByUser(newPost: newPost)
         
     }
     

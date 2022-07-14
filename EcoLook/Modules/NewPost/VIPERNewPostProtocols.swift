@@ -13,7 +13,7 @@ protocol NewPostViewProtocol: AnyObject {
 
 protocol NewPostPresenterProtocol: AnyObject {
     
-    func fetchInsertNewPostByUser(idUser: Int, newPost: Post)
+    func fetchInsertNewPostByUser(newPost: Post)
     
 }
 
@@ -23,6 +23,6 @@ protocol NewPostRouterProtocol {
 
 protocol NewPostInteractorProtocol{
     
-    func insertNewPostByUser(idUser: Int, newPost: Post)
+    func insertNewPostByUser(newPost: Post)
     
 }

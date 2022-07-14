@@ -98,10 +98,9 @@ class PostsRemoteRepository: PostsRepository {
         
     }
     
-    func insertNewPost(idUser: Int, newPost: Post, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
+    func insertNewPost(newPost: Post, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void) {
         
-        let idUserString = String(idUser)
-        let url = "https://apiecolook.improntux.online/public/api/borrarFavoritoPorUsuarioPublicacion/" + idUserString
+        let url = "https://apiecolook.improntux.online/public/api/insertarPublicacionPorUsuario/"
         
         AF.request(url,
                    method: .post,

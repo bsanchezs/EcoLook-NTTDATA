@@ -181,7 +181,7 @@ class NewPostViewController: UIViewController {
                 print("El post a enviar seria: \(newPost)")
             
             
-            presenter?.fetchInsertNewPostByUser(idUser: 1, newPost: newPost)
+            presenter?.fetchInsertNewPostByUser(newPost: newPost)
                 
             
         }

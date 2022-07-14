@@ -16,7 +16,7 @@ class NewPostInteractor {
 
 extension NewPostInteractor: NewPostInteractorProtocol {
     
-    func insertNewPostByUser(idUser: Int, newPost: Post) {
+    func insertNewPostByUser(newPost: Post) {
         
         
         
