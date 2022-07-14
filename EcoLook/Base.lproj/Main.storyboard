@@ -91,7 +91,7 @@
                     <connections>
                         <outlet property="buttonGoNewPost" destination="g5m-gg-Evo" id="P10-l8-zIw"/>
                         <outlet property="labelTitleHeaderPersonal" destination="nDn-CX-mUv" id="4SS-Rj-2iS"/>
-                        <outlet property="tableViewPersonalPostsCards" destination="g5m-gg-Evo" id="kr3-s2-QBq"/>
+                        <outlet property="tableViewPersonalPostsCards" destination="6a5-57-y4T" id="9Jl-Ib-exQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kn-HD-txR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
