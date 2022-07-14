@@ -9,6 +9,10 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
 
+    @IBOutlet weak var labelTitleHeaderFavorite: UILabel!
+    @IBOutlet weak var buttonGoNewPost: UIButton!
+    @IBOutlet weak var tableViewFavoritePostsCards: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

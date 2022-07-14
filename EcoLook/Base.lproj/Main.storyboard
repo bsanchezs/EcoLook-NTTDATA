@@ -214,6 +214,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="QFN-5T-ZDH"/>
                     <connections>
+                        <outlet property="buttonGoNewPost" destination="eJm-2s-fKs" id="lTQ-fQ-i2s"/>
+                        <outlet property="labelTitleHeaderFavorite" destination="Cep-9n-JNQ" id="3T9-oU-1cX"/>
+                        <outlet property="tableViewFavoritePostsCards" destination="frr-2D-oue" id="qzf-LD-R3j"/>
                         <segue destination="uM2-cT-7ec" kind="show" id="bY2-3n-wqw"/>
                         <segue destination="hvi-A6-xZM" kind="presentation" id="vkQ-eM-It9"/>
                     </connections>
@@ -703,7 +706,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Osf-Rk-Pco"/>
+        <segue reference="bY2-3n-wqw"/>
         <segue reference="vkQ-eM-It9"/>
     </inferredMetricsTieBreakers>
     <resources>
