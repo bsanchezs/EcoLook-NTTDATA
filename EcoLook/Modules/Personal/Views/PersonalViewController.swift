@@ -54,6 +54,11 @@ extension PersonalViewController {
     
 }
 
+extension PersonalViewController: PersonalViewProtocol {
+    
+    
+}
+
 extension PersonalViewController: UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
