@@ -18,7 +18,8 @@ class PersonalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setConfigurationPersonalViewController()
         // Do any additional setup after loading the view.
     }
     

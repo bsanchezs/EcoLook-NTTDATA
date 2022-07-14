@@ -18,4 +18,6 @@ protocol PostsRepository {
     func insertNewPost(newPost: Post, success: @escaping (Int) -> Void, failure: @escaping (Error?) -> Void)
     
     func getFavoritesPostsByUser(idUser: Int, success: @escaping ([Post]?) -> Void, failure: @escaping (Error?) -> Void)
+    
+    func getPersonalPostsByUser(idUser: Int, success: @escaping ([Post]?) -> Void, failure: @escaping (Error?) -> Void)
 }
