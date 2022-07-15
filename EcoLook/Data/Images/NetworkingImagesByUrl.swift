@@ -9,7 +9,7 @@ import UIKit
 
 class NetworkingImagesByUrl: NetworkingImages {
     
-    var task: URLSessionDataTask!
+    var task: URLSessionDataTask?
 
     func getImageByUrl(url: String, success: @escaping (UIImage) -> Void, failure: @escaping (Error?) -> Void) {
         
@@ -46,7 +46,7 @@ class NetworkingImagesByUrl: NetworkingImages {
             
         }
 
-        task.resume()
+        task?.resume()
         
         
     }

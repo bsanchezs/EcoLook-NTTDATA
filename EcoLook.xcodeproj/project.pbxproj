@@ -22,6 +22,9 @@
 		1F46D3E0285BEA87008F84CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3DE285BEA87008F84CA /* Main.storyboard */; };
 		1F46D3E2285BEA87008F84CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E1285BEA87008F84CA /* Assets.xcassets */; };
 		1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F46D3E3285BEA87008F84CA /* LaunchScreen.storyboard */; };
+		1F60E9662881F4F600E7965F /* TagsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F60E9652881F4F600E7965F /* TagsRepository.swift */; };
+		1F60E9682881F51900E7965F /* TagsLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F60E9672881F51900E7965F /* TagsLocalRepository.swift */; };
+		1F60E96F2881F8A800E7965F /* tags_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F60E96E2881F8A800E7965F /* tags_success.json */; };
 		1F63BC1D286A0F580070AE08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63BC1C286A0F580070AE08 /* DetailViewController.swift */; };
 		1F6F5924287BA5EC00CC2CBA /* PostsRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F5923287BA5EC00CC2CBA /* PostsRepositories.swift */; };
 		1F6F5926287BAB5500CC2CBA /* PostsRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6F5925287BAB5500CC2CBA /* PostsRemoteRepository.swift */; };
@@ -84,6 +87,9 @@
 		1F46D3E1285BEA87008F84CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F46D3E4285BEA87008F84CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F46D3E6285BEA87008F84CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F60E9652881F4F600E7965F /* TagsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsRepository.swift; sourceTree = "<group>"; };
+		1F60E9672881F51900E7965F /* TagsLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsLocalRepository.swift; sourceTree = "<group>"; };
+		1F60E96E2881F8A800E7965F /* tags_success.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = tags_success.json; sourceTree = "<group>"; };
 		1F63BC1C286A0F580070AE08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1F6F5923287BA5EC00CC2CBA /* PostsRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepositories.swift; sourceTree = "<group>"; };
 		1F6F5925287BAB5500CC2CBA /* PostsRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRemoteRepository.swift; sourceTree = "<group>"; };
@@ -205,6 +211,7 @@
 				1F2CC229286672D400A6ECE2 /* TabBarOptions.swift */,
 				1FDBC76628736121009A4970 /* Locations */,
 				1F15428E28651B6400FC48F4 /* Fonts */,
+				1F60E9692881F7DC00E7965F /* Jsons */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -250,6 +257,23 @@
 				1F46D3E6285BEA87008F84CA /* Info.plist */,
 			);
 			path = EcoLook;
+			sourceTree = "<group>";
+		};
+		1F60E9642881F4C500E7965F /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				1F60E9652881F4F600E7965F /* TagsRepository.swift */,
+				1F60E9672881F51900E7965F /* TagsLocalRepository.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		1F60E9692881F7DC00E7965F /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				1F60E96E2881F8A800E7965F /* tags_success.json */,
+			);
+			path = Jsons;
 			sourceTree = "<group>";
 		};
 		1F8614F128680EAD00036DE7 /* CollectionViewCell */ = {
@@ -414,6 +438,7 @@
 			children = (
 				1F3DDC5D287D19F900D5CD3B /* Images */,
 				1FD13D322877BE4D0031B9D9 /* Post */,
+				1F60E9642881F4C500E7965F /* Tags */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -535,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA70A6A2865394700BDB740 /* Playball-Regular.ttf in Resources */,
+				1F60E96F2881F8A800E7965F /* tags_success.json in Resources */,
 				1FAC454E2868A6BB0070ECAC /* TagsCollectionViewCell.xib in Resources */,
 				1FDBC768287361F4009A4970 /* MyHouse.gpx in Resources */,
 				1F46D3E5285BEA87008F84CA /* LaunchScreen.storyboard in Resources */,
@@ -635,6 +661,7 @@
 				1FD13D30287785FF0031B9D9 /* Configuration.swift in Sources */,
 				1F762D642870F0F3001AD67D /* GeolocalizationViewController.swift in Sources */,
 				1F3DDC61287D21E100D5CD3B /* NetworkingImagesByUrl.swift in Sources */,
+				1F60E9682881F51900E7965F /* TagsLocalRepository.swift in Sources */,
 				1F93049D28808293004649FA /* FavoritesRouter.swift in Sources */,
 				1FD33554287F77C500FF7852 /* VIPERNewPostProtocols.swift in Sources */,
 				1FC50167286D3968004D5327 /* TagsNewPostCollectionViewCell.swift in Sources */,
@@ -647,6 +674,7 @@
 				1F9304A92880AFA6004649FA /* VIPERPersonalProtocols.swift in Sources */,
 				1FAC454D2868A6BB0070ECAC /* TagsCollectionViewCell.swift in Sources */,
 				1FD3355B287F78AF00FF7852 /* NewPostInteractor.swift in Sources */,
+				1F60E9662881F4F600E7965F /* TagsRepository.swift in Sources */,
 				1F0F7466287E54C50089B9F8 /* DetailRouter.swift in Sources */,
 				1F2CC22A286672D400A6ECE2 /* TabBarOptions.swift in Sources */,
 				1F0F7464287E54B40089B9F8 /* DetailPresenter.swift in Sources */,
