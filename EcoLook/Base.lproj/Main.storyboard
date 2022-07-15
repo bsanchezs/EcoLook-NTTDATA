@@ -172,6 +172,7 @@
                     <connections>
                         <outlet property="buttonNewPost" destination="Zxn-CN-Kyb" id="uVp-9Z-Elp"/>
                         <outlet property="labelTitle" destination="fl8-WN-JSs" id="UqB-a0-8bl"/>
+                        <outlet property="searchBarHome" destination="6ju-e3-J9p" id="MDY-Ua-xr9"/>
                         <outlet property="sliderTags" destination="aAR-xc-m94" id="g1m-1K-YGF"/>
                         <outlet property="tableViewPostsCards" destination="aA8-Nd-ZAR" id="D63-e4-3l5"/>
                         <segue destination="hvi-A6-xZM" kind="presentation" identifier="homeToDetailSegue" id="hjC-n4-BNL"/>
