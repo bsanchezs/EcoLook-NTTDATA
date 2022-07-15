@@ -118,6 +118,17 @@ extension FavoritesViewController: ButtonGoViewCellDelegate{
 
     }
     
-    
-    
 }
+
+
+//extension FavoritesViewController: ButtonFavoriteDelegate{
+//
+//    func buttonFavoriteHasPressed() {
+//
+//        print("Llega aqui??")
+//
+//        tableViewFavoritePostsCards.reloadData()
+//
+//    }
+//
+//}
