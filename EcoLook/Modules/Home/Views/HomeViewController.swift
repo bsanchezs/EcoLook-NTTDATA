@@ -135,6 +135,20 @@ extension HomeViewController: UICollectionViewDataSource{
         cell?.btnTagHS.setTitle(arrEtiquetasTotales[indexPath.row].name, for: .normal)
         cell?.btnTagHS.tag = arrEtiquetasTotales[indexPath.row].id
         
+        if ( !setTagsNameSelected.contains((cell?.btnTagHS.currentTitle)!) ){
+            
+            cell?.btnTagHS.backgroundColor = ThemeColors.verdeBackground
+            
+            cell?.btnTagHS.tintColor = ThemeColors.verdeLabel
+            
+        }else{
+            
+            cell?.btnTagHS.backgroundColor = ThemeColors.verdePrimary
+            
+            cell?.btnTagHS.tintColor = .white
+            
+        }
+        
         cell?.delegate = self
         
         return cell!
@@ -150,36 +164,9 @@ extension HomeViewController: UICollectionViewDataSource{
 
 extension HomeViewController: ButtonViewCollectionCellDelegate{
     
-    
-    func btnHasPressed(btnPressed: UIButton) {
+    func btnHasPressed() {
         
-        guard let nameButtonPressed = btnPressed.currentTitle else {
-            return
-        }
-        
-        
-//        print("El tag es: \(tagButtonPressed) y el nombre es: \(nameButtonPressed)")
-        
-        if setTagsNameSelected.contains(nameButtonPressed){
-            
-            setTagsNameSelected.remove(nameButtonPressed)
-            
-            btnPressed.tintColor = ThemeColors.verdeLabel
-            
-            btnPressed.backgroundColor = ThemeColors.verdeBackground
-            
-        } else {
-            
-            setTagsNameSelected.insert(nameButtonPressed)
-            
-            btnPressed.tintColor = .white
-            
-            btnPressed.backgroundColor = ThemeColors.verdePrimary
-            
-        }
-        
-        
-        
+        sliderTags.reloadData()
         
     }
     

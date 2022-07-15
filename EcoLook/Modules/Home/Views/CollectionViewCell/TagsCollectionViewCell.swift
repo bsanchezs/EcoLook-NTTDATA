@@ -9,7 +9,7 @@ import UIKit
 
 protocol ButtonViewCollectionCellDelegate: AnyObject {
     
-    func btnHasPressed(btnPressed: UIButton)
+    func btnHasPressed()
     
 }
 
@@ -25,26 +25,27 @@ class TagsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
 
-        // Color de cada celda
         viewCell.backgroundColor = ThemeColors.verdeBackground
-        
-        //Color de las etiquetas
-        btnTagHS.tintColor = ThemeColors.verdeLabel
         
         // Tener efecto de redondeado
         btnTagHS.layer.cornerRadius = 10
         btnTagHS.clipsToBounds = true
         
-        
-//        btnTagHS.backgroundColor = ThemeColors.verdeLabel
-        
-        
-        
     }
 
-    @IBAction func btnAction(_ sender: UIButton) {
-        
-        delegate?.btnHasPressed(btnPressed: btnTagHS)
+    @IBAction func btnAction() {
+                
+        if ( !setTagsNameSelected.contains(btnTagHS.currentTitle!) ){
+            
+            setTagsNameSelected.insert(btnTagHS.currentTitle!)
+            
+        }else{
+            
+            setTagsNameSelected.remove(btnTagHS.currentTitle!)
+            
+        }
+ 
+        delegate?.btnHasPressed()
         
     }
     
