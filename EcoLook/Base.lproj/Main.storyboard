@@ -123,16 +123,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🔍 Buscar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddT-XH-pTS">
-                                <rect key="frame" x="20" y="97" width="374" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="zhN-5x-kaT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="RobotoFlex-Regular" family="Roboto Flex" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-xc-m94">
-                                <rect key="frame" x="20" y="151" width="374" height="61"/>
+                                <rect key="frame" x="20" y="143" width="374" height="61"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="XCf-cr-z5C"/>
@@ -146,33 +138,39 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-Nd-ZAR">
-                                <rect key="frame" x="20" y="220" width="374" height="593"/>
+                                <rect key="frame" x="20" y="212" width="374" height="601"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6ju-e3-J9p">
+                                <rect key="frame" x="20" y="97" width="374" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Nvf-cg-IYh"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQE-Uk-zCp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zxn-CN-Kyb" firstAttribute="top" secondItem="fQE-Uk-zCp" secondAttribute="top" constant="5" id="1T4-O9-EON"/>
+                            <constraint firstItem="6ju-e3-J9p" firstAttribute="leading" secondItem="fQE-Uk-zCp" secondAttribute="leading" constant="20" id="2nJ-Zv-lub"/>
                             <constraint firstItem="fl8-WN-JSs" firstAttribute="centerX" secondItem="KRI-Tg-QM1" secondAttribute="centerX" id="BQE-y1-eLG"/>
+                            <constraint firstItem="aAR-xc-m94" firstAttribute="top" secondItem="6ju-e3-J9p" secondAttribute="bottom" symbolic="YES" id="Oxl-KM-8Hd"/>
                             <constraint firstItem="aA8-Nd-ZAR" firstAttribute="bottom" secondItem="fQE-Uk-zCp" secondAttribute="bottom" id="QzE-ZI-gpW"/>
                             <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="aA8-Nd-ZAR" secondAttribute="trailing" constant="20" id="Ro8-iT-Uqn"/>
+                            <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="6ju-e3-J9p" secondAttribute="trailing" constant="20" id="VjA-hB-2Cz"/>
                             <constraint firstItem="aAR-xc-m94" firstAttribute="leading" secondItem="fQE-Uk-zCp" secondAttribute="leading" constant="20" id="c9v-g4-DLg"/>
+                            <constraint firstItem="6ju-e3-J9p" firstAttribute="top" secondItem="fl8-WN-JSs" secondAttribute="bottom" constant="13" id="cn0-nS-AZ3"/>
                             <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="Zxn-CN-Kyb" secondAttribute="trailing" constant="20" id="dVM-Le-gaU"/>
-                            <constraint firstItem="ddT-XH-pTS" firstAttribute="top" secondItem="fl8-WN-JSs" secondAttribute="bottom" constant="13" id="dsY-7S-jK6"/>
                             <constraint firstItem="aA8-Nd-ZAR" firstAttribute="top" secondItem="aAR-xc-m94" secondAttribute="bottom" constant="8" symbolic="YES" id="eTJ-av-dyy"/>
                             <constraint firstItem="aA8-Nd-ZAR" firstAttribute="leading" secondItem="fQE-Uk-zCp" secondAttribute="leading" constant="20" id="fc6-fa-Pnb"/>
                             <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="aAR-xc-m94" secondAttribute="trailing" constant="20" id="fcj-h6-OUy"/>
-                            <constraint firstItem="fQE-Uk-zCp" firstAttribute="trailing" secondItem="ddT-XH-pTS" secondAttribute="trailing" constant="20" id="fgN-rP-WJC"/>
-                            <constraint firstItem="aAR-xc-m94" firstAttribute="top" secondItem="ddT-XH-pTS" secondAttribute="bottom" constant="8" symbolic="YES" id="nDg-OD-hez"/>
                             <constraint firstItem="fl8-WN-JSs" firstAttribute="top" secondItem="fQE-Uk-zCp" secondAttribute="top" id="p7z-k6-0yX"/>
-                            <constraint firstItem="ddT-XH-pTS" firstAttribute="leading" secondItem="fQE-Uk-zCp" secondAttribute="leading" constant="20" id="zii-Yf-u6f"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="DLz-uG-DIG" customClass="CustomTabBarItem" customModule="EcoLook" customModuleProvider="target"/>
                     <connections>
                         <outlet property="buttonNewPost" destination="Zxn-CN-Kyb" id="uVp-9Z-Elp"/>
-                        <outlet property="inputSearch" destination="ddT-XH-pTS" id="Dgj-sZ-3DK"/>
                         <outlet property="labelTitle" destination="fl8-WN-JSs" id="UqB-a0-8bl"/>
                         <outlet property="sliderTags" destination="aAR-xc-m94" id="g1m-1K-YGF"/>
                         <outlet property="tableViewPostsCards" destination="aA8-Nd-ZAR" id="D63-e4-3l5"/>
@@ -182,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXQ-H1-BPB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="-708"/>
+            <point key="canvasLocation" x="734.78260869565224" y="-708.48214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aRM-yN-T19">

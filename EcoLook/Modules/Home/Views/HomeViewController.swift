@@ -11,7 +11,6 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var buttonNewPost: UIButton!
-    @IBOutlet weak var inputSearch: UITextField!
     @IBOutlet weak var sliderTags: UICollectionView!
     @IBOutlet weak var tableViewPostsCards: UITableView!
     
@@ -80,9 +79,6 @@ extension HomeViewController {
         labelTitle.textColor = ThemeColors.verdePrimary
         
         buttonNewPost.tintColor = ThemeColors.verdePrimary
-        
-        inputSearch.backgroundColor = ThemeColors.verdeInput
-        inputSearch.borderStyle = .none
         
         sliderTags.backgroundColor = ThemeColors.verdeBackground
         sliderTags.dataSource = self
