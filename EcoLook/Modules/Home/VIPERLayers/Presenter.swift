@@ -17,6 +17,18 @@ class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
     
+    func fetchAllTags() {
+        
+        interactor?.getAllTags()
+        
+    }
+    
+    func loadSuccessAllTags(tags: [Tag]?) {
+        
+        view?.showSuccessAllTags(tags: tags)
+        
+    }
+    
     func fetchAllPostsByUser(idUser: Int) {
         
 //        print("El dato que llego es: \(idUser)")

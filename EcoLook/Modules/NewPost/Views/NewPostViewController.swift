@@ -126,7 +126,7 @@ class NewPostViewController: UIViewController {
                         
                     for nameTag in setTagsSelectedNewPost {
                         
-                        let tag = arrEtiquetasTotales.filter( {$0.name == nameTag } )
+                        let tag = allTags.filter( {$0.name == nameTag } )
                         arrayTagsSelected.append(tag[0])
                         
                     }
@@ -284,16 +284,16 @@ extension NewPostViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrEtiquetasTotales.count
+        return allTags.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTagNewPost", for: indexPath) as? TagsNewPostCollectionViewCell
         
-        cell?.buttonTagNewPost.setTitle(arrEtiquetasTotales[indexPath.row].name, for: .normal)
+        cell?.buttonTagNewPost.setTitle(allTags[indexPath.row].name, for: .normal)
         
-        cell?.buttonTagNewPost.tag = arrEtiquetasTotales[indexPath.row].id
+        cell?.buttonTagNewPost.tag = allTags[indexPath.row].id
         
         cell?.delegate = self
         

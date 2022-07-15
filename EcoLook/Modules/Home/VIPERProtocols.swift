@@ -9,11 +9,17 @@ import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     
+    func showSuccessAllTags(tags: [Tag]?)
+    
     func showSuccessAllPostsByUser(allPosts: [Post])
     func showSuccessImagePostByUrl(image: UIImage, cell: PostsTableViewCell?)
+    
 }
 
 protocol HomePresenterProtocol: AnyObject{
+    
+    func fetchAllTags()
+    func loadSuccessAllTags(tags: [Tag]?)
     
     func fetchAllPostsByUser(idUser: Int)
     func loadSuccessAllPostsByUser(allPosts: [Post]?)
@@ -36,6 +42,8 @@ protocol HomeRouterProtocol{
 }
 
 protocol HomeInteractorProtocol{
+    
+    func getAllTags()
     
     func getAllPostsByUser(idUser: Int)
     func getImagePostByUrl(url: String, cell: PostsTableViewCell?)

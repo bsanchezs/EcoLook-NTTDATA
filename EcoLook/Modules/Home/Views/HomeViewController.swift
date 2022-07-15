@@ -24,6 +24,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter?.fetchAllTags()
+        
         setConfigurationHomeViewController()
         
         
@@ -102,6 +104,16 @@ extension HomeViewController {
 
 extension HomeViewController: HomeViewProtocol {
     
+    func showSuccessAllTags(tags: [Tag]?) {
+        
+        guard let tags = tags else {
+            return
+        }
+        
+        allTags = tags
+        
+    }
+    
     func showSuccessAllPostsByUser(allPosts: [Post]) {
         
         posts = allPosts
@@ -155,15 +167,15 @@ extension HomeViewController: UICollectionViewDataSource{
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrEtiquetasTotales.count
+        return allTags.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCellTag", for: indexPath) as? TagsCollectionViewCell
         
-        cell?.btnTagHS.setTitle(arrEtiquetasTotales[indexPath.row].name, for: .normal)
-        cell?.btnTagHS.tag = arrEtiquetasTotales[indexPath.row].id
+        cell?.btnTagHS.setTitle(allTags[indexPath.row].name, for: .normal)
+        cell?.btnTagHS.tag = allTags[indexPath.row].id
         
         if ( !tagsNameSelectedToFilter.contains((cell?.btnTagHS.currentTitle)!) ){
             

@@ -9,6 +9,7 @@ import Foundation
 
 class HomeInteractor {
     
+    let tagsRepository: TagsRepository? = TagsLocalRepository()
     let postRepository: PostsRepository? = PostsRemoteRepository()
     let networkingImages: NetworkingImages? = NetworkingImagesByUrl()
     
@@ -17,6 +18,16 @@ class HomeInteractor {
 }
 
 extension HomeInteractor: HomeInteractorProtocol {
+    
+    func getAllTags() {
+        
+        tagsRepository?.getAllTags(success: { tags in
+            
+            self.presenter?.loadSuccessAllTags(tags: tags)
+            
+        }, failure: { _ in })
+        
+    }
     
     func getAllPostsByUser(idUser: Int) {
         

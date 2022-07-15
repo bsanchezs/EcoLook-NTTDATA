@@ -31,7 +31,7 @@ class TagsNewPostCollectionViewCell: UICollectionViewCell {
         buttonTagNewPost.layer.cornerRadius = 15
         
         
-        tagNewPost = arrEtiquetasTotales.filter( {$0.id == buttonTagNewPost.tag} )
+        tagNewPost = allTags.filter( {$0.id == buttonTagNewPost.tag} )
 //        buttonTagNewPost.setTitle(tagNewPost?.name, for: .normal)
         
 //        guard let id = tagNewPost?.id else{
