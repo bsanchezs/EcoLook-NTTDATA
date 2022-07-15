@@ -1,0 +1,6 @@
+framework module Pods_EcoLook {
+  umbrella header "Pods-EcoLook-umbrella.h"
+
+  export *
+  module * { export * }
+}
