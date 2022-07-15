@@ -44,9 +44,9 @@ extension HomePresenter: HomePresenterProtocol {
         
     }
     
-    func loadSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+    func loadSuccessImagePostByUrl(image: UIImage, cell: PostsTableViewCell?) {
         
-        view?.showSuccessImagePostByUrl(dataImage: dataImage, cell: cell)
+        view?.showSuccessImagePostByUrl(image: image, cell: cell)
         
     }
     

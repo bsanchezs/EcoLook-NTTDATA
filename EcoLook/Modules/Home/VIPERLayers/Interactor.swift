@@ -37,7 +37,7 @@ extension HomeInteractor: HomeInteractorProtocol {
             
 //            print("Hay data? : \(dataImage)")
             
-            self.presenter?.loadSuccessImagePostByUrl(dataImage: dataImage, cell: cell)
+            self.presenter?.loadSuccessImagePostByUrl(image: dataImage, cell: cell)
             
         }, failure: { _ in })
         

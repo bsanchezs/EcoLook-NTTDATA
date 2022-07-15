@@ -5,13 +5,13 @@
 //  Created by Brian Antonio Sanchez Solorsano on 11/07/22.
 //
 
-import Foundation
+import UIKit
 
 class NetworkingImagesByUrl: NetworkingImages {
     
     var task: URLSessionDataTask!
 
-    func getImageByUrl(url: String, success: @escaping (Data) -> Void, failure: @escaping (Error?) -> Void) {
+    func getImageByUrl(url: String, success: @escaping (UIImage) -> Void, failure: @escaping (Error?) -> Void) {
         
         guard let url = URL(string: url) else {
             return
@@ -23,11 +23,20 @@ class NetworkingImagesByUrl: NetworkingImages {
             
         }
         
+        if let imageFromCache = imageCache.object(forKey: url.absoluteString as AnyObject) as? UIImage {
+            
+            success(imageFromCache)
+            return
+            
+        }
+        
         task = URLSession.shared.dataTask(with: url) { data, response, error in
             
-            if let data = data {
-                  
-                success(data)
+            if let data = data, let imagen = UIImage(data: data) {
+                
+                imageCache.setObject(imagen, forKey: url.absoluteString as AnyObject)
+                success(imagen)
+                
                 
             }else{
                 

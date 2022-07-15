@@ -111,10 +111,10 @@ extension HomeViewController: HomeViewProtocol {
         
     }
     
-    func showSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+    func showSuccessImagePostByUrl(image: UIImage, cell: PostsTableViewCell?) {
         
         DispatchQueue.main.async {
-            cell?.imageViewCard.image = UIImage(data: dataImage)
+            cell?.imageViewCard.image = image
         }
         
     }

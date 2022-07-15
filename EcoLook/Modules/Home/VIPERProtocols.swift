@@ -5,13 +5,12 @@
 //  Created by Brian Antonio Sanchez Solorsano on 7/07/22.
 //
 
-import Foundation
 import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     
     func showSuccessAllPostsByUser(allPosts: [Post])
-    func showSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?)
+    func showSuccessImagePostByUrl(image: UIImage, cell: PostsTableViewCell?)
 }
 
 protocol HomePresenterProtocol: AnyObject{
@@ -20,7 +19,7 @@ protocol HomePresenterProtocol: AnyObject{
     func loadSuccessAllPostsByUser(allPosts: [Post]?)
     
     func fetchImagePostByUrl(url: String, cell: PostsTableViewCell?)
-    func loadSuccessImagePostByUrl(dataImage: Data, cell: PostsTableViewCell?)
+    func loadSuccessImagePostByUrl(image: UIImage, cell: PostsTableViewCell?)
     
     func requestSendToDetail(idPost: Int)
     
