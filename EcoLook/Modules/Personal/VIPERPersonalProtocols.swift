@@ -10,7 +10,7 @@ import UIKit
 protocol PersonalViewProtocol: AnyObject {
     
     func showSuccessPersonalPostsByUser(personalPosts: [Post])
-    func showSuccessImagePersonalPostByUrl(dataImage: Data, cell: PostsTableViewCell?)
+    func showSuccessImagePersonalPostByUrl(image: UIImage, cell: PostsTableViewCell?)
     
 }
 
@@ -20,7 +20,7 @@ protocol PersonalPresenterProtocol: AnyObject{
     func loadSuccessPersonalPostsByUser(personalPosts: [Post]?)
     
     func fetchImagePersonalPostByUrl(url: String, cell: PostsTableViewCell?)
-    func loadSuccessImagePersonalPostByUrl(dataImage: Data, cell: PostsTableViewCell?)
+    func loadSuccessImagePersonalPostByUrl(image: UIImage, cell: PostsTableViewCell?)
     
     func requestSendToDetail(idPost: Int)
     

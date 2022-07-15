@@ -43,9 +43,9 @@ extension PersonalPresenter: PersonalPresenterProtocol {
         
     }
     
-    func loadSuccessImagePersonalPostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+    func loadSuccessImagePersonalPostByUrl(image: UIImage, cell: PostsTableViewCell?) {
         
-        view?.showSuccessImagePersonalPostByUrl(dataImage: dataImage, cell: cell)
+        view?.showSuccessImagePersonalPostByUrl(image: image, cell: cell)
         
     }
     

@@ -31,7 +31,7 @@ extension PersonalInteractor: PersonalInteractorProtocol {
         
         networkImages?.getImageByUrl(url: url, success: { dataImage in
             
-            self.presenter?.loadSuccessImagePersonalPostByUrl(dataImage: dataImage, cell: cell)
+            self.presenter?.loadSuccessImagePersonalPostByUrl(image: dataImage, cell: cell)
             
         }, failure: { _ in })
         

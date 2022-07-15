@@ -66,10 +66,10 @@ extension PersonalViewController: PersonalViewProtocol {
         
     }
     
-    func showSuccessImagePersonalPostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+    func showSuccessImagePersonalPostByUrl(image: UIImage, cell: PostsTableViewCell?) {
         
         DispatchQueue.main.async {
-            cell?.imageViewCard.image = UIImage(data: dataImage)
+            cell?.imageViewCard.image = image
         }
         
     }
