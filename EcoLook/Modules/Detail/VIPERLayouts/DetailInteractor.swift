@@ -22,7 +22,7 @@ extension DetailInteractor: DetailInteractorProtocol {
         
         networkingImages?.getImageByUrl(url: url, success: { dataImage in
             
-            self.presenter?.loadSuccessImageDetailPostByUrl(dataImage: dataImage)
+            self.presenter?.loadSuccessImageDetailPostByUrl(image: dataImage)
             
         }, failure: { _ in })
         

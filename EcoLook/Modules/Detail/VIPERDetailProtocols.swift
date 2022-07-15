@@ -5,11 +5,11 @@
 //  Created by Brian Antonio Sanchez Solorsano on 12/07/22.
 //
 
-import Foundation
+import UIKit
 
 protocol DetailViewProtocol: AnyObject {
     
-    func showSuccessImageDetailPostByUrl(dataImage: Data)
+    func showSuccessImageDetailPostByUrl(image: UIImage)
     
     func changeImageButtonByResponse(response: Int)
     
@@ -18,7 +18,7 @@ protocol DetailViewProtocol: AnyObject {
 protocol DetailPresenterProtocol: AnyObject {
     
     func fetchImageDetailPostByUrl(url: String)
-    func loadSuccessImageDetailPostByUrl(dataImage: Data)
+    func loadSuccessImageDetailPostByUrl(image: UIImage)
     
     func fetchInsertFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int)
     func loadSuccessResponseInsertFavoritePostByIdUserAndIdPost(response: Int)

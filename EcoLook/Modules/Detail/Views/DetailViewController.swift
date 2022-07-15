@@ -179,10 +179,10 @@ extension DetailViewController {
 
 extension DetailViewController: DetailViewProtocol {
     
-    func showSuccessImageDetailPostByUrl(dataImage: Data) {
+    func showSuccessImageDetailPostByUrl(image: UIImage) {
         
         DispatchQueue.main.async {
-            self.imageViewDetail.image = UIImage(data: dataImage)
+            self.imageViewDetail.image = image
         }
         
     }

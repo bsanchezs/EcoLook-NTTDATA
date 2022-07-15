@@ -5,7 +5,7 @@
 //  Created by Brian Antonio Sanchez Solorsano on 12/07/22.
 //
 
-import Foundation
+import UIKit
 
 class DetailPresenter {
     
@@ -23,9 +23,9 @@ extension DetailPresenter: DetailPresenterProtocol {
         
     }
     
-    func loadSuccessImageDetailPostByUrl(dataImage: Data) {
+    func loadSuccessImageDetailPostByUrl(image: UIImage) {
         
-        view?.showSuccessImageDetailPostByUrl(dataImage: dataImage)
+        view?.showSuccessImageDetailPostByUrl(image: image)
         
     }
     
