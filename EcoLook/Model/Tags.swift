@@ -26,5 +26,5 @@ let arrEtiquetasTotales = [
 ]
 
 
-var setTagsNameSelected = Set<String>()
+var tagsNameSelectedToFilter = Set<String>()
 

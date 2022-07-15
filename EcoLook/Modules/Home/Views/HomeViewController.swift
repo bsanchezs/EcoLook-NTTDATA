@@ -137,7 +137,7 @@ extension HomeViewController: UICollectionViewDataSource{
         cell?.btnTagHS.setTitle(arrEtiquetasTotales[indexPath.row].name, for: .normal)
         cell?.btnTagHS.tag = arrEtiquetasTotales[indexPath.row].id
         
-        if ( !setTagsNameSelected.contains((cell?.btnTagHS.currentTitle)!) ){
+        if ( !tagsNameSelectedToFilter.contains((cell?.btnTagHS.currentTitle)!) ){
             
             cell?.btnTagHS.backgroundColor = ThemeColors.verdeBackground
             
@@ -169,6 +169,67 @@ extension HomeViewController: ButtonViewCollectionCellDelegate{
     func btnHasPressed() {
         
         sliderTags.reloadData()
+        
+        if( tagsNameSelectedToFilter.isEmpty ) {
+            
+            if let allPostsByUser = allPostsByUser {
+                
+                posts = allPostsByUser
+                
+            }else{
+                
+                posts = []
+                
+            }
+            
+        }else {
+            
+            var postsFiltro: [Post] = []
+            
+            guard let allPostsByUser = allPostsByUser else{
+                return
+            }
+            
+            for post in allPostsByUser {
+                
+                if let tagsPost = post.etiquetas {
+                    
+                    var nameTagsPosts: [String] = []
+                    
+                    for tag in tagsPost {
+                        
+                        nameTagsPosts.append(tag.name)
+                        
+                    }
+                    
+                    var cumple = 1
+                    
+                    for tagFilter in tagsNameSelectedToFilter {
+                        
+                        if !nameTagsPosts.contains(tagFilter) {
+                            
+                            cumple = 0
+                            break
+                            
+                        }
+                        
+                    }
+                    
+                    if cumple == 1 {
+                        
+                        postsFiltro.append(post)
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            posts = postsFiltro
+        
+        }
+        
+        tableViewPostsCards.reloadData()
         
     }
     

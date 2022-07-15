@@ -32,20 +32,22 @@ class TagsCollectionViewCell: UICollectionViewCell {
         btnTagHS.clipsToBounds = true
         
     }
+    
+    
+    @IBAction func actionBtnTag(_ sender: Any) {
+        
+        if ( !tagsNameSelectedToFilter.contains(btnTagHS.currentTitle!) ){
 
-    @IBAction func btnAction() {
-                
-        if ( !setTagsNameSelected.contains(btnTagHS.currentTitle!) ){
-            
-            setTagsNameSelected.insert(btnTagHS.currentTitle!)
-            
+            tagsNameSelectedToFilter.insert(btnTagHS.currentTitle!)
+
         }else{
-            
-            setTagsNameSelected.remove(btnTagHS.currentTitle!)
-            
+
+            tagsNameSelectedToFilter.remove(btnTagHS.currentTitle!)
+
         }
- 
+
         delegate?.btnHasPressed()
+        
         
     }
     
