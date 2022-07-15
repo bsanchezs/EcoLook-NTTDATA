@@ -29,9 +29,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        print("Apareceeee")
+    override func viewWillAppear(_ animated: Bool) {
         
         presenter?.fetchAllPostsByUser(idUser: 1)
         

@@ -43,7 +43,7 @@ extension DetailPresenter: DetailPresenterProtocol {
     
     func fetchDeleteFavoritePostByIdUserAndIdPost(idUser: Int, idPost: Int) {
         
-        interactor?.deleteFavoritePostByIdUserAndIdPost(idUser: idUser, idPost: idUser)
+        interactor?.deleteFavoritePostByIdUserAndIdPost(idUser: idUser, idPost: idPost)
         
     }
     
