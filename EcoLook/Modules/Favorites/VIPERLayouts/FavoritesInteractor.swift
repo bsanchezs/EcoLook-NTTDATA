@@ -32,7 +32,7 @@ extension FavoritesInteractor: FavoritesInteractorProtocol {
         
         networkImages?.getImageByUrl(url: url, success: { dataImage in
             
-            self.presenter?.loadSuccessImageFavoritePostByUrl(dataImage: dataImage, cell: cell)
+            self.presenter?.loadSuccessImageFavoritePostByUrl(image: dataImage, cell: cell)
             
         }, failure: { _ in })
         

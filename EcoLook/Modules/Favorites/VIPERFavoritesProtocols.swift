@@ -10,7 +10,7 @@ import UIKit
 protocol FavoritesViewProtocol: AnyObject {
     
     func showSuccessFavoritesPostsByUser(favoritesPosts: [Post])
-    func showSuccessImageFavoritePostByUrl(dataImage: Data, cell: PostsTableViewCell?)
+    func showSuccessImageFavoritePostByUrl(image: UIImage, cell: PostsTableViewCell?)
     
 }
 
@@ -20,7 +20,7 @@ protocol FavoritesPresenterProtocol: AnyObject{
     func loadSuccessFavoritesPostsByUser(favoritesPosts: [Post]?)
     
     func fetchImageFavoritePostByUrl(url: String, cell: PostsTableViewCell?)
-    func loadSuccessImageFavoritePostByUrl(dataImage: Data, cell: PostsTableViewCell?)
+    func loadSuccessImageFavoritePostByUrl(image: UIImage, cell: PostsTableViewCell?)
     
     func requestSendToDetail(idPost: Int)
     

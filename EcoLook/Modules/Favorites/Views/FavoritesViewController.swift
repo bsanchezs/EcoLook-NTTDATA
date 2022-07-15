@@ -65,10 +65,10 @@ extension FavoritesViewController: FavoritesViewProtocol {
         
     }
     
-    func showSuccessImageFavoritePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+    func showSuccessImageFavoritePostByUrl(image: UIImage, cell: PostsTableViewCell?) {
         
         DispatchQueue.main.async {
-            cell?.imageViewCard.image = UIImage(data: dataImage)
+            cell?.imageViewCard.image = image
         }
         
     }

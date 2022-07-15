@@ -45,9 +45,9 @@ extension FavoritesPresenter: FavoritesPresenterProtocol {
         
     }
     
-    func loadSuccessImageFavoritePostByUrl(dataImage: Data, cell: PostsTableViewCell?) {
+    func loadSuccessImageFavoritePostByUrl(image: UIImage, cell: PostsTableViewCell?) {
         
-        view?.showSuccessImageFavoritePostByUrl(dataImage: dataImage, cell: cell)
+        view?.showSuccessImageFavoritePostByUrl(image: image, cell: cell)
         
     }
     
