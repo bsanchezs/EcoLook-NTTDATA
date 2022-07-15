@@ -8,6 +8,8 @@
 import Foundation
 
 class NetworkingImagesByUrl: NetworkingImages {
+    
+    var task: URLSessionDataTask!
 
     func getImageByUrl(url: String, success: @escaping (Data) -> Void, failure: @escaping (Error?) -> Void) {
         
@@ -15,7 +17,13 @@ class NetworkingImagesByUrl: NetworkingImages {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        if let task = task {
+            
+            task.cancel()
+            
+        }
+        
+        task = URLSession.shared.dataTask(with: url) { data, response, error in
             
             if let data = data {
                   

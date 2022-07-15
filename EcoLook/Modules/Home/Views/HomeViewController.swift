@@ -279,6 +279,8 @@ extension HomeViewController: UITableViewDataSource{
         
         let url = posts[indexPath.row].getUrlImage(imagen: posts[indexPath.row].imagen)
         
+        cell?.imageViewCard.image = UIImage(systemName: "no-image")
+        
         presenter?.fetchImagePostByUrl(url: url, cell: cell)
         
         cell?.labelTitleCard.text = posts[indexPath.row].titulo
