@@ -86,6 +86,7 @@ extension HomeViewController {
         searchBarHome.barTintColor = ThemeColors.verdeInput
         searchBarHome.barStyle = .default
         searchBarHome.searchBarStyle = .minimal
+        searchBarHome.delegate = self
         
         sliderTags.backgroundColor = ThemeColors.verdeBackground
         sliderTags.dataSource = self
@@ -120,6 +121,32 @@ extension HomeViewController: HomeViewProtocol {
         
     }
     
+    
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == "" {
+            
+            guard let allPostsByUser = allPostsByUser else{
+                return
+            }
+            
+            posts = allPostsByUser
+            tableViewPostsCards.reloadData()
+            
+        }else{
+            
+            let postsFiltro = posts.filter( {$0.titulo.contains(searchText) } )
+            print("posts filtro: \(postsFiltro)")
+            posts = postsFiltro
+            tableViewPostsCards.reloadData()
+            
+        }
+        
+    }
     
 }
 
@@ -159,9 +186,6 @@ extension HomeViewController: UICollectionViewDataSource{
         return cell!
         
     }
-    
-    
-    
     
     
 }
