@@ -93,3 +93,4 @@ var posts = [
 
 ]
 
+var allPostsByUser: [Post]?

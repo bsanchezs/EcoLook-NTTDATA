@@ -103,6 +103,8 @@ extension HomeViewController: HomeViewProtocol {
     func showSuccessAllPostsByUser(allPosts: [Post]) {
         
         posts = allPosts
+        allPostsByUser = allPosts
+        
         tableViewPostsCards.reloadData()
         
     }
