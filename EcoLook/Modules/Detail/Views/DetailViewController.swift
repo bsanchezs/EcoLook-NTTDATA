@@ -8,6 +8,12 @@
 import UIKit
 import GoogleMaps
 
+protocol ButtonFavoriteDelegate {
+    
+    func buttonFavoriteHasPressed()
+    
+}
+
 class DetailViewController: UIViewController {
     
     
@@ -25,6 +31,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var collectionViewTagsPostDetail: UICollectionView!
 
     var presenter: DetailPresenterProtocol?
+    var delegate: ButtonFavoriteDelegate?
     var idSelectedPost: Int?
     var post: Post?
 
@@ -202,6 +209,8 @@ extension DetailViewController: DetailViewProtocol {
                 posts[index].esFavorito = 0
                 
             }
+            
+            delegate?.buttonFavoriteHasPressed()
             
         }
         
